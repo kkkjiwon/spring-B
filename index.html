@@ -19,6 +19,8 @@
     <!-- Twitter -->
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- 스와이퍼 css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <!-- XEICON css -->
@@ -144,29 +146,26 @@
         </div>
       <div class="s_btn s_btn--reverse:hover">more view</div>
       <!-- 이달의 영상 -->
-      <section class="s_Mentor">
+      <section class="mentor">
         <div class="inner">
-          <div class="s_Mentor_area">
-            <div class="s_Mentor_area_left">
-            <a href="#">
-              <div class="s_Mentor_des">
-                <div class="tit">뭘 해도 행복한 사람과<br />불만인 사람의 말버릇</div>
-                <div class="tit2">리플러스인간연구소</div>
-                <div class="name">박재연 <span>소장님</span></div>
-                <div class="s_btn">MORE VIEW</div>
-              </div>
-            </a>
-          </div>
-          <div class="s_Mentor_area_right">
-            <img src="images//soon/park.png" alt="박재현소장" />
-          </div>
+          <div class="mentor-txt">
+            <div class="mentor-txt-1" data-aos="fade-up" data-aos-duration="1000" >" 뭘 해도</div>
+            <div class="mentor-txt-2" data-aos="fade-up" data-aos-duration="1250">행복한 사람과</div>
+            <div class="mentor-txt-3" data-aos="fade-up" data-aos-duration="1500" >불만인 사람의 말버릇 "</div>
           </div>
         </div>
       </section>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+      <script>
+      // AOS 초기화
+      AOS.init();
+      </script>
       <!-- 리뷰 -->
       <section class="review">
         <div class="title">Review
           <div class="title2">한 달만 해도 변화하는 프로그램 후기</div>
+          
       </section>
       <!-- 공지시항 -->
       <section class="notice"></section>

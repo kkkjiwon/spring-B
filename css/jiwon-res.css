@@ -1,0 +1,29 @@
+@charset "utf-8";
+@media screen and (max-width: 1200px) {
+    .mentor {
+        padding: 0 5%;
+    }
+    .mentor-txt{
+        font-size: 4.7vw;
+    }
+}
+@media screen and (max-width: 1150px){
+    .mentor-txt{
+        bottom: 120px;
+    }
+}
+/* @media screen and (max-width: 1100px){
+    .mentor-txt{
+        bottom: 125px;
+    }
+}
+@media screen and (max-width: 1050px){
+    .mentor-txt{
+        bottom: 130px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .mentor-txt{
+        bottom: 135px;
+    }
+} */
