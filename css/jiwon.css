@@ -1,10 +1,17 @@
 @charset "utf-8";
 @import url("reset.css");
 @import url("style.css");
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "font/SCDream3.otf";
 @import "font/SCDream5.otf";
 @import "font/SCDream8.otf";
+@font-face {
+  font-family: 'Ownglyph_Dailyokja-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Dailyokja-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: "S-CoreDream-3Light";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
@@ -22,6 +29,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* 메인 ==== 이달의 강연 */
+.mentor{
+  margin-top: 150px;
+  width: 100%;
+  height: 495px;
+}
+.mentor > .inner{
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: url("../images/jiwon/mentor.jpg")no-repeat center;
+  background-size: contain;
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+.mentor-txt{
+  font-family: 'Ownglyph_Dailyokja-Rg';
+  color: #fff;
+  height: 100%;
+  /* font-size: 3.2vw; */
+  font-size: 60px;
+  line-height: 1.5;
+  /* padding-left: 55px;
+  padding-top: 120px; */
+  position: absolute;
+  top: 72%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  /* display: flex; */
+}
+
+
+
+
 /* 프로그램 소개 ================= */
 .j_banner_wrap {
   padding-top: 100px;

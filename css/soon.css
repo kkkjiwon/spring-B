@@ -190,7 +190,7 @@
   transform: translateY(0);
 }
 .s_Mentor_des.active .name {
-  transition: all 1s 0.4s;
+  transition: all 1s 0.3s;
   opacity: 1;
   transform: translateY(0);
 }
