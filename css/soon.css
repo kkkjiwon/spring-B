@@ -40,76 +40,14 @@
 /* 프로그램 시작 ********************************************** *********************************************/
 .s_program {
   position: relative;
-  background-color: var(--bg-color);
   padding-bottom: 3rem;
 }
-.s_program > .sw-program {
-  width: 100%;
-  height: 100%;
-  padding: 0px 5%;
-  position: relative;
-}
-.s_program > .sw-program > .swiper-wrapper > .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-.s_program_bg {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.s_program_bg_img {
-  width: 100%;
-  max-height: 300px;
-  overflow: hidden;
-  border-radius: 10px 10px 0 0;
-}
-.s_program_bg_img img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-.swiper-slide:hover img {
-  transform: scale(1.2);
-  transition: transform 0.3s ease; /* 선택적으로 부드러운 전환 효과를 추가할 수 있습니다. */
-}
-.s_program_des {
-  text-align: left;
-  padding: 2rem;
-  font-family: var(--main-ko-font)
-}
-.s_program_tit {
-  font-weight: bold;
-  font-size: 1.8rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.s_program_txt {
-  font-size: 1.5rem;
-  padding-top: 1rem;
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.s_program > .s_btn {
-  margin: 50px auto 30px;
+.s_program .s_btn {
+  margin: 20px auto;
 }
 /* 이달의 영상 시작 ********************************************** *********************************************/
 .s_Mentor {
   font-family: var(--main-ko-font);
-  background-color: #fffcf6;
-}
-.s_Mentor .inner {
-  /* background-color: pink; */
 }
 .s_Mentor_area {
   display: flex;
@@ -117,7 +55,6 @@
   align-items: center;
   gap: 10%;
 }
-
 .s_Mentor_des .tit {
   font-weight: 600;
   font-size: 3rem;
@@ -166,66 +103,11 @@
   transform: translateY(0);
 }
 
-/* 편지 시작 ********************************************** *********************************************/
 
-.s_letter > .inner {
-  background-color: var(--bg-color);
-  display: flex;
-}
-.s_letter_box {
-  flex-basis: 50%;
-}
-.s_letter_box > .s_btn {
-  margin: 8% auto 0;
-}
-.s_letter_left {
-  background-color: var(--side-color);
-}
-.s_letter_left img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  padding: 2% 2% 0 2%;
-}
-.s_letter_right {
-  margin: auto;
-  font-family: var(--main-ko-font);
-}
-.s_letter_right .tit2 {
-  font-size: 1.8rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100px);
-}
-.s_letter_right .tit {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 5%;
-  line-height: 1.5;
-  opacity: 0;
-  transform: translateY(100px);
-}
-.s_letter_right .s_btn {
-  opacity: 0;
-  transform: translateY(100px);
-}
-.s_letter_right.active .tit2 {
-  transition: all 1s 0.2s;
-  opacity: 1;
-  transform: translateY(0);
-}
-.s_letter_right.active .tit {
-  transition: all 1s 0.3s;
-  opacity: 1;
-  transform: translateY(0);
-}
-.s_letter_right.active .s_btn {
-  transition: all 1s 0.4s;
-  opacity: 1;
-  transform: translateY(0);
-}
+/* 리뷰 시작 ********************************************** **********************************************/
+
+/* 공지사항 시작 ********************************************** **********************************************/
+
 /* 인스타그램 시작 ********************************************** *********************************************/
 .s_instagram {
   width: 100%;
@@ -242,4 +124,8 @@
 }
 .s_instagram .s_btn {
   margin: 30px auto;
+}
+.s_instagram > .s_btn {
+  margin: 50px auto;
+  text-align: center;
 }

@@ -53,6 +53,12 @@ body {
   padding-top: 150px;
   padding-bottom: 50px;
 }
+.title2 {
+  font-family: 'S-CoreDream-3Light';
+  font-size: 1.5rem;
+  line-height: 4;
+  letter-spacing: 0.1rem;
+}
 /* 버튼 */
 /* <div class="btn btn--white">view more</div> */
 .s_btn {
@@ -387,7 +393,7 @@ nav {
   cursor: pointer;
   display: block;
   margin-left: 5px;
-  font-size: 18px;
+  font-size: 3rem;
   font-weight: lighter;
   height: 50px;
   border: none;
