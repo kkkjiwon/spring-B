@@ -1,0 +1,245 @@
+@charset "utf-8";
+@import "style.css";
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+
+
+/* 비주얼 시작 ********************************************** *********************************************/
+.s_vistual {
+  position: relative;
+}
+.s_vistual > .sw-vistual {
+  width: 100%;
+  height: 100%;
+}
+.s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide {
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 페이지 네이션 */
+.swiper-scrollbar {
+  width: 50%;
+}
+/*  메인 >> 브랜드 소개  시작 ********************************************** *********************************************/
+.s_brandAbout > .inner img {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+/* 프로그램 시작 ********************************************** *********************************************/
+.s_program {
+  position: relative;
+  background-color: var(--bg-color);
+  padding-bottom: 3rem;
+}
+.s_program > .sw-program {
+  width: 100%;
+  height: 100%;
+  padding: 0px 5%;
+  position: relative;
+}
+.s_program > .sw-program > .swiper-wrapper > .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.s_program_bg {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.s_program_bg_img {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.s_program_bg_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.swiper-slide:hover img {
+  transform: scale(1.2);
+  transition: transform 0.3s ease; /* 선택적으로 부드러운 전환 효과를 추가할 수 있습니다. */
+}
+.s_program_des {
+  text-align: left;
+  padding: 2rem;
+  font-family: var(--main-ko-font)
+}
+.s_program_tit {
+  font-weight: bold;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.s_program_txt {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.s_program > .s_btn {
+  margin: 50px auto 30px;
+}
+/* 이달의 영상 시작 ********************************************** *********************************************/
+.s_Mentor {
+  font-family: var(--main-ko-font);
+  background-color: #fffcf6;
+}
+.s_Mentor .inner {
+  /* background-color: pink; */
+}
+.s_Mentor_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.s_Mentor_des .tit {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_Mentor_des .name {
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_Mentor_des .name > span {
+  font-size: 1.8rem;
+}
+.s_Mentor_des .tit2 {
+  font-size: 1.8rem;
+  padding: 3rem 0 0.5rem;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_Mentor_des > .s_btn {
+  margin-top: 10%;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_Mentor_des.active .tit {
+  transition: all 1s 0.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_Mentor_des.active .tit2 {
+  transition: all 1s 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_Mentor_des.active .name {
+  transition: all 1s 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_Mentor_des.active > .s_btn {
+  transition: all 1s 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 편지 시작 ********************************************** *********************************************/
+
+.s_letter > .inner {
+  background-color: var(--bg-color);
+  display: flex;
+}
+.s_letter_box {
+  flex-basis: 50%;
+}
+.s_letter_box > .s_btn {
+  margin: 8% auto 0;
+}
+.s_letter_left {
+  background-color: var(--side-color);
+}
+.s_letter_left img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  padding: 2% 2% 0 2%;
+}
+.s_letter_right {
+  margin: auto;
+  font-family: var(--main-ko-font);
+}
+.s_letter_right .tit2 {
+  font-size: 1.8rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_letter_right .tit {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5%;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_letter_right .s_btn {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.s_letter_right.active .tit2 {
+  transition: all 1s 0.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_letter_right.active .tit {
+  transition: all 1s 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.s_letter_right.active .s_btn {
+  transition: all 1s 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 인스타그램 시작 ********************************************** *********************************************/
+.s_instagram {
+  width: 100%;
+  padding-bottom: 100px;
+}
+.s_instagram_img_wrap {
+  padding: 3rem 0;
+  display: flex;
+  gap: 1%;
+}
+.s_instagram a img {
+  width: 100%;
+  height: 100%;
+}
+.s_instagram .s_btn {
+  margin: 30px auto;
+}
