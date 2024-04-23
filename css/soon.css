@@ -1,49 +1,146 @@
 @charset "utf-8";
 @import "style.css";
-@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
 
 /* 비주얼 시작 ********************************************** *********************************************/
-.s_vistual {
+
+/*  For you ********************************************** *********************************************/
+/* for you 스와이퍼 시작 */
+.sw-s_foryou {
   position: relative;
-}
-.s_vistual > .sw-vistual {
   width: 100%;
   height: 100%;
+  background-color: lightblue;
 }
-.s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide {
+.sw-s_foryou > .swiper-slide {
   text-align: center;
-  font-size: 2rem;
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.s_vistual > .sw-vistual > .swiper-wrapper > .swiper-slide img {
+/*  스와이퍼 추가 */
+.sw-s_foryou_des {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10%;
+}
+.sw-s_foryou_des_tit {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.sw-s_foryou_des_txt {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.sw-s_foryou_des_mon {
+  font-size: 1.5rem;
+}
+.sw-s_foryou_img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: pink;
+}
+.sw-s_foryou_img > img {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border-radius: 10px;
+  padding: 0 10%;
 }
-/* 페이지 네이션 */
-.swiper-scrollbar {
-  width: 50%;
+/* ARROWS */
+.sw-s_foryou > .swiper-button-prev,
+.sw-s_foryou > .swiper-button-next {
+  color: var(--main-color);
 }
-/*  메인 >> 브랜드 소개  시작 ********************************************** *********************************************/
-.s_brandAbout > .inner img {
-  width: 100%;
-  height: 100%;
-  margin-top: 50px;
-}
+
 /* 프로그램 시작 ********************************************** *********************************************/
 .s_program {
-  position: relative;
   padding-bottom: 3rem;
 }
 .s_program .s_btn {
   margin: 20px auto;
+}
+/* 프로그램 스와이퍼 시작 */
+.s_program > .bk-slider {
+  position: relative;
+  width: 50vw;
+  height: auto;
+  padding: 100px 0;
+  margin: 0 auto;
+  /* background-color: lightblue; */
+}
+.sw-s_program {
+  width: 100%;
+  height: 300px;
+  overflow: visible;
+  background-color: lightgoldenrodyellow;
+}
+.swiper-wrapper {
+}
+.s_program .swiper-slide.swiper-slide {
+  /* 활성화된 슬라이드에 대한 스타일 */
+  filter: brightness(50%);
+}
+.s_program .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  transition: all 0.3s ease;
+  color: black;
+
+  &.swiper-slide-active {
+    color: #fff;
+    /* background: linear-gradient(45deg, rgb(246, 146, 89), rgb(241, 105, 117)); */
+    transform: scale(1.4);
+    z-index: 2;
+    filter: brightness(100%);
+  }
+}
+
+/* 프로그램 스와이퍼 추가 */
+.s_program_box {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  /* background-color: pink; */
+}
+.s_program_box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.s_program_des {
+  width: 100%;
+  text-align: left;
+  padding: 30px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  border-radius: 10px;
+  color: white;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.s_program_tit {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.s_program_txt {
+  font-size: 1.3rem;
+  line-height: 2;
 }
 /* 이달의 영상 시작 ********************************************** *********************************************/
 .s_Mentor {
@@ -102,7 +199,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* 리뷰 시작 ********************************************** **********************************************/
 
