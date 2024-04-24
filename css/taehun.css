@@ -44,49 +44,35 @@ html {
   max-width: 1200px;
   min-width: 280px;
   width: 90vw;
-  height: 470px;
+  height: 800px;
   margin: 30px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+
 }
 .t_in-header {
   min-width: 280px;
   width: 95%;
-  height: 100px;
+  height: 300px;
   /* background-color: aqua; */
   margin: 0 auto;
   text-align: center;
 
   border-bottom: 1px solid #d9d9d9;
 }
-.t_in-header h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.t_in-header-notice {
-  font-size: 18px;
-}
+.t_in-contents{
 
+}
 .t_in-bottom {
   width: 95%;
-  height: 50px;
+  height: 150px;
+margin: 0 auto;
 }
-.t_in-button {
+.t_in-bottom .s_btn{
+  background-color: #fff;
   position: absolute;
-  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 130px;
-  height: 34px;
-  background-color: #ffbe98;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 700;
-  cursor: pointer;
 }
 .t_in-main-info {
   width: 95%;
@@ -110,7 +96,7 @@ html {
 
   cursor: pointer;
 }
-.t_in-main-info li:nth-child(1){
+.t_in-main-info li:nth-child(1) {
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -132,40 +118,31 @@ html {
 /* 인스타 */
 .t_instagram {
   width: 100%;
-  height: 250px;
+  max-width: 1200px;
+  height: 630px;
+  /* min-height: 700px; */
   text-align: center;
+  margin: 0 auto;
 }
-.t_insta-title{
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.t_instagram > .inner {
+.t_instagram .title{
+
 }
 .t_insta-img-wrap {
-  padding: 3rem 0;
   display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  max-width: 1200px;
 }
 
-.t_instagram a img {
-  width: 100%;
-  height: 100%;
+.t_instagram img {
+width: 180px;
+height: 180px;
+  margin: 10px auto;
 }
-.t_insta-btn{
-  margin-top: 20px;
+.t_instagram .s_btn{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 130px;
-  height: 34px;
-  background-color: #ffbe98;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 34px;
-  cursor: pointer;
 }
 
 /* 인스타 */
@@ -534,7 +511,6 @@ p {
 }
 .t_pl-contents-info li:nth-child(3) {
   width: 400px;
- 
 }
 .t_pl-main-info {
   width: 95%;
@@ -561,7 +537,7 @@ p {
   font-weight: 600;
   cursor: pointer;
 }
-.t_pl-main-info li:nth-child(2){
+.t_pl-main-info li:nth-child(2) {
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -593,22 +569,57 @@ p {
   color: #ffbe98;
 }
 /* 커뮤니티 */
+@media screen and (max-width: 1200px){
+  .t_instagram img {
+   
+      width: 15vw;
+      height: 15vw;
+      min-width: 130px;
+      min-height: 130px;
+  
+    }
+} 
 @media screen and (max-width: 768px) {
-  .t_insta-img-wrap{
+.t_instagram{
+  height: 850px;
+}
+  .t_insta-img-wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
+  }
+  .t_insta-img-wrap img {
+    width: 200px;
+    height: 200px;
   }
 }
 @media screen and (max-width: 630px) {
   .t_in-main-info li:nth-child(3) {
     display: none;
   }
-  .t_pl-main-info li:nth-child(1), .t_pl-main-info li:nth-child(4) {
+  .t_pl-main-info li:nth-child(1),
+  .t_pl-main-info li:nth-child(4) {
     display: none;
   }
-  .t_pl-contents-info li:nth-child(1), .t_pl-contents-info li:nth-child(4) {
+  .t_pl-contents-info li:nth-child(1),
+  .t_pl-contents-info li:nth-child(4) {
     display: none;
   }
+}
+@media screen and (max-width: 600px){
+  .t_insta-img-wrap a:nth-child(n+5) {
+    display: none;
+}
+}
+@media screen and (max-width: 400px){
+  .t_instagram{
+    height: 730px;
+  }
+  .t_insta-img-wrap img {
+    width: 300px;
+    height: 300px;
+  }
+  .t_insta-img-wrap a:nth-child(n+2) {
+    display: none;
+}
 }
