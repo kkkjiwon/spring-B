@@ -1,5 +1,6 @@
 window.onload = function () {
-  
+  // aos 적용
+  AOS.init();
   // 상단 스크롤 기능
   const header = document.querySelector(".header");
   const mbt = document.querySelector(".mbt");
@@ -25,55 +26,7 @@ window.onload = function () {
     navMb.classList.remove("active");
     overlay.classList.remove("active");
   });
-  // s_visual
-  var swiper = new Swiper(".sw-vistual", {
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: true,
-    },
-  });
-  // s_program
-  var swiper = new Swiper(".sw-program", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    breakpoints: {
-      1400: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10,
-      },
-      500: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-    },
-  });
-
-  // 글자 모션
-  var observer = new IntersectionObserver(
-    function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        } else {
-          entry.target.classList.remove("active");
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  var mentorSection = document.querySelector(".s_Mentor_des");
-  observer.observe(mentorSection);
-
-  var letterSection = document.querySelector(".s_letter_right");
-  observer.observe(letterSection);
-};
-
-
+}
 $(document).ready(function () {
   $(".main-menu").mouseenter(function () {
     $(".sub-menu li , .navbt").stop().slideDown();

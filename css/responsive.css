@@ -14,12 +14,22 @@
 
 }
 @media screen and (max-width: 1000px) {
-  /* s_mentor */
-  .s_Mentor_area {
-   gap:1%
+  /* foryou/ */
+  .sw-s_foryou_des {
+    margin: 2rem;
+    height: auto;
   }
-  .s_Mentor .inner {
-    padding: 10% 5%;
+  .sw-s_foryou_des_tit{
+  font-size: 2rem;
+  }
+  .sw-s_foryou_des_txt {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   }
 @media screen and (max-width: 900px) {
@@ -30,6 +40,8 @@
     align-items: center;
   }
 }
+
+
 @media screen and (max-width: 768px) {
   /* 전체 */
   html {
@@ -55,6 +67,7 @@
     flex-direction: column;
   }
   .nav-mb-gnb {
+    display: block;
     align-items: flex-start;
     position: absolute;
     left: 50%;
@@ -86,44 +99,35 @@
 .navigation>li>a:hover::before {
   width: 100%;
 }
-  /* 멘토 */
-  .s_Mentor_area {
-    flex-direction: column-reverse;
-    gap: 50px;
+/*  배경 */
+.overlay {
+  display: block;
 }
-.s_Mentor_area_left{
-  text-align: center;
 }
-.s_Mentor_des > .s_btn {
-  margin: 50px auto;
-  /* text-align: center; */
-}
-  /* 프로그램 */
-  .s_program > .sw-program {
-    min-width: 250px;
+@media screen and (max-width: 700px) {
+  /* for you */
+  .sw-s_foryou_img{
+    width: 100%;
   }
-  .s_program_des {
-    padding: 2.5rem 2rem;
+.sw-s_foryou_des {
+    width: 100%;
   }
-  .s_program_tit {
-    font-size: 2rem;
+  .sw-s_foryou_des_txt{
+    margin: 2rem 0;
   }
-  /* s_letter */
-  .s_letter_right .tit {
-    font-size: 2.3rem;
-    font-weight: bold;
-    line-height: 1.3;
-  }
-  }
-@media screen and (max-width: 600px) {
-  /* s_letter */
-  .s_letter > .inner {
+  .sw-s_foryou_box{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
   }
-  .s_letter_right{
-    padding: 10%;
+  .sw-s_foryou_des{
+    margin: 1.8rem;
+    padding-left:0;
   }
-  .s_letter_right .tit{
-    padding-top: 10%;
-  }
+  /* ARROWS */
+.sw-s_foryou > .swiper-button-prev,
+.sw-s_foryou > .swiper-button-next {
+  display: none;
+}
 }
