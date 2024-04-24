@@ -67,7 +67,7 @@
     flex-direction: column;
   }
   .nav-mb-gnb {
-    display: block;
+    display: flex;
     align-items: flex-start;
     position: absolute;
     left: 50%;
@@ -129,5 +129,11 @@
 .sw-s_foryou > .swiper-button-prev,
 .sw-s_foryou > .swiper-button-next {
   display: none;
+}
+.sw-s_foryou_pg{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 }
