@@ -35,16 +35,18 @@
     <link rel="stylesheet" href="css/responsive.css" />
 
     <!-- html -->
-
     <!-- Js 연동 -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
+    <!-- aos적용 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 스와이퍼 JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+
   </head>
   <body>
     <!-- 전체 레이아웃 -->
@@ -68,7 +70,7 @@
             <ul class="navigation">
               <li><a href="#" title="">Home</a></li>
               <li><a href="#" title="">About</a></li>
-              <li><a href="#" title="">Program</a></li>
+              <li><a href="program.html" title="">Program</a></li>
               <li>
                 <a href="#" title="">
                   Play <svg
@@ -124,29 +126,56 @@
           </div>
         </div>
                 <!-- 오버레이 -->
-                <div class="overlay"></div>
+        <div class="overlay"></div>
       </header>
       <!-- 비주얼 -->
       <section class="s_vistual">
         <div class="inner">
           <div class="s_vistual_left">
             <div class="s_vistual_left_img"><img src="images/soon/ch1-bgx.png" alt="고민하는로고"></div>
-            <div class="s_vistual_left_txt1" data-aos="slide-up" data-aos-duration="3000">하고싶은게없어</div>
-            <div class="s_vistual_left_txt2"data-aos="slide-up" data-aos-duration="2000">요즘 계속 무기력해</div>
-            <div class="s_vistual_left_txt3" data-aos="slide-up" data-aos-duration="1000">밖에선 괜찮은데 집에 오면 공허해</div>
+            <div class="s_vistual_left_txt1" data-aos="slide-up" data-aos-duration="1000">
+              <img src="images/soon/speech1.png" alt="말풍선1">
+            </div>
+            <div class="s_vistual_left_txt2"data-aos="slide-up" data-aos-duration="2000">
+              <img src="images/soon/speech2.png" alt="말풍선1">
+            </div>
+            <div class="s_vistual_left_txt3" data-aos="slide-up" data-aos-duration="3000">
+              <img src="images/soon/speech3.png" alt="말풍선3">
+            </div>
           </div>
         <div class="s_vistual_right">
-          <div class="s_vistual_right_tit" data-aos="slide-up" data-aos-duration="1000">나 혼자만 힘든 것 같을 때<br>
-            우리가 알려줄게요<br>
-            함께해요
+          <div class="s_vistual_right_tit" data-aos="slide-up" data-aos-duration="1000">
+            <p class="txt1">나 혼자만 힘든 것 같을 때</p><br>
+            <p class="txt2">우리가 도와줄게요</p>
           </div>
         </div>
         </div>
+        <div class="s_vistual_roundBg" alt="둥근바탕"> </div>
       </section>
       <!-- 메인 >> 브랜드 소개 -->
       <section class="s_brandAbout">
+        
+        <div class="s_brandAbout_logodes">
         <div class="inner">
+          <div class="s_brandAbout_left">
+            <div class="s_brandAbout_left_tit">see + spring</div>
+            <div class="s_brandAbout_left_txt">내 마음을 봄 + 마음의 온도는 봄</div>
+          </div>
+          <div class="s_brandAbout_right">
+            <img src="images/soon/logo300.png" alt="logo">
+          </div>
         </div>
+        <div class="s_brandAbout_roundBg" alt="둥근바탕"></div>
+        </div>
+        <div class="s_brandAbout_ch3">
+          <div class="inner">
+            <div class="s_brandAbout_ch3_img">
+              <img src="images/soon/ch3500.png" alt="캐릭터3인방">
+            </div>
+            <div class="s_brandAbout_ch3_tit">내면의 변화를 일으키는 힐링 플랫폼</div>
+          </div>
+        </div>
+
       </section>
       <section class="s_foryou">
         <div class="title">Foryou
@@ -194,6 +223,7 @@
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination sw-s_foryou_pg"></div>
       </div>
       </section>
       <script>
@@ -204,6 +234,10 @@ var swiper = new Swiper(".sw-s_foryou", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+        el: ".sw-s_foryou_pg",
+        dynamicBullets: true,
+      },
   autoplay: {
     delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
     disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
@@ -222,7 +256,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/draw15min400.jpg" alt="draw15min" />
+                              <img src="images/soon/400min.jpg" alt="draw15min" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">낙서하듯 그리기</div>
@@ -233,7 +267,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/music400.jpg" alt="music" />
+                              <img src="images/soon/400music.jpg" alt="music" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">나만의 플레이리스트</div>
@@ -244,7 +278,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/myeongsang400.jpg" alt="myeongsang" />
+                              <img src="images/soon/400myeongsang.jpg" alt="myeongsang" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">하루 10분 명상하기</div>
@@ -255,7 +289,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/cheer400.jpg" alt="cheer" />
+                              <img src="images/soon/400cheer.jpg" alt="cheer" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">긍정카드 필사&감사일기</div>
@@ -266,7 +300,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/plants400.jpg" alt="plants" />
+                              <img src="images/soon/400plants.jpg" alt="plants" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">식물 산책&감사일기</div>
@@ -277,7 +311,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/positive400.jpg" alt="positive" />
+                              <img src="images/soon/400positive.jpg" alt="positive" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">오늘의 긍정적인 순간 수집</div>
@@ -288,7 +322,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/food400.jpg" alt="food" />
+                              <img src="images/soon/400food.jpg" alt="food" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">제철 음식으로 나 돌보기</div>
@@ -297,9 +331,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                           </a>
                         </div>
                       </div>
-                      <!-- Add Arrows -->
-                      <!-- <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div> -->
+
                     </div>
         </div>
       <div class="s_btn s_btn--reverse:hover">more view</div>
@@ -319,24 +351,81 @@ var swiper = new Swiper(".sw-s_foryou", {
       <!-- 이달의 영상 -->
       <section class="mentor">
         <div class="inner">
-          <div class="mentor-txt">
-            <div class="mentor-txt-1" data-aos="fade-up" data-aos-duration="1000" >" 뭘 해도</div>
-            <div class="mentor-txt-2" data-aos="fade-up" data-aos-duration="1250">행복한 사람과</div>
-            <div class="mentor-txt-3" data-aos="fade-up" data-aos-duration="1500" >불만인 사람의 말버릇 "</div>
+          <div class="mentor-left mentor-box">
+            <div class="mentor-top">
+              <span>● LIVE</span>
+              <p>5월  ㅣ  이달의 강연</p>
+            </div>
+            <div class="mentor-md">
+              <div class="mentor-txt-1" data-aos="fade-up" data-aos-duration="1000" >" 뭘 해도</div>
+              <div class="mentor-txt-2" data-aos="fade-up" data-aos-duration="1250">행복한 사람과</div>
+              <div class="mentor-txt-3" data-aos="fade-up" data-aos-duration="1500" >불만인 사람의 말버릇 "</div>
+            </div>
+            <div class="mentor-bt"><p>2024.05.15 WED  ㅣ  20:00 - 21:30</p></div>
+        </div>
+          <div class="mentor-right mentor-box">
+            <img src="images/jiwon/mentor.jpg" alt="멘토사진">
           </div>
+          
         </div>
       </section>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-      <script>
-      // AOS 초기화
-      AOS.init();
-      </script>
       <!-- 리뷰 -->
       <section class="review">
         <div class="title">Review
           <div class="title2">한 달만 해도 변화하는 프로그램 후기</div>
-          
+          <div class="rv-wrap">
+            <a href="program-2.html">
+            <div class="rv-box-1 rv-box">
+              <span>낙서하듯 그리기</span>
+              <div class="rv-tit">매일매일이 기대되요</div>
+              <hr>
+              <div class="rv-body">
+                오늘의 드로잉을 올리면 다들 어떤 댓글을 달아주실까 기대하는 재미도 아주 쏠쏠했어요. 우리만의 광장 같았습니다. 부담스럽지 않게 조금씩 매일 그림 그리는 습관을 길러보고싶은 분들께 추천합니다.
+              </div>
+            </div></a>
+            <a href="program-2.html">
+            <div class="rv-box-2 rv-box">
+              <span>나만의 플레이리스트 만들기</span>
+              <div class="rv-tit">덕분에 용기가 생겼어요</div>
+              <hr>
+              <div class="rv-body">
+                회사에서는 당연히 말하기 어렵고 친구에게도 대뜸 말하기 어려운 감정이나 생각.. 그냥 지나가면 잊혀지는 그런 것들을 한번 더 곱씹어 볼 수 있어서 좋았어요! 모두들 솔직하게 일상과 마음을 나눠주셔서 더 용기가 났던 것 같아요ㅎㅎ
+              </div>
+            </div></a>
+            <a href="program-2.html">
+            <div class="rv-box-3 rv-box">
+              <span>하루 10분 명상하기</span>
+              <div class="rv-tit">고민은 신청을 늦출 뿐</div>
+              <hr>
+              <div class="rv-body">
+                혼자 하기 어려운 뭔가를 함께 하니 훨씬 이어가기가 수월했고, 꾸준함과 열정이 생겨 3주가 시간이 정말 빨리 흘러간 거 같아요^^ 할까말까를 고민하고 계신 분이라면, 한 번 도전해보세요! 추천합니다!!
+              </div>
+            </div></a>
+            <a href="program-2.html">
+            <div class="rv-box-4 rv-box">
+              <span>제철 음식으로 나 돌보기</span>
+              <div class="rv-tit">즐겁고 맛있는 시간</div>
+              <hr>
+              <div class="rv-body">
+                다양한 봄나물에 대해 배울 수 있었고 처음으로 냉이파스타를 만들게 되었는데 즐겁고 맛있는 시간이었습니다. 다양한 요리 정보에 이어 다른 분들의 요리를 보는 즐거움도 있는 시간이었어요.</div>
+            </div></a>
+            <a href="program-2.html">
+            <div class="rv-box-5 rv-box">
+              <span>식물산책&감사일기</span>
+              <div class="rv-tit">이젠 식물만 보여요</div>
+              <hr>
+              <div class="rv-body">
+                덕분에 가을을 무사히 보냈어요. 갖고 있는 불안을 작게 하는 방법은 내가 좋아하는 것을 하거나 관심있는 것을 찾아 집중하는 것이라는 것도 알게 되었어요. 길가에서 자주 보던 국화가 신이 보내주는 응원의 메시지라도 생각되어 기운이 나요^^</div>
+            </div></a>
+            <a href="program-2.html">
+            <div class="rv-box-6 rv-box">
+              <span>나를 향한 응원 일지 쓰기</span>
+              <div class="rv-tit">나와 마주볼 수있는 시간</div>
+              <hr>
+              <div class="rv-body">
+                응원이 필요했는데 응원일지를 쓰면서 '해야만해'의 마음이 '하고싶어'로 바뀌었어요. 하루를 기록하며 놓쳤던 순간들을 다시 돌아보면서 '괜찮아. 좋아.'라고 응원하게 되었습니다. 특히 이번달을 '보물찾기의 달'으로 이름지으면서 더 특별해졌어요.</div>
+            </div></a>
+          </div>
       </section>
    <!-- 커뮤니티 -->
    <div class="t_in-notice-wrap">
