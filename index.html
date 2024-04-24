@@ -124,29 +124,56 @@
           </div>
         </div>
                 <!-- 오버레이 -->
-                <div class="overlay"></div>
+        <div class="overlay"></div>
       </header>
       <!-- 비주얼 -->
       <section class="s_vistual">
         <div class="inner">
           <div class="s_vistual_left">
             <div class="s_vistual_left_img"><img src="images/soon/ch1-bgx.png" alt="고민하는로고"></div>
-            <div class="s_vistual_left_txt1" data-aos="slide-up" data-aos-duration="3000">하고싶은게없어</div>
-            <div class="s_vistual_left_txt2"data-aos="slide-up" data-aos-duration="2000">요즘 계속 무기력해</div>
-            <div class="s_vistual_left_txt3" data-aos="slide-up" data-aos-duration="1000">밖에선 괜찮은데 집에 오면 공허해</div>
+            <div class="s_vistual_left_txt1" data-aos="slide-up" data-aos-duration="1000">
+              <img src="images/soon/speech1.png" alt="말풍선1">
+            </div>
+            <div class="s_vistual_left_txt2"data-aos="slide-up" data-aos-duration="2000">
+              <img src="images/soon/speech2.png" alt="말풍선1">
+            </div>
+            <div class="s_vistual_left_txt3" data-aos="slide-up" data-aos-duration="3000">
+              <img src="images/soon/speech3.png" alt="말풍선3">
+            </div>
           </div>
         <div class="s_vistual_right">
-          <div class="s_vistual_right_tit" data-aos="slide-up" data-aos-duration="1000">나 혼자만 힘든 것 같을 때<br>
-            우리가 알려줄게요<br>
-            함께해요
+          <div class="s_vistual_right_tit" data-aos="slide-up" data-aos-duration="1000">
+            <p class="txt1">나 혼자만 힘든 것 같을 때</p><br>
+            <p class="txt2">우리가 도와줄게요</p>
           </div>
         </div>
         </div>
+        <div class="s_vistual_roundBg" alt="둥근바탕"> </div>
       </section>
       <!-- 메인 >> 브랜드 소개 -->
       <section class="s_brandAbout">
+        
+        <div class="s_brandAbout_logodes">
         <div class="inner">
+          <div class="s_brandAbout_left">
+            <div class="s_brandAbout_left_tit">see + spring</div>
+            <div class="s_brandAbout_left_txt">내 마음을 봄 + 마음의 온도는 봄</div>
+          </div>
+          <div class="s_brandAbout_right">
+            <img src="images/soon/logo300.png" alt="logo">
+          </div>
         </div>
+        <div class="s_brandAbout_roundBg" alt="둥근바탕"></div>
+        </div>
+        <div class="s_brandAbout_ch3">
+          <div class="inner">
+            <div class="s_brandAbout_ch3_img">
+              <img src="images/soon/ch3500.png" alt="캐릭터3인방">
+            </div>
+            <div class="s_brandAbout_ch3_tit">내면의 변화를 일으키는 힐링 플랫폼</div>
+          </div>
+        </div>
+
       </section>
       <section class="s_foryou">
         <div class="title">Foryou
@@ -194,6 +221,7 @@
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination sw-s_foryou_pg"></div>
       </div>
       </section>
       <script>
@@ -204,6 +232,10 @@ var swiper = new Swiper(".sw-s_foryou", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+        el: ".sw-s_foryou_pg",
+        dynamicBullets: true,
+      },
   autoplay: {
     delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
     disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
@@ -222,7 +254,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/draw15min400.jpg" alt="draw15min" />
+                              <img src="images/soon/400min.jpg" alt="draw15min" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">낙서하듯 그리기</div>
@@ -233,7 +265,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/music400.jpg" alt="music" />
+                              <img src="images/soon/400music.jpg" alt="music" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">나만의 플레이리스트</div>
@@ -244,7 +276,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/myeongsang400.jpg" alt="myeongsang" />
+                              <img src="images/soon/400myeongsang.jpg" alt="myeongsang" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">하루 10분 명상하기</div>
@@ -255,7 +287,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/cheer400.jpg" alt="cheer" />
+                              <img src="images/soon/400cheer.jpg" alt="cheer" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">긍정카드 필사&감사일기</div>
@@ -266,7 +298,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/plants400.jpg" alt="plants" />
+                              <img src="images/soon/400plants.jpg" alt="plants" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">식물 산책&감사일기</div>
@@ -277,7 +309,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/positive400.jpg" alt="positive" />
+                              <img src="images/soon/400positive.jpg" alt="positive" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">오늘의 긍정적인 순간 수집</div>
@@ -288,7 +320,7 @@ var swiper = new Swiper(".sw-s_foryou", {
                         <div class="swiper-slide">
                           <a href="#" class="s_program_box">
             
-                              <img src="images/program/food400.jpg" alt="food" />
+                              <img src="images/soon/400food.jpg" alt="food" />
             
                             <div class="s_program_des">
                               <div class="s_program_tit">제철 음식으로 나 돌보기</div>
