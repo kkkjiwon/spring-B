@@ -7,8 +7,8 @@
 @import "font/SCDream5.otf";
 @import "font/SCDream8.otf";
 @font-face {
-  font-family: 'Ownglyph_Dailyokja-Rg';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Dailyokja-Rg.woff2') format('woff2');
+  font-family: "Ownglyph_Dailyokja-Rg";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Dailyokja-Rg.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -29,41 +29,146 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* 메인 ==== 이달의 강연 */
-.mentor{
+/* 메인 === 이달의 강연 ======================= */
+.mentor {
+  font-family: "S-CoreDream-3Light";
   margin-top: 150px;
-  width: 100%;
-  height: 495px;
 }
-.mentor > .inner{
+.mentor > .inner {
   cursor: pointer;
   width: 100%;
   height: 100%;
-  background: url("../images/jiwon/mentor.jpg")no-repeat center;
-  background-size: contain;
   position: relative;
-  /* display: flex;
-  align-items: center; */
+  display: flex;
 }
-.mentor-txt{
-  font-family: 'Ownglyph_Dailyokja-Rg';
-  color: #fff;
+.mentor-box {
+  flex-basis: 50%;
+}
+.mentor-box img {
+  width: 100%;
   height: 100%;
-  /* font-size: 3.2vw; */
-  font-size: 60px;
-  line-height: 1.5;
-  /* padding-left: 55px;
-  padding-top: 120px; */
-  position: absolute;
-  top: 72%;
-  left: 22%;
-  transform: translate(-50%, -50%);
-  /* display: flex; */
 }
+.mentor-left {
+  background-color: #ffbc6c;
+  text-align: left;
+  position: relative;
+}
+.mentor-top {
+  display: flex;
+  align-items: center;
+  /* padding: 1vw; */
+  width: 100%;
+  min-width: 150px;
+  gap: 5%;
+  position: absolute;
+  left: 1.5vw;
+  top: 1.5vw;
+}
+.mentor-top span {
+  width: 90px;
+  line-height: 1.6;
+  background-color: #fff;
+  border-radius: 80px;
+  color: #ffbc6c;
+  text-align: center;
+  letter-spacing: 0.1vw;
+  font-size: 18px;
+  font-weight: bold;
+}
+.mentor-top p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.mentor-md {
+  font-family: "Ownglyph_Dailyokja-Rg";
+  color: #fff;
+  font-size: 73px;
+  line-height: 1.2;
+  width: 100%;
+  min-width: 500px;
+  padding-left: 2.5vw;
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  top: 50%; /* 요소의 상단을 부모 요소의 세로 중앙에 위치시킵니다. */
+  transform: translateY(-50%); /* 요소를 세로 방향으로 위로 이동시켜 중앙에 맞춥니다. */
+}
+.mentor-bt {
+  position: absolute;
+  left: 1.5vw;
+  bottom: 1.5vw;
+  width: 100%;
+  min-width: 150px;
+}
+.mentor-bt p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  /* padding: 1vw; */
+}
+/* 8888888888888888888888888888888888888888888888888888 */
 
+/* 메인 === 리뷰 =========================== */
+.review {
+  margin-top: 150px;
+  width: 100%;
+  background-color: #fff2f2;
+}
+.rv-wrap {
+  font-family: "S-CoreDream-3Light";
+  width: 90%;
+  margin: 0 auto;
+  gap: 2vw;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+.rv-box {
+  /* width: calc(100% / 5); */
+  /* min-width: 200px; */
+  max-width: 500px;
+  height: 300px;
+  min-height: 250px;
+  background-color: #ffffffb2;
+  text-align: left;
+  /* padding: 1vw; */
+  padding: 10%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.rv-box:hover {
+  scale: 1.05;
+  transition: all 0.4s;
+  background-color: #ffffff;
+}
+.rv-box span {
+  font-size: calc(0.1vw + 10px);
+  color: gray;
+}
+.rv-tit {
+  font-size: calc(0.3vw + 16px);
+  font-weight: bold;
+  margin: 10px 0;
+}
+.rv-box hr {
+  border: 1px solid #99999949;
+}
+.rv-body {
+  padding: 15px 0;
+  font-size: calc(0.2vw + 10px);
+  font-weight: bold;
+  line-height: 1.5;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+}
+/* 메인 전체 끝 8888888888888888888888888888888888888888 */
 
-
-
+/* 상세 페이지 =================================== */
 /* 프로그램 소개 ================= */
 .j_banner_wrap {
   padding-top: 100px;
@@ -114,7 +219,7 @@
   padding-top: 80px;
 }
 .j_left {
-  width: 400px;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -138,16 +243,17 @@
   margin: 10px 0;
   margin-left: 10px;
   line-height: 25px;
+  text-align: left;
 }
 .j_right {
-  width: 800px;
+  width: 65%;
   height: 100%;
   display: flex;
   gap: 20px;
 }
-.j_box {
-  width: 250px;
-  height: 250px;
+.j_right > a > .j_box {
+  max-width: 250px;
+  max-height: 250px;
   border-radius: 10px;
   border: 1px solid var(--font-color);
   overflow: hidden;
@@ -178,9 +284,9 @@
   font-family: "S-CoreDream-3Light";
   background-color: var(--bg-color);
 }
-.j_review > .inner{
-  width: 1200px;
-  height: 600px;
+.j_review > .inner {
+  /* width: 1200px;
+  height: 600px; */
   margin: 0 auto;
   padding-top: 70px;
 }
@@ -196,103 +302,96 @@
   background-color: var(--side-color);
   color: #fff;
 }
-  .fa-circle-plus{
-    font-size: 40px;
-    color: rgb(146, 146, 146);
-    cursor: pointer;
-  }
-.j_rv_bt{
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    
+.fa-circle-plus {
+  font-size: 40px;
+  color: rgb(146, 146, 146);
+  cursor: pointer;
 }
-.j_rv_box{
-    width: calc(100% / 4 - 20px);
-    height: 450px;
-    border-radius: 10px;
-    overflow: hidden;
+.j_rv_bt {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
-.j_rv_box_top{
-    width: 100%;
-    height: 280px;
+.j_rv_box {
+  width: calc(100% / 4 - 20px);
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
 }
-.j_rv_box_top img{
-    width: 100%;
-    height: 100%;
+.j_rv_box_top {
+  width: 100%;
+  height: 280px;
 }
-.j_rv_box_bt{
-    background-color: #fff;
-    width: 100%;
-    height: 170px;
-    padding: 20px;
-    
+.j_rv_box_top img {
+  width: 100%;
+  height: 100%;
 }
-.j_rv_box_bt h3{
-    font-size: 10px;
-    font-weight: bold;
-    padding-bottom: 15px;
-    color: var(--side-color);
+.j_rv_box_bt {
+  background-color: #fff;
+  width: 100%;
+  height: 170px;
+  padding: 20px;
 }
-.j_rv_box_bt p{
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1.4;
-    overflow: hidden; /* 넘치는 텍스트는 숨김 */
-    text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 표시 */
+.j_rv_box_bt h3 {
+  font-size: 10px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  color: var(--side-color);
 }
-/* 이달의 강의 배너 =================*/
-.j_banner > .inner > img{
-    width: 100%;
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+.j_rv_box_bt p {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: left;
+  overflow: hidden; /* 넘치는 텍스트는 숨김 */
+  text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 표시 */
 }
+/* 이달의 강연  =================*/
 
 /* =================상세페이지================== */
-.j_product{
+.j_product {
   font-family: "S-CoreDream-3Light";
   margin-top: 80px;
 }
-.j_product_wrap{
+.j_product_wrap {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   height: 400px;
 }
-.j_pd_left{
+.j_pd_left {
   width: 400px;
   height: 100%;
 }
-.j_pd_left img{
+.j_pd_left img {
   width: 100%;
   height: 100%;
 }
-.j_pd_right{
+.j_pd_right {
   width: 400px;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.j_pd_title{
+.j_pd_title {
   margin-bottom: 30px;
 }
-.j_cate{
+.j_cate {
   font-weight: bold;
   font-size: 16px;
   color: var(--side-color);
   margin-bottom: 30px;
 }
-.j_pd_title h2{
+.j_pd_title h2 {
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 12px;
 }
-.j_pd_title p{
+.j_pd_title p {
   font-size: 12px;
   letter-spacing: 1px;
 }
-.j_teacher_wrap{
+.j_teacher_wrap {
   width: 100%;
   height: 50px;
   display: flex;
@@ -300,54 +399,54 @@
   gap: 10px;
   margin-bottom: 30px;
 }
-.j_teacher_wrap img{
+.j_teacher_wrap img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
-.j_teacher_wrap p{
+.j_teacher_wrap p {
   font-size: 12px;
   font-weight: bold;
 }
-.j_schedule{
+.j_schedule {
   margin-bottom: 50px;
 }
-.j_date{
+.j_date {
   display: flex;
   margin-bottom: 15px;
 }
-.j_date .p1{
+.j_date .p1 {
   width: 50px;
   font-size: 14px;
   font-weight: bold;
   border-right: 2px solid #dadada;
   margin-right: 20px;
 }
-.j_date .p2{
+.j_date .p2 {
   font-size: 14px;
   font-weight: bold;
 }
-.j_bt_wrap{
+.j_bt_wrap {
   width: 100%;
   display: flex;
   /* justify-content: space-evenly; */
   gap: 30px;
 }
-.j_bt{
+.j_bt {
   height: 50px;
   border-radius: 10px;
   border: 3px solid var(--side-color);
   text-align: center;
 }
-.j_bt1{
+.j_bt1 {
   line-height: 56px;
   width: 50px;
 }
-.j_bt1 .fas{
+.j_bt1 .fas {
   font-size: 24px;
   color: var(--side-color);
 }
-.j_bt2{
+.j_bt2 {
   font-size: 16px;
   font-weight: bold;
   line-height: 44px;
