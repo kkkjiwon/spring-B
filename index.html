@@ -238,7 +238,6 @@
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-      <div class="swiper-scrollbar sw-s_foryou_pg"></div>
       </div>
       </section>
       <script>
@@ -249,16 +248,14 @@ var swiper = new Swiper(".sw-s_foryou", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: false,
-      }
-
-  // autoplay: {
-  //   delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
-  //   disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
-  // },
-  // 슬라이드가 끝나면 다시 처음으로 돌아갑니다.
+  autoplay: {
+    delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
+    disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
+    reverseDirection: false, // 슬라이드 방향 반대로
+    stopOnLastSlide: false, // 마지막 슬라이드에서 재생 중지
+    waitForTransition: true, // 다음 슬라이드로 넘어가기 전에 현재 슬라이드의 전환을 기다림
+    disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
+  },
 });
       </script>
             <!-- 프로그램 -->
@@ -358,7 +355,16 @@ var swiper = new Swiper(".sw-s_foryou", {
                 centeredSlides: true,
                 loop: true,
                 spaceBetween: 20,
-      
+                breakpoints : {
+                  1200: {
+                    slidesPerView: 4,
+                    spaceBetween:10,
+                  },
+                  400: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                  }
+                }
               });
             </script>
       <!-- 이달의 영상 -->
