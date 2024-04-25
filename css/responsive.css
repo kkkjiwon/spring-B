@@ -166,7 +166,7 @@
 .s_vistual_left {
   width: 90%;
 }
-/* 소개 */
+/* 브랜드 소개 */
 .s_brandAbout_logodes .inner {
   display: flex;
   flex-direction: column;
@@ -180,6 +180,7 @@
   gap: 1rem;
   flex-direction: column;
 }
+<<<<<<< HEAD
   /* 프로그램 스와이퍼 시작 */
   .sw-s_program{
     height: 200px;
@@ -187,6 +188,15 @@
   .s_program > .bk-slider {
     width: 100vw;
   }
+=======
+  /* 프로그램 */
+  .s_program > .bk-slider{
+    width: 100vw;
+  }
+  .s_program_tit{
+    font-size: 2rem;
+  }
+>>>>>>> db55d5ec6f4495de87d2cb50b098b3cdd4cf4f43
 }
 @media screen and (max-width: 700px) {
   /* for you */
@@ -257,6 +267,7 @@
 }
 
 @media screen and (max-width:500px) {
+  /* 브랜드 소개 */
   .s_brandAbout_ch3_img{
     max-width: 250px;
     width: 250px;
@@ -266,6 +277,7 @@
   }
 }
 @media screen and (max-width:400px) {
+  /* 브랜드 소개 */
   .s_brandAbout_left_tit {
     font-size: 3rem;
   }
