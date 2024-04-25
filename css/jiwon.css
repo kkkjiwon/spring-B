@@ -120,10 +120,10 @@
 .rv-wrap {
   font-family: "S-CoreDream-3Light";
   width: 90%;
-  margin: 0 auto;
+  margin: 50px auto;
   gap: 2vw;
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 .rv-box {
   /* width: calc(100% / 5); */
@@ -139,17 +139,12 @@
   border-radius: 20px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
 }
-.rv-box:hover {
-  scale: 1.05;
-  transition: all 0.4s;
-  background-color: #ffffff;
-}
 .rv-box span {
   font-size: calc(0.1vw + 10px);
   color: gray;
 }
 .rv-tit {
-  font-size: calc(0.3vw + 16px);
+  font-size: calc(0.3vw + 12px);
   font-weight: bold;
   margin: 10px 0;
 }
@@ -157,14 +152,31 @@
   border: 1px solid #99999949;
 }
 .rv-body {
+  height: 70%;
+  max-height: 220px;
   padding: 15px 0;
   font-size: calc(0.2vw + 10px);
   font-weight: bold;
   line-height: 1.5;
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow-y: auto;
+  scrollbar-width: thin; /* 스크롤 바 너비 설정 */
+  scrollbar-color: transparent transparent; /* 화살표 색상 설정 */
+  scrollbar-color: #888 #f1f1f1;
   color: #555;
+}
+.rv-body::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+.rv-body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+.rv-body::-webkit-scrollbar-button {
+  display: none;
+}
+/* 코너에 라운드 효과 */
+.rv-body::-webkit-scrollbar-track,
+.rv-body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
 }
 /* 메인 전체 끝 8888888888888888888888888888888888888888 */
 
