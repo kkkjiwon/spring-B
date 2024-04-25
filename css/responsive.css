@@ -151,7 +151,7 @@
 .s_vistual_left {
   width: 90%;
 }
-/* 소개 */
+/* 브랜드 소개 */
 .s_brandAbout_logodes .inner {
   display: flex;
   flex-direction: column;
@@ -165,6 +165,13 @@
   gap: 1rem;
   flex-direction: column;
 }
+  /* 프로그램 */
+  .s_program > .bk-slider{
+    width: 100vw;
+  }
+  .s_program_tit{
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 700px) {
   /* for you */
@@ -234,6 +241,7 @@
   }
 }
 @media screen and (max-width:500px) {
+  /* 브랜드 소개 */
   .s_brandAbout_ch3_img{
     max-width: 250px;
     width: 250px;
@@ -243,6 +251,7 @@
   }
 }
 @media screen and (max-width:400px) {
+  /* 브랜드 소개 */
   .s_brandAbout_left_tit {
     font-size: 3rem;
   }

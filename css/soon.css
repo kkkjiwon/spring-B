@@ -117,7 +117,7 @@
   color: white;
   letter-spacing: 0.25rem;
 }
-/*  브랜드 소개 ********************************************** *********************************************/
+/*  브랜드 브랜드 소개 ********************************************** *********************************************/
 .s_brandAbout {
   position: relative;
 }
@@ -129,7 +129,7 @@
   position: relative;
 }
 
-/* 브랜드 소개 둥근 이미지 */
+/* 브랜드 브랜드 소개 둥근 이미지 */
 /*  */
 .s_brandAbout_roundBg {
   position: absolute;
@@ -177,7 +177,7 @@
   width: 100%;
   height: 100%;
 }
-/* 소개 하단 */
+/* 브랜드 소개 하단 */
 .s_brandAbout_ch3 {
   font-family: var(--sub-ko-font);
   width: 100%;
@@ -207,7 +207,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: pink;
 }
 .sw-s_foryou_pg {
   display: none;
@@ -364,7 +363,7 @@
 .s_program_tit {
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .s_program_txt {
   font-size: 1.8rem;
