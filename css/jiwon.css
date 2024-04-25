@@ -86,7 +86,7 @@
   font-size: 73px;
   line-height: 1.2;
   width: 100%;
-  min-width: 500px;
+  /* min-width: 500px; */
   padding-left: 2.5vw;
   position: absolute;
   /* top: 50%;
