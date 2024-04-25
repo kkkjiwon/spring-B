@@ -86,14 +86,14 @@
   font-size: 73px;
   line-height: 1.2;
   width: 100%;
-  min-width: 500px;
+  /* min-width: 500px; */
   padding-left: 2.5vw;
   position: absolute;
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  top: 50%; /* 요소의 상단을 부모 요소의 세로 중앙에 위치시킵니다. */
-  transform: translateY(-50%); /* 요소를 세로 방향으로 위로 이동시켜 중앙에 맞춥니다. */
+  top: 50%; 
+  transform: translateY(-50%);
 }
 .mentor-bt {
   position: absolute;
@@ -200,7 +200,7 @@
   font-family: "S-CoreDream-3Light";
   font-size: 16px;
   font-weight: bold;
-  line-height: 28px;
+  line-height: 1.6;
 }
 .j_banner p:nth-child(2) {
   margin-bottom: 20px;
@@ -216,10 +216,11 @@
   width: 100%;
   height: 400px;
   display: flex;
-  padding-top: 80px;
+  padding: 80px 20px;
+  
 }
 .j_left {
-  width: 30%;
+  width: 400px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -236,27 +237,28 @@
   /* border: 2px solid var(--side-color); */
   border-radius: 10px;
   margin-bottom: 40px;
+  box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.2);
 }
 .j_left > p {
+  text-align: left;
   font-size: 14px;
   font-weight: bold;
   margin: 10px 0;
-  margin-left: 10px;
   line-height: 25px;
-  text-align: left;
 }
 .j_right {
-  width: 65%;
+  width: 800px;
   height: 100%;
   display: flex;
   gap: 20px;
 }
-.j_right > a > .j_box {
-  max-width: 250px;
-  max-height: 250px;
+.j_box {
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
-  border: 1px solid var(--font-color);
   overflow: hidden;
+  box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid #a0a0a0ad; */
 }
 .j_box .j_top {
   width: 100%;
@@ -269,12 +271,17 @@
 .j_bottom {
   width: 100%;
   height: 40px;
-  line-height: 40px;
+  line-height: 3;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
   background-color: var(--bg-color);
   color: var(--font-color);
+  
+}
+.J_container hr{
+  width: 100%;
+  border: 1px solid #6868686c;
 }
 /* 참여후기 ================= */
 .j_review {
@@ -317,6 +324,8 @@
   height: 450px;
   border-radius: 10px;
   overflow: hidden;
+  /* box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3); */
+  box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
 }
 .j_rv_box_top {
   width: 100%;
