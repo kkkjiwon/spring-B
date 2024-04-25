@@ -44,38 +44,81 @@
     <!-- 전체 레이아웃 -->
     <div class="t_wrap">
       <!-- 상단 띠 -->
-      <div class="topBanner">
-        <a class="tit">프로그램 신청 중 <strong>회원가입시 5000원 추가 할인</strong></a>
-      </div>
+      <!-- <div class="topBanner">
+        <a class="tit">프로그램 신청 중 <b>회원가입시 5000원 추가 할인</b></a>
+      </div> -->
       <!-- 헤더 -->
       <header class="header">
         <!-- 상단 메뉴 -->
         <div class="top-menu">
           <!-- 로고 -->
-          <a href="index.html" class="logo"></a>
+          <div class="top-menu-logo">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="탑메뉴 로고">
+          </a>
+          </div>
           <!-- 네비 -->
           <nav>
-            <a class="item" href="index.html">Home</a>
-            <a class="item" href="">About</a>
-            <a class="item" href="program.html">Program</a>
-            <div class="item" href="playground.html">
-              Play
-              <div class="dropdown">
-                <div>
-                  <a href="playground.html">Notice</a>
-                  <a href="playground.html">Talk</a>
-                  <a href="playground.html">Together</a>
+            <ul class="navigation">
+              <li><a href="#" title="">Home</a></li>
+              <li><a href="#" title="">About</a></li>
+              <li><a href="program.html" title="">Program</a></li>
+              <li>
+                <a href="#" title="">
+                  Play <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="chevron"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="white"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                  </svg>
+                </a>
+                <div class="subnavigation__wrapper">
+                  <ul>
+                    <li><a href="#" title="">Community</a></li>
+                    <li><a href="#" title="">Together</a></li>
+                    <li><a href="#" title="">Talk</a></li>
+                  </ul>
                 </div>
-              </div>
-            </div>
-            <div class="underline"></div>
+              </li>
+            </ul>
           </nav>
           <!-- 상단 아이콘  -->
-          <div class="top-icon">
+          <div class="top-menu-icons">
             <a href="#" class="xi-search icon"></a>
             <a href="login.html" class="xi-user-o icon"></a>
+            <button class="mbt">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+                      <!-- 모바일 메뉴 리스트 -->
+          <div class="nav-mb">
+            <ul class="nav-mb-gnb">
+              <li class="menu"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Program</a></li>
+              <li class="menu"><a href="#">Play<span class="material-symbols-outlined">expand_more</span></a>
+                <ul class="hide">
+                  <li><a href="">Notice</a></li>
+                  <li><a href="">talk</a></li>
+                  <li><a href="">together</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           </div>
         </div>
+                <!-- 오버레이 -->
+        <div class="overlay"></div>
       </header>
 
       <!-- 로그인 -->
