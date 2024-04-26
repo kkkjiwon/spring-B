@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#FF782C" />
     <meta property="og:title" content="내마음봄: 내면의 변화를 만드는 플랫폼" />
     <meta property="og:description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
-    <meta property="og:image" content="https://nicetomeetme.kr/images/share/share-image.png" />
+    <meta property="og:image" content="images/share-image.png" />
     <!-- <meta name="naver-site-verification" content="ac83739dee8db19366947125d2910ea6f02f76a2" /> -->
     <meta name="description" content="나답게 성장하는 사람들이 만들어가는 프로젝트" />
     <!-- Twitter -->
@@ -50,6 +50,17 @@
     <script src="js/main.js"></script>
   </head>
   <body>
+    <!-- 탑 버튼 -->
+    <div class="top-button">
+      <a href="#" class="chat-btn">
+        <img src="images/chat-btn.png" alt="chat" />
+        <span>무엇을 도와드릴까요?</span>
+      </a>
+      <a href="#" class="shop-btn">STX</a>
+      <a href="#" class="top-btn" id="top-btn">
+        <img src="images/top-btn.png" alt="top-btn" id="top-btn-img" />
+      </a>
+    </div>
     <!-- 전체 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
@@ -60,17 +71,17 @@
           <div class="top-menu-logo">
             <a href="index.html" class="logo">
               <img src="images/logo.png" alt="탑메뉴 로고" class="logo-web" />
-              <img src="images/logo_mb.png" alt="탑메뉴 로고 모바일" class="logo-mb">
+              <img src="images/logo_mb.png" alt="탑메뉴 로고 모바일" class="logo-mb" />
             </a>
           </div>
           <!-- 네비 -->
           <nav>
             <ul class="navigation">
-              <li><a href="#" title="">Home</a></li>
-              <li><a href="#" title="">About</a></li>
-              <li><a href="program.html" title="">Program</a></li>
+              <li><a href="index.html" title="Home">Home</a></li>
+              <li><a href="brand.html" title="About">About</a></li>
+              <li><a href="program.html" title="Program">Program</a></li>
               <li>
-                <a href="#" title="playground">
+                <a href="playground.html" title="playground">
                   Playground
                   <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -79,9 +90,9 @@
                 </a>
                 <div class="subnavigation__wrapper">
                   <ul>
-                    <li><a href="#" title="">Community</a></li>
-                    <li><a href="#" title="">Together</a></li>
-                    <li><a href="#" title="">Talk</a></li>
+                    <li><a href="playground.html">Notice</a></li>
+                    <li><a href="playground.html">talk</a></li>
+                    <li><a href="playground.html">together</a></li>
                   </ul>
                 </div>
               </li>
@@ -90,7 +101,7 @@
           <!-- 상단 아이콘  -->
           <div class="top-menu-icons">
             <div class="search">
-              <input type="text">
+              <input type="text" />
               <div href="#" class="xi-search icon"></div>
             </div>
             <a href="login.html" class="xi-user-o icon"></a>
@@ -102,15 +113,15 @@
             <!-- 모바일 메뉴 리스트 -->
             <div class="nav-mb">
               <ul class="nav-mb-gnb">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="brand.html">About</a></li>
                 <li><a href="program.html">Program</a></li>
                 <li class="menu">
-                  <a href="#">Play<span class="material-symbols-outlined">expand_more</span></a>
+                  <a href="playground.html">Playground<span class="material-symbols-outlined">expand_more</span></a>
                   <ul class="hide">
-                    <li><a href="">Notice</a></li>
-                    <li><a href="">talk</a></li>
-                    <li><a href="">together</a></li>
+                    <li><a href="playground.html">Notice</a></li>
+                    <li><a href="playground.html">talk</a></li>
+                    <li><a href="playground.html">together</a></li>
                   </ul>
                 </li>
               </ul>
@@ -179,60 +190,13 @@
           </div>
         </div>
       </section>
-      <!-- 처음이라면 -->
-      <section class="s_foryou">
-        <div class="title">
-          For you
-          <div class="title2">내마음봄이 처음이라면?</div>
-        </div>
-        <!-- /* for you 스와이퍼 시작 */ -->
-        <div class="swiper sw-s_foryou inner">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img" data-aos="fade-right" data-aos-duration="1000">
-                  <img src="images/soon/color.jpg" alt="컬러명상" />
-                </div>
-                <div class="sw-s_foryou_des" data-aos="fade-left" data-aos-duration="1000">
-                  <div class="sw-s_foryou_des_tit">번아웃을 극복하는 컬러 명상</div>
-                  <div class="sw-s_foryou_des_txt">컬러 명상은 이분법적인 사고를 깨고 세상을 다각도로 세심하게 느끼도록 도와줘요. 평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</div>
-                  <div class="s_btn">More view</div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img">
-                  <img src="images/program/positive.jpg" alt="긍정적인순간수집" />
-                </div>
-                <div class="sw-s_foryou_des">
-                  <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
-                  <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
-                  <div class="s_btn">More view</div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img">
-                  <img src="images/program/myeongsang.jpg" alt="10분명상" />
-                </div>
-                <div class="sw-s_foryou_des">
-                  <div class="sw-s_foryou_des_tit">하루 10분 명상하기</div>
-                  <div class="sw-s_foryou_des_txt">명상을 하면서 내가 하는 생각들과, 몸의 통증이나 감각들을 살펴봐요. 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</div>
-                  <div class="s_btn">More view</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </section>
       <!-- 프로그램 -->
       <section class="s_program">
-        <div class="title">program<div class="title2">다양한 힐링 방법이 필요하다면?</div></div>
-        <div class="bk-slider" data-aos="fade-down"  data-aos-duration="1500">
+        <div class="title">
+          program
+          <div class="title2">다양한 힐링 방법이 필요하다면?</div>
+        </div>
+        <div class="bk-slider" data-aos="fade-down" data-aos-duration="1500">
           <div class="swiper sw-s_program">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -309,6 +273,56 @@
           </div>
         </div>
         <div class="s_btn s_btn--reverse:hover">more view</div>
+      </section>
+      <!-- 처음이라면 -->
+      <section class="s_foryou">
+        <div class="title">
+          For you
+          <div class="title2">내마음봄이 처음이라면?</div>
+        </div>
+        <!-- /* for you 스와이퍼 시작 */ -->
+        <div class="swiper sw-s_foryou inner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="sw-s_foryou_box">
+                <div class="sw-s_foryou_img" data-aos="fade-right" data-aos-duration="1000">
+                  <img src="images/soon/color.jpg" alt="컬러명상" />
+                </div>
+                <div class="sw-s_foryou_des" data-aos="fade-left" data-aos-duration="1000">
+                  <div class="sw-s_foryou_des_tit">번아웃을 극복하는 컬러 명상</div>
+                  <div class="sw-s_foryou_des_txt">컬러 명상은 이분법적인 사고를 깨고 세상을 다각도로 세심하게 느끼도록 도와줘요. 평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</div>
+                  <div class="s_btn">More view</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sw-s_foryou_box">
+                <div class="sw-s_foryou_img">
+                  <img src="images/program/positive.jpg" alt="긍정적인순간수집" />
+                </div>
+                <div class="sw-s_foryou_des">
+                  <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
+                  <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
+                  <div class="s_btn">More view</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sw-s_foryou_box">
+                <div class="sw-s_foryou_img">
+                  <img src="images/program/myeongsang.jpg" alt="10분명상" />
+                </div>
+                <div class="sw-s_foryou_des">
+                  <div class="sw-s_foryou_des_tit">하루 10분 명상하기</div>
+                  <div class="sw-s_foryou_des_txt">명상을 하면서 내가 하는 생각들과, 몸의 통증이나 감각들을 살펴봐요. 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</div>
+                  <div class="s_btn">More view</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </section>
       <!-- 이달의 영상 -->
       <section class="mentor">
