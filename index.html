@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TT8S9TLH");
+    </script>
+    <!-- End Google Tag Manager -->
+    
     <title>내마음봄</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,8 +63,21 @@
     <!-- 스와이퍼 JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRYGNJK8N7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZRYGNJK8N7");
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT8S9TLH" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- 전체 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
@@ -60,7 +88,7 @@
           <div class="top-menu-logo">
             <a href="index.html" class="logo">
               <img src="images/logo.png" alt="탑메뉴 로고" class="logo-web" />
-              <img src="images/logo_mb.png" alt="탑메뉴 로고 모바일" class="logo-mb">
+              <img src="images/logo_mb.png" alt="탑메뉴 로고 모바일" class="logo-mb" />
             </a>
           </div>
           <!-- 네비 -->
@@ -90,7 +118,7 @@
           <!-- 상단 아이콘  -->
           <div class="top-menu-icons">
             <div class="search">
-              <input type="text">
+              <input type="text" />
               <div href="#" class="xi-search icon"></div>
             </div>
             <a href="login.html" class="xi-user-o icon"></a>
@@ -231,8 +259,11 @@
       </section>
       <!-- 프로그램 -->
       <section class="s_program">
-        <div class="title">program<div class="title2">다양한 힐링 방법이 필요하다면?</div></div>
-        <div class="bk-slider" data-aos="fade-down"  data-aos-duration="1500">
+        <div class="title">
+          program
+          <div class="title2">다양한 힐링 방법이 필요하다면?</div>
+        </div>
+        <div class="bk-slider" data-aos="fade-down" data-aos-duration="1500">
           <div class="swiper sw-s_program">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
