@@ -53,7 +53,8 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 100px;
+  margin-top: 50px;
   padding-bottom: 50px;
 }
 .title2 {
@@ -65,7 +66,7 @@ body {
 /* 버튼 */
 /* <div class="btn btn--white">view more</div> */
 .s_btn {
-  font-family:  "Montserrat";
+  font-family: "Montserrat";
   width: 130px;
   padding: 10px;
   border: 2px solid var(--main-color);
@@ -76,10 +77,11 @@ body {
   text-align: center;
   cursor: pointer;
   display: block;
-  transition: 0.4s;
   margin-top: 100px;
   text-transform: uppercase;
   font-size: 1.3rem;
+  transition: all 0.7s ease;
+  gap: 0.25rem;
 }
 .s_btn:hover {
   color: #fff;
@@ -116,8 +118,9 @@ body {
   width: 100%;
   height: 70px;
   padding: 0 60px;
-  background-color: rgba(255, 255 , 255, 0.8);
-  backdrop-filter : blur(20px);
+  background-color: white;
+  /* background-color: rgba(255, 255 , 255, 0.8);
+  backdrop-filter : blur(20px); */
   /* border-bottom : 1px solid #d2d2d2; */
   z-index: 999;
   transition: all 0.5s;
@@ -140,7 +143,10 @@ body {
 .logo {
   display: block;
   padding: 8px 12px;
-  width: 70px;
+  width: 180px;
+}
+.logo-mb{
+  display: none;
 }
 .logo img{
   width: 100%;
@@ -160,7 +166,6 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: row;
-  /* background-color: lightblue; */
 }
 .navigation li {
   position: relative;
@@ -231,13 +236,40 @@ nav {
 .top-menu-icons {
   display: flex;
 }
-.xi-user-o {
-
-}
 .top-menu-icons a {
   color: var(--side-color);
   padding: 8px 12px;
   font-size: 2rem;
+}
+/* 검색 */
+.header .top-menu-icons .search {
+  height: 34px;
+  position: relative;
+}
+.header .top-menu-icons .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  transition: width 0.4s;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 30px;
+}
+.header .top-menu .top-menu-icons .search input:focus {
+  width: 150px;
+  border-color: var(--side-color)
+}
+.header .top-menu .top-menu-icons .search .xi-search  {
+  width: 36px;
+  height: 34px;
+  position: absolute;
+  top:7px;
+  right: 2px;
+  margin: auto;
+  transition: 0.4s;
+}
+.header .top-menu .top-menu-icons .search.focused .xi-user-o{
+  opacity: 0;
 }
 /* 모바일 메뉴 햄버거 */
 .mbt {
