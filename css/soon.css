@@ -24,6 +24,7 @@
 .s_vistual {
   background-color: var(--side-color);
   position: relative;
+  user-select: none;
 }
 .s_vistual_left_txtBox {
   display: none;
@@ -120,6 +121,7 @@
 /*  브랜드 브랜드 소개 ********************************************** *********************************************/
 .s_brandAbout {
   position: relative;
+  user-select: none;
 }
 .s_brandAbout_logodes {
   width: 100%;
@@ -202,6 +204,9 @@
 }
 
 /*  For you ********************************************** *********************************************/
+.s_foryou {
+  margin-bottom: 100px;
+}
 /* for you 스와이퍼 시작 */
 .sw-s_foryou {
   position: relative;
@@ -292,20 +297,20 @@
 /* 프로그램 시작 ********************************************** *********************************************/
 .s_program {
   padding-bottom: 3rem;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
+  background-color: #fdfbf7;
+  margin-top: 100px;
 }
 .s_program .s_btn {
-  margin: 20px auto;
+  margin: 5% auto;
 }
 /* 프로그램 스와이퍼 시작 */
 .s_program > .bk-slider {
   position: relative;
   width: 65vw;
-  height: auto;
   padding: 100px 0;
   margin: 0 auto;
-  /* background-color: pink; */
 }
 .sw-s_program {
   width: 100%;
@@ -327,11 +332,10 @@
   margin: 0px;
   transition: all 0.3s ease;
   color: black;
-  transform: scale(0.7);
+  transform: scale(0.8);
 
   &.swiper-slide-active {
     color: black;
-    /* background: linear-gradient(45deg, rgb(246, 146, 89), rgb(241, 105, 117)); */
     transform: scale(1);
     z-index: 2;
     filter: brightness(100%);
@@ -353,31 +357,34 @@
 }
 .s_program_des {
   width: 100%;
-  text-align: left;
-  padding: 30px 20px;
-  /* background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent); */
+  text-align: center;
+  padding: 30px 10px;
   border-radius: 10px;
   color: black;
-
-  /* position: absolute;
-  left: 0;
-  bottom: 0; */
 }
 .s_program_tit {
+  max-width: 350px;
+  margin: 0 auto;
   font-weight: bold;
   letter-spacing: 1px;
-<<<<<<< HEAD
   font-size: 2rem;
-  text-align: center;
-  line-height: 1.2;
-=======
+  line-height: 2;
   font-size: 2.5rem;
->>>>>>> db55d5ec6f4495de87d2cb50b098b3cdd4cf4f43
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 말줄임 적용 */
 }
 .s_program_txt {
-  font-size: 1.8rem;
-  line-height: 2;
-  display: none;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  overflow: hidden;
+
+  height: 50px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  display: inline-block;
+  -webkit-line-clamp: 2; 
+
 }
 /* 이달의 영상 시작 ********************************************** *********************************************/
 .s_Mentor {

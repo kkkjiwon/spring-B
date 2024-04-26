@@ -60,7 +60,8 @@
           <!-- 로고 -->
           <div class="top-menu-logo">
             <a href="index.html" class="logo">
-              <img src="images/logo.png" alt="탑메뉴 로고" />
+              <img src="images/logo.png" alt="탑메뉴 로고" class="logo-web" />
+              <img src="images/logo_mb.png" alt="탑메뉴 로고 모바일" class="logo-mb">
             </a>
           </div>
           <!-- 네비 -->
@@ -70,8 +71,8 @@
               <li><a href="#" title="">About</a></li>
               <li><a href="program.html" title="">Program</a></li>
               <li>
-                <a href="#" title="">
-                  Play
+                <a href="#" title="playground">
+                  Playground
                   <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 6l6 6l-6 6"></path>
@@ -89,13 +90,33 @@
           </nav>
           <!-- 상단 아이콘  -->
           <div class="top-menu-icons">
-            <a href="#" class="xi-search icon"></a>
+            <div class="search">
+              <input type="text">
+              <div href="#" class="xi-search icon"></div>
+            </div>
             <a href="login.html" class="xi-user-o icon"></a>
             <button class="mbt">
               <span></span>
               <span></span>
               <span></span>
             </button>
+            <script>
+              const searchEl = document.querySelector('.search');
+const searchInputEl = searchEl.querySelector('input');
+
+searchEl.addEventListener('click', function () {
+    searchInputEl.focus();
+});
+
+searchInputEl.addEventListener('focus', function() {
+    searchEl.classList.add('focused');
+    searchInputEl.setAttribute('placeholder', '이달의 강연 무료');
+});
+searchInputEl.addEventListener('blur', function() {
+    searchEl.classList.remove('focused');
+    searchInputEl.setAttribute('placeholder', '');
+});
+            </script>
             <!-- 모바일 메뉴 리스트 -->
             <div class="nav-mb">
               <ul class="nav-mb-gnb">
@@ -245,11 +266,8 @@
       </script>
       <!-- 프로그램 -->
       <section class="s_program">
-        <div class="title">
-          program
-          <div class="title2">다양한 힐링 방법이 필요하다면?</div>
-        </div>
-        <div class="bk-slider">
+        <div class="title">program<div class="title2">다양한 힐링 방법이 필요하다면?</div></div>
+        <div class="bk-slider" data-aos="fade-down"  data-aos-duration="1500">
           <div class="swiper sw-s_program">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -307,7 +325,7 @@
                   <img src="images/soon/400positive.jpg" alt="positive" />
 
                   <div class="s_program_des">
-                    <div class="s_program_tit">오늘의 긍정적인 순간 수집</div>
+                    <div class="s_program_tit">긍정적인 순간 수집</div>
                     <div class="s_program_txt">SNS로 비교하는 대신, 내 하루의 좋은 점 찾기</div>
                   </div>
                 </a>
@@ -329,10 +347,19 @@
       </section>
       <script>
         var swiper = new Swiper(".sw-s_program", {
-          slidesPerView: 3,
+          slidesPerView: 2,
           centeredSlides: true,
           loop: true,
           spaceBetween: 20,
+          breakpoints : {
+            1000 :{
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            800: {
+              slidesPerView: 2,
+            }
+          }
         });
       </script>
       <!-- 이달의 강연-->

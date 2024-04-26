@@ -1,4 +1,16 @@
 @charset "utf-8";
+@media screen and (max-width:1800px){
+  /* 프로그램 */
+  .s_program_txt {
+    display: none;
+  }
+  .sw-s_program {
+    height: 200px;
+  }
+  .s_program .s_btn {
+    margin: 15% auto;
+}
+}
 @media screen and (max-width: 1200px) {
   /* 헤더 */
   .header {
@@ -6,18 +18,17 @@
     height: 70px;
   }
   /* 프로그램 스와이퍼 시작 */
-.s_program > .bk-slider {
-  width: 80vw;
-}
 .s_program .swiper-slide {
   transform: scale(0.8);
 
   &.swiper-slide-active {
-    color: black;
-    /* background: linear-gradient(45deg, rgb(246, 146, 89), rgb(241, 105, 117)); */
     transform: scale(1.2);
-    z-index: 2;
-    filter: brightness(100%);
+  }
+  .s_program_tit{
+    font-size: 2rem;
+  }
+  .sw-s_program {
+    height: 200px;
   }
 }
   /* 인스타그램 */
@@ -94,8 +105,16 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
+  /* 프로그램 */
+  .s_program  {
+    height: 90vh;
+  }
   }
 @media screen and (max-width: 900px) {
+  /* 프로그램 */
+  .sw-s_program {
+    height: 150px;
+  }
   /* 인스타그램 */
   .s_instagram_img_wrap {
     flex-wrap: wrap;
@@ -180,23 +199,10 @@
   gap: 1rem;
   flex-direction: column;
 }
-<<<<<<< HEAD
   /* 프로그램 스와이퍼 시작 */
-  .sw-s_program{
-    height: 200px;
-  }
-  .s_program > .bk-slider {
-    width: 100vw;
-  }
-=======
-  /* 프로그램 */
-  .s_program > .bk-slider{
-    width: 100vw;
-  }
   .s_program_tit{
     font-size: 2rem;
   }
->>>>>>> db55d5ec6f4495de87d2cb50b098b3cdd4cf4f43
 }
 @media screen and (max-width: 700px) {
   /* for you */
@@ -277,6 +283,17 @@
   }
 }
 @media screen and (max-width:400px) {
+  /* 헤더 */
+  .logo-web {
+    display: none;
+  }
+  .logo {
+    width: 80px;
+    transform: scaleX(-1);
+  }
+  .logo-mb {
+    display: block;
+  }
   /* 브랜드 소개 */
   .s_brandAbout_left_tit {
     font-size: 3rem;
