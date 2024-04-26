@@ -100,7 +100,7 @@
         display: block;
     }
     .rv-box{
-        height: 28.5vw;
+        height: 23.8vw;
     }
     .rv-body{
         height: 60%;
@@ -109,17 +109,24 @@
 }
 @media screen and (max-width: 768px){
     .rv-wrap{
+        width: 80%;
         grid-template-columns: repeat(2, 1fr);
       }
     .rv-box{
-        height: 200px;
+        height: 230px;
+        min-height: auto;
+        padding: 5% 10%;
+
     }
     .rv-box-5, 
     .rv-box-6{
         display: none;
     }
+    .rv-body{
+        height: 60%;
+        font-size: 12px;
+    }
 }
-
 @media screen and (max-width: 506px){
     .j_left{
         align-items: center;
@@ -147,16 +154,34 @@
         height: 100%;
     }
     .rv-wrap{
-        width: 90%;
-        padding: 10%;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 80%;
         grid-template-columns: repeat(1, 1fr);
       }
+      .rv-wrap a{
+        margin: 0 auto;
+      }
       .rv-box{
+        max-width: 300px;
+        min-width: 260px;
+        height: 47vw;
+        min-height: 220px;
         padding: 7%;
       }
       .rv-box-4{
         display: none;
     }
+    .rv-box span{
+        font-size: 11px;
+    }
+    .rv-tit{
+        font-size: 14px;
+    }
+    .rv-body{
+        font-size: 12px;
+    }
+    
 }
 @media screen and (max-width: 450px){
     .mentor-top span,
