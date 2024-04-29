@@ -1,17 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   // aos 적용
   AOS.init();
-  // 햄버거 버튼, 오버레이
-  const mbt = document.querySelector(".mbt");
-  const navMb = document.querySelector(".nav-mb");
+  // 탑버튼
+    const topButton = document.getElementById("top-button");
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 0) { // 스크롤이 발생하면
+        topButton.style.display = "block"; // 보이기
+      } else {
+        topButton.style.display = "none"; // 숨기기
+      }
+    });  
   //검색창
   const searchEl = document.querySelector(".search");
   const searchInputEl = searchEl.querySelector("input");
-
   searchEl.addEventListener("click", function () {
     searchInputEl.focus();
   });
-
   searchInputEl.addEventListener("focus", function () {
     searchEl.classList.add("focused");
     searchInputEl.setAttribute("placeholder", "이달의 강연 무료");
@@ -20,7 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     searchEl.classList.remove("focused");
     searchInputEl.setAttribute("placeholder", "");
   });
-  // 햄버거 버튼 클릭 이벤트
+  // 햄버거 버튼, 오버레이
+    const mbt = document.querySelector(".mbt");
+    const navMb = document.querySelector(".nav-mb");
+  
   mbt.addEventListener("click", function () {
     const state = this.classList.contains("ani");
     if (state) {
@@ -65,16 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 2,
       },
     },
+    autoplay: {
+      delay: 2000, // 슬라이드 간의 시간 간격 (밀리초)
+    },
   });
 });
 // 모바일 메뉴
 $(document).ready(function () {
-  $(".main-menu").mouseenter(function () {
-    $(".sub-menu li , .navbt").stop().slideDown();
-  });
-  $(".main-menu").mouseleave(function () {
-    $(".sub-menu li , .navbt").stop().slideUp();
-  });
   $(".menu > a").click(function (event) {
     event.preventDefault(); // 기본 이벤트 방지
 

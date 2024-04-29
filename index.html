@@ -15,7 +15,7 @@
       })(window, document, "script", "dataLayer", "GTM-TT8S9TLH");
     </script>
     <!-- End Google Tag Manager -->
-    
+
     <title>내마음봄</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -78,18 +78,14 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT8S9TLH" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <!-- 탑 버튼 -->
-    <!-- <div class="top-button">
-      <a href="#" class="chat-btn">
-        <img src="images/chat-btn.png" alt="chat" />
-        <span>무엇을 도와드릴까요?</span>
+    <div class="top-button" id="top-button">
+      <a href="program-2.html" class="chat-btn">
+        <img src="images/chat-btn.png" alt="프로그램 신청 로고" />
+        <span>이달의 프로그램</span>
       </a>
-      <a href="#" class="shop-btn">STX</a>
-      <a href="#" class="top-btn" id="top-btn">
-        <img src="images/top-btn.png" alt="top-btn" id="top-btn-img" />
-      </a>
-    </div> -->
+    </div>
     <!-- 전체 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
@@ -130,7 +126,7 @@
           <!-- 상단 아이콘  -->
           <div class="top-menu-icons">
             <div class="search">
-              <input type="text" />
+              <input type="text" id="search" name="search" />
               <div href="#" class="xi-search icon"></div>
             </div>
             <a href="login.html" class="xi-user-o icon"></a>
@@ -197,12 +193,15 @@
         <div class="s_vistual_roundBg" alt="둥근바탕"></div>
       </section>
       <!-- 브랜드 소개 -->
-      <section class="s_brandAbout">
+      <section class="s_brandAbout" id="s_brandAbout">
         <div class="s_brandAbout_logodes">
           <div class="inner">
             <div class="s_brandAbout_left">
-              <div class="s_brandAbout_left_tit" data-aos="slide-up" data-aos-duration="1000" data-aos-once="false">see + spring</div>
-              <div class="s_brandAbout_left_txt" data-aos="slide-up" data-aos-duration="1000" data-aos-once="false">내 마음을 봄 + 마음의 온도는 봄</div>
+              <div class="s_brandAbout_leftBox">
+                <div class="s_brandAbout_left_txt">내 마음을</div>
+                <div class="s_brandAbout_left_txt">마음의 온도는</div>
+              </div>
+              <div class="s_brandAbout_left_tit">봄</div>
             </div>
             <div class="s_brandAbout_right">
               <img src="images/soon/logo300.png" alt="logo" />
@@ -220,7 +219,7 @@
         </div>
       </section>
       <!-- 프로그램 -->
-      <section class="s_program">
+      <section class="s_program" id="s_program">
         <div class="title">
           program
           <div class="title2">다양한 힐링 방법이 필요하다면?</div>
@@ -301,7 +300,7 @@
             </div>
           </div>
         </div>
-        <a href="program.html" ><div class="s_btn s_btn--reverse:hover">more view</div></a>
+        <a href="program.html"><div class="s_btn s_btn--reverse:hover">more view</div></a>
       </section>
       <!-- 처음이라면 -->
       <section class="s_foryou">
@@ -325,14 +324,14 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img">
-                  <img src="images/program/positive.jpg" alt="긍정적인순간수집" />
-                </div>
-                <div class="sw-s_foryou_des">
+              <div class="sw-s_foryou_box sw-s_foryou_box_reverse">
+                <div class="sw-s_foryou_des sw-s_foryou_des2">
                   <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
                   <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
                   <a href="program-2.html" id="more_today"><div class="s_btn">More view</div></a>
+                </div>
+                <div class="sw-s_foryou_img">
+                  <img src="images/program/positive.jpg" alt="긍정적인순간수집" />
                 </div>
               </div>
             </div>
@@ -512,7 +511,7 @@
             <a href="playground.html">공지사항</a>
             <a href="playground.html">커뮤니티</a>
           </div>
-          <div class="copyright">2024 all rights reserved by spring</div>
+          <div class="copyright">2024 all rights reserved by Jiwon & Teahun & Soon</div>
         </div>
       </footer>
     </div>
