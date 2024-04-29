@@ -158,7 +158,7 @@ height: 180px;
   max-width: 540px;
   min-width: 280px;
   width: 90vw;
-  height: 560px;
+  height: 600px;
   margin: 30px auto;
   background-color: #fff;
   padding-top: 30px;
@@ -579,6 +579,84 @@ p {
   color: #ffbe98;
 }
 /* 커뮤니티 */
+
+/* 브랜드스토리 */
+.t_brand-container{
+text-align: center;
+}
+
+.t_brand-top{
+  font-weight: 500;
+  margin: 50px auto;
+}
+.t_brand-top p span{
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.t_brand-middle{
+  font-family: "UhBeeSe_hyun";
+}
+.t_brand-middle h1{
+  font-size: 50px;
+  line-height: 100px; 
+  color:  var(--side-color);
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.t_brand-symbol-title{
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px;
+  color:  var(--side-color);
+}
+.t_brand-symbol ul{
+  display: flex;
+      justify-content: center;
+}
+.t_brand-symbol li:nth-child(1){
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.t_brand-symbol li p{
+  margin-bottom: 40px;
+  font-weight: 500;
+  text-align: left;
+}
+.t_brand-symbol li p span{
+  color:  var(--main-color);
+  font-weight: 700;
+}
+.t_brand-symbol li h2{
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 20px;
+}
+.t_brand-symbol li img{
+  width: 300px;
+}
+.t_brand-slogan-title{
+  font-family: "Montserrat";
+  margin: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color:  var(--side-color);
+}
+.t_brand-slogan h2{
+  font-family: "Montserrat";
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 700;
+  color:  var(--side-color);
+}
+.t_brand-slogan h2 span{
+font-size: 20px;
+font-weight: 500;
+font-family: "UhBeeSe_hyun";
+}
+/* 브랜드스토리 */
 @media screen and (max-width: 1200px){
   .t_instagram img {
    
@@ -590,6 +668,14 @@ p {
     }
 } 
 @media screen and (max-width: 768px) {
+  .t_login-container {
+    height: 540px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .t_login-ul-sns{
+    margin-top: 20px;
+  }
 .t_instagram{
   height: 850px;
 }
@@ -619,6 +705,20 @@ p {
 @media screen and (max-width: 600px){
   .t_insta-img-wrap a:nth-child(n+5) {
     display: none;
+}
+.t_brand-symbol ul{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.t_brand-symbol li:nth-child(1){
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.t_brand-symbol li p{
+  text-align: center;
+}
+.t_brand-symbol li h2{
+  text-align: center;
 }
 }
 @media screen and (max-width: 400px){
