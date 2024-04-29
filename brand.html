@@ -5,6 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 파비콘 생성 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- seo 엔진 최적화 -->
     <title>내마음봄 : 당신의 마음에도 봄이 오면 좋겠어요.</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, viewport-fit=cover" />
@@ -69,11 +76,11 @@
             <!-- 네비 -->
             <nav>
               <ul class="navigation">
-                <li><a href="index.html" title="Home">Home</a></li>
-                <li><a href="brand.html" title="About">About</a></li>
-                <li><a href="program.html" title="Program">Program</a></li>
+                <li><a href="index.html" title="">Home</a></li>
+                <li><a href="brand.html" title="">About</a></li>
+                <li><a href="program.html" title="">Program</a></li>
                 <li>
-                  <a href="playground.html" title="playground">
+                  <a href="#" title="playground">
                     Playground
                     <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -82,9 +89,9 @@
                   </a>
                   <div class="subnavigation__wrapper">
                     <ul>
-                      <li><a href="playground.html">Notice</a></li>
-                      <li><a href="playground.html">talk</a></li>
-                      <li><a href="playground.html">together</a></li>
+                      <li><a href="playground.html" title="">Community</a></li>
+                      <li><a href="playground.html" title="">Together</a></li>
+                      <li><a href="playground.html" title="">Talk</a></li>
                     </ul>
                   </div>
                 </li>
@@ -93,8 +100,8 @@
             <!-- 상단 아이콘  -->
             <div class="top-menu-icons">
               <div class="search">
-                <input type="text" />
-                <div href="#" class="xi-search icon"></div>
+                <input type="text">
+                <div href="playground.html" class="xi-search icon"></div>
               </div>
               <a href="login.html" class="xi-user-o icon"></a>
               <button class="mbt">
@@ -102,6 +109,23 @@
                 <span></span>
                 <span></span>
               </button>
+              <script>
+                const searchEl = document.querySelector('.search');
+  const searchInputEl = searchEl.querySelector('input');
+  
+  searchEl.addEventListener('click', function () {
+      searchInputEl.focus();
+  });
+  
+  searchInputEl.addEventListener('focus', function() {
+      searchEl.classList.add('focused');
+      searchInputEl.setAttribute('placeholder', '이달의 강연 무료');
+  });
+  searchInputEl.addEventListener('blur', function() {
+      searchEl.classList.remove('focused');
+      searchInputEl.setAttribute('placeholder', '');
+  });
+              </script>
               <!-- 모바일 메뉴 리스트 -->
               <div class="nav-mb">
                 <ul class="nav-mb-gnb">
@@ -109,7 +133,7 @@
                   <li><a href="brand.html">About</a></li>
                   <li><a href="program.html">Program</a></li>
                   <li class="menu">
-                    <a href="playground.html">Playground<span class="material-symbols-outlined">expand_more</span></a>
+                    <a href="playground.html">Play<span class="material-symbols-outlined">expand_more</span></a>
                     <ul class="hide">
                       <li><a href="playground.html">Notice</a></li>
                       <li><a href="playground.html">talk</a></li>
@@ -123,7 +147,40 @@
           <!-- 오버레이 -->
           <div class="overlay"></div>
         </header>
-   
+   <div class="t_brand-container">
+    <div class="t_brand-top">
+      <p>나 혼자만 힘든 것 같을 때</p>
+      <p><span>우리가 도와줄게요</span></p>
+    </div>
+    <div class="t_brand-middle">
+      <p>내면의 변화를 일으키는 힐링 플랫폼
+        <h1>내마음봄</h1>
+      </p>
+    </div>
+    <div class="t_brand-symbol">
+      <p class="t_brand-symbol-title">symbol</p>
+      <ul>
+        <li>
+           <p>펜톤 올해의 컬러 <span>'피치 퍼즈'</span></p>
+      <p>색상코드 : <span>FFBE98</span></p>
+      <h2>편안하고 따듯함, 아늑함, 온화함, 포근함을 
+        <br>표현할 수 있는 부드러운 복숭아 색상입니다.
+        <br>혼란스러운 현재를 살고 있는 사람들에게 
+        <br>따듯하고 편안한 느낌으로 연민과 공감의 메시지를 
+        <br>전달할 수 있는 컬러입니다.
+      </h2>
+        </li>
+        <li>
+          <img src="images/taehun/ch4.png" alt="심볼">
+        </li>
+      </ul>
+    </div>
+    <div class="t_brand-slogan">
+      <p class="t_brand-slogan-title">slogan</p>
+      <h2>SEE + SPRING
+      <br><span>내마음을 봄 + 내 마음의 온도는 봄</span></h2>
+    </div>
+   </div>
     <footer>
       <div class="inner">
         <div class="socials">

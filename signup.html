@@ -5,6 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 파비콘 생성 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- seo 엔진 최적화 -->
     <title>내마음봄 : 당신의 마음에도 봄이 오면 좋겠어요.</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, viewport-fit=cover" />
@@ -128,11 +135,13 @@
 
               <li class="t_signup-li">
                 <p>비밀번호</p>
-                <input type="password" class="t_signup-input-box" id="t_signup-password" name="t_signup-password" required placeholder="비밀번호" />
+                <input type="password" class="t_signup-input-box" 
+                id="t_signup-password" name="t_signup-password" required placeholder="비밀번호" />
               </li>
               <li class="t_signup-li">
                 <p>비밀번호 확인</p>
-                <input type="password" class="t_signup-input-box" id="t_signup-password" name="t_signup-password" required placeholder="비밀번호 확인" />
+                <input type="password" class="t_signup-input-box" 
+                id="t_signup-confirmPassword" name="t_signup-confirmPassword" required placeholder="비밀번호 확인" />
               </li>
               <li class="t_signup-li">
                 <p>이메일</p>
@@ -175,83 +184,82 @@
               </label>
             </div>
 
-            <button type="submit" class="t_submit-bt"><a href="login.html" target="_blank">내마음 봄 시작하기</a></button>
+            <button type="submit" class="t_submit-bt"><a href="login.html">내마음 봄 시작하기</a></button>
           </form>
         </div>
       </div>
       <script>
-        // 회원가입 폼 제출 이벤트 리스너
-        const singupForm = document.getElementById("t_signup-form");
-        singupForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-          // 사용자가 입력한 사용자명과 비밀번호를 가져온다
-          const usernameInput = document.getElementById("t_signup-username");
-          const passwordInput = document.getElementById("t_signup-password");
-          const confirmPasswordInput = document.getElementById("t_signup-confirmPassword");
-          const userName = usernameInput.value.trim();
-          const userPassword = passwordInput.value.trim();
-          const confirmPassword = confirmPasswordInput.value.trim();
+const singupForm = document.getElementById("t_signup-form");
+singupForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  // 사용자가 입력한 사용자명과 비밀번호를 가져온다
+  // const usernameInput = document.getElementById("t_signup-username");
+ const passwordInput = document.getElementById("t_signup-password");
+const confirmPasswordInput = document.getElementById("t_signup-confirmPassword");
+  // const userName = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+const confirmPassword = confirmPasswordInput.value.trim();
 
-          // 사용자명과 비밀번호의 유효성을 정규 표현식을 사용하여 확인합니다.
-          const usernameRegex = /^[a-zA-Z0-9]+$/;
-          const passwordRegex = /.{6,}/;
 
-          if (!usernameRegex.test(userName)) {
-            alert("사용자명은 영문자와 숫자로만 이루어져야 합니다.");
-            return;
-          }
+   // 사용자명과 비밀번호의 유효성을 정규 표현식을 사용하여 확인합니다.
+  //  const usernameRegex = /^[a-zA-Z0-9]+$/;
+  const passwordRegex = /.{6,}/;
 
-          if (!passwordRegex.test(userPassword)) {
-            alert("비밀번호는 최소 6자 이상이어야 합니다.");
-            return;
-          }
+  // if (!usernameRegex.test(userName)) {
+  //   alert("사용자명은 영문자와 숫자로만 이루어져야 합니다.");
+  //   return;
+  // }
 
-          if (userPassword !== confirmPassword) {
-            alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
-            return;
-          }
+  if (!passwordRegex.test(userPassword)) {
+    alert("비밀번호는 최소 6자 이상이어야 합니다.");
+    return;
+  }
 
-          const newUser = {
-            username: userName,
-            password: userPassword,
-          };
+  if (userPassword !== confirmPassword) {
+    alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+    return;
+  }
 
-          // 사용자 정보를 저장하고 페이지를 리디렉션하는 코드를 추가합니다.
-          const users = JSON.parse(localStorage.getItem("users")) || [];
-          users.push(newUser);
-          localStorage.setItem("users", JSON.stringify(users));
-          alert("가입 완료! 로그인 페이지로 이동합니다.");
-          window.location.href = "login.html";
-        });
+  const newUser = {
+    username: userName,
+    password: userPassword,
+  };
 
-        // 아이디 중복 확인 버튼 이벤트 리스너
-        document.getElementById("checkDuplicate").addEventListener("click", function () {
-          var id = document.getElementById("t_signup-username").value;
-          // 여기에 이메일 중복 확인하는 코드를 추가할 수 있습니다.
-          // 이 예시에서는 알림창에 중복 확인을 시뮬레이트합니다.
-          if (id) {
-            alert("입력하신 " + id + " 아이디는 사용 가능합니다.");
-          } else {
-            alert("아이디를 입력해주세요.");
-          }
-        });
+  // 사용자 정보를 저장하고 페이지를 리디렉션하는 코드를 추가합니다.
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
+  alert("가입 완료! 로그인 페이지로 이동합니다.");
+  window.location.href = "login.html";
+});
+         // 아이디 중복 확인 버튼 이벤트 리스너
+         document.getElementById("checkDuplicate").addEventListener("click", function () {
+           var id = document.getElementById("t_signup-username").value;
+           // 여기에 이메일 중복 확인하는 코드를 추가할 수 있습니다.
+           // 이 예시에서는 알림창에 중복 확인을 시뮬레이트합니다.
+           if (id) {
+             alert("입력하신 " + id + " 아이디는 사용 가능합니다.");
+           } else {
+             alert("아이디를 입력해주세요.");
+           }
+         });
 
-        // 휴대폰 번호 인증 버튼 이벤트 리스너
-        document.getElementById("sendVerification").addEventListener("click", function () {
-          var phoneNumber = document.getElementById("t_tel").value;
-          // 여기에 실제로 인증번호를 전송하는 코드를 추가할 수 있습니다.
-          // 이 예시에서는 알림창에 인증번호 전송을 시뮬레이트합니다.
-          if (phoneNumber) {
-            alert("휴대폰 번호 " + phoneNumber + " 로 인증번호가 전송되었습니다.");
-          } else {
-            alert("휴대폰 번호를 입력해주세요.");
-          }
-        });
+         // 휴대폰 번호 인증 버튼 이벤트 리스너
+         document.getElementById("sendVerification").addEventListener("click", function () {
+           var phoneNumber = document.getElementById("t_tel").value;
+           // 여기에 실제로 인증번호를 전송하는 코드를 추가할 수 있습니다.
+           // 이 예시에서는 알림창에 인증번호 전송을 시뮬레이트합니다.
+           if (phoneNumber) {
+             alert("휴대폰 번호 " + phoneNumber + " 로 인증번호가 전송되었습니다.");
+           } else {
+             alert("휴대폰 번호를 입력해주세요.");
+           }
+         });
 
-        // 동의 모두선택 / 해제 버튼 이벤트 리스너
-        document.getElementById("agree_all").addEventListener("click", function () {
+         // 동의 모두선택 / 해제 버튼 이벤트 리스너
+         document.getElementById("agree_all").addEventListener("click", function () {
           var checkboxes = document.querySelectorAll(".agree");
-          for (var i = 0; i < checkboxes.length; i++) {
+           for (var i = 0; i < checkboxes.length; i++) {
             checkboxes[i].checked = this.checked;
           }
         });
