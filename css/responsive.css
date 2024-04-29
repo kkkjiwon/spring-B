@@ -84,7 +84,7 @@
   .s_vistual_left_txt2 {
     position: absolute;
     top: 0;
-    left: 30%;
+    left: 28%;
     rotate: 0deg;
   }
   .s_vistual_left_txt3 {
@@ -109,7 +109,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
   /* 프로그램 */
@@ -153,6 +153,9 @@
   }
   .hide {
     flex-direction: column;
+  }
+  .nav-mb {
+    display: block;
   }
   .nav-mb-gnb {
     display: flex;
@@ -205,9 +208,7 @@
     gap: 1rem;
     flex-direction: column;
   }
-}
-@media screen and (max-width: 700px) {
-  /* for you */
+    /* for you */ 
   .sw-s_foryou_img {
     width: 100%;
   }
@@ -216,16 +217,27 @@
   }
   .sw-s_foryou_des_txt {
     margin: 2rem 0;
+    font-size: 1.8rem;
+    line-height: 1.5;
   }
   .sw-s_foryou_box {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 0 5%;
   }
   .sw-s_foryou_des {
+    width: 95%;
     margin: 1.8rem;
     padding-left: 0;
+  }
+  .sw-s_foryou_des_tit {
+    padding-top: 10px;
+    font-size: 3rem;
+  }
+  .sw-s_foryou_box_reverse {
+    flex-direction: column-reverse;
   }
   /* ARROWS */
   .sw-s_foryou > .swiper-button-prev,
@@ -236,7 +248,11 @@
     display: block;
   }
 }
+@media screen and (max-width: 700px) {
+
+}
 @media screen and (max-width: 600px) {
+
   /* 비주얼 */
   .s_vistual_left {
     height: 90vh;
@@ -279,6 +295,10 @@
 }
 
 @media screen and (max-width: 500px) {
+  /* 탑메뉴 */
+  .top-button {
+    right: 15px;
+  }
   /* 브랜드 소개 */
   .s_brandAbout_ch3_img {
     max-width: 250px;

@@ -3,7 +3,7 @@
 @import url(jiwon.css);
 @import url(jiwon-res.css);
 @import url(taehun.css);
-@import url(font/SCDream9.otf);
+
 
 
 a {color: #3a3c3b;text-decoration: none;}
@@ -18,7 +18,62 @@ body {
   color : var(--font-color);
   word-break: keep-all;
 }
-
+/* 탑버튼 */
+.top-button{
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 9999;
+}
+.top-button .chat-btn span {
+  line-height: 1.3;
+  font-family: var(--side-ko-font);
+  display: block;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 70px;
+  background-color: #ffff;
+  border-radius: 20px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgba(182, 182, 182, 0.8);
+  animation: updown 0.5s infinite;
+}
+.top-button .chat-btn span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  translate: -50%;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  rotate: 45deg;
+  
+}
+/* .chat-btn:hover span {
+  display: block;
+} */
+.chat-btn{
+  width: 100%;height: 100%;
+}
+.chat-btn img {
+    width: 70px;
+    animation: updown 0.5s infinite; /* 시간을 나타내는 단위는 "s"입니다. */
+  }
+  /* 애니메이션 효과 */
+  @keyframes updown {
+    0% {
+      transform: translateY(0); /* "translatey" 대신 "translateY"로 수정 */
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 /* 전체 레이아웃 ********************************************** *********************************************/
 .wrap {
   position: relative;
@@ -36,6 +91,7 @@ body {
   --font-color: #3A3C3B;
   --main-ko-font: "S-CoreDream-3Light";
   --main-en-font: "Montserrat";
+  --side-ko-font: "UhBeeSe_hyun";
 
   /* 네비 */
   --primary: #24ce8f;
@@ -143,7 +199,7 @@ body {
 .logo {
   display: block;
   padding: 8px 12px;
-  width: 180px;
+  width: 140px;
 }
 .logo-mb{
   display: none;
@@ -345,6 +401,7 @@ nav {
 }
 /* 모바일 메뉴 리스트 */
 .nav-mb {
+  display: none;
   position: absolute;
   top: -100vh; /* 초기에는 화면 위쪽에 숨겨둡니다. */
   left: 0;
@@ -355,7 +412,6 @@ background-color: var(--bg-color);
   opacity: 1;
   transition: all 0.3s ease; /* top 속성에 대한 변화를 부드럽게 처리하기 위해 transition 추가 */
   z-index: 9;
-  display: flex;
   justify-content: center;
 }
 .nav-mb.active {
@@ -397,7 +453,6 @@ background-color: var(--bg-color);
   transition: transform 0.3s ease-in-out;
 }
 .nav-mb-gnb li a {
-  display: block;
   font-size: 2rem;
   font-weight: bold;
   color: #000;
@@ -497,5 +552,8 @@ font-weight: bold;
 }
 footer > .inner > .socials > a:hover img{
   scale: 1.2;
+}
+.copyright {
+  font-family: var(--main-en-font);
 }
 /* 풋터 끝 ********************************************** *********************************************/
