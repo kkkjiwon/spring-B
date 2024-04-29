@@ -109,14 +109,18 @@
   font-family: var(--main-ko-font);
 }
 .s_vistual_right_tit .txt1{
+  font-family: var(--side-ko-font);
   font-size: 3rem;
   color: white;
 }
 .s_vistual_right_tit .txt2{
-  font-size: 4rem;
-  font-weight: 900;
+  font-family: var(--side-ko-font);
+  font-size: 3rem;
   color: white;
   letter-spacing: 0.25rem;
+}
+.s_vistual_right_tit .txt2 span{
+  font-size: 4rem;
 }
 /*  브랜드 소개 ********************************************** *********************************************/
 .s_brandAbout {
@@ -207,12 +211,11 @@
   font-size: 3rem;
   color: #fff;
 }
-
-/*  For you ********************************************** *********************************************/
+/*  내마음봄이 처음이라면? ********************************************** *********************************************/
 .s_foryou {
-  padding-bottom: 100px;
+  height: 100vh;
+  padding-bottom: 150px;
   background-color:var(--bg-color);
-  border-radius: 10% 10% 0 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
 }
 /* for you 스와이퍼 시작 */
@@ -304,16 +307,49 @@
 .sw-s_foryou > .swiper-button-next {
   color: var(--main-color);
 }
+/* 이달의 할인 배너 및 리뷰 적립 */
+.sw-s_banner2 {
+  width: 100%;
+  position: relative;
+  margin: 10% 0 20% 0;
+}
+.sw-s_banner2 > .inner {
+  position: absolute;
+  left:0;
+  bottom: -200px;
+}
+/* 이달의 할인 배너 및 리뷰 적립 스와이퍼 적용 */
+.sw-s_banner2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sw-s_banner2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sw-s_banner2-pg {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+.sw-s_banner2-pg .swiper-pagination-bullet {
+  background-color: var(--bg-color);
+}
 
 /* 프로그램 시작 ********************************************** *********************************************/
 .s_program {
   padding-bottom: 3rem;
   height: 100%;
   overflow: hidden;
-  margin-top: 100px;
 }
 .s_program .s_btn {
-  margin: 5% auto;
+  margin: 3% auto;
 }
 /* 프로그램 스와이퍼 시작 */
 .s_program > .bk-slider {
