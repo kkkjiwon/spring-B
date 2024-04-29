@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // aos 적용
   AOS.init();
   // 탑버튼
-    const topButton = document.getElementById("top-button");
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 0) { // 스크롤이 발생하면
-        topButton.style.display = "block"; // 보이기
-      } else {
-        topButton.style.display = "none"; // 숨기기
-      }
-    });  
+  const topButton = document.getElementById("top-button");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      // 스크롤이 발생하면
+      topButton.style.display = "block"; // 보이기
+    } else {
+      topButton.style.display = "none"; // 숨기기
+    }
+  });
   //검색창
   const searchEl = document.querySelector(".search");
   const searchInputEl = searchEl.querySelector("input");
@@ -25,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInputEl.setAttribute("placeholder", "");
   });
   // 햄버거 버튼, 오버레이
-    const mbt = document.querySelector(".mbt");
-    const navMb = document.querySelector(".nav-mb");
-  
+  const mbt = document.querySelector(".mbt");
+  const navMb = document.querySelector(".nav-mb");
+
   mbt.addEventListener("click", function () {
     const state = this.classList.contains("ani");
     if (state) {
@@ -39,23 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("ani");
       navMb.classList.add("active");
     }
-  });
-  // 처음이라면
-  var swiper = new Swiper(".sw-s_foryou", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-      delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
-      disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
-      reverseDirection: false, // 슬라이드 방향 반대로
-      stopOnLastSlide: false, // 마지막 슬라이드에서 재생 중지
-      waitForTransition: true, // 다음 슬라이드로 넘어가기 전에 현재 슬라이드의 전환을 기다림
-      disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
-    },
   });
   // 프로그램
   var swiper = new Swiper(".sw-s_program", {
@@ -74,6 +58,34 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     autoplay: {
       delay: 2000, // 슬라이드 간의 시간 간격 (밀리초)
+    },
+  });
+  // <!-- 이달의 할인 배너 및 리뷰 적립 -->
+  var swiper = new Swiper(".sw-s_banner2", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".sw-s_banner2-pg",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+  // 처음이라면
+  var swiper = new Swiper(".sw-s_foryou", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 5000, // 슬라이드 간의 시간 간격 (밀리초)
+      disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생을 유지할지 여부
+      reverseDirection: false, // 슬라이드 방향 반대로
+      stopOnLastSlide: false, // 마지막 슬라이드에서 재생 중지
+      waitForTransition: true, // 다음 슬라이드로 넘어가기 전에 현재 슬라이드의 전환을 기다림
+      disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 재생 유지
     },
   });
 });
