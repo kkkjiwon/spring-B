@@ -30,7 +30,7 @@ body {
   font-family: var(--side-ko-font);
   display: block;
   position: absolute;
-  top: -50px;
+  top: -60px;
   right: 0;
   width: 70px;
   background-color: #ffff;
@@ -38,7 +38,7 @@ body {
   padding: 8px 10px;
   text-align: center;
   box-shadow: 0px 3px 7px 0 rgba(182, 182, 182, 0.8);
-  animation: updown 0.5s infinite;
+  /* animation: updown 0.5s infinite; */
 }
 .top-button .chat-btn span::after {
   content: "";
@@ -60,7 +60,7 @@ body {
 }
 .chat-btn img {
     width: 70px;
-    animation: updown 0.5s infinite; /* 시간을 나타내는 단위는 "s"입니다. */
+    animation: updown 0.8s infinite; /* 시간을 나타내는 단위는 "s"입니다. */
   }
   /* 애니메이션 효과 */
   @keyframes updown {
