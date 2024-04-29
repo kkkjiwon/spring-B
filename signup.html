@@ -53,39 +53,30 @@
         <div class="top-menu">
           <!-- 로고 -->
           <div class="top-menu-logo">
-          <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="탑메뉴 로고">
-          </a>
+            <a href="index.html" class="logo">
+              <img src="images/logo.png" alt="탑메뉴 로고" class="logo-web" />
+              <img src="images/logo_mb.png" alt="탑메뉴 로고 모바일" class="logo-mb">
+            </a>
           </div>
           <!-- 네비 -->
           <nav>
             <ul class="navigation">
-              <li><a href="#" title="">Home</a></li>
-              <li><a href="#" title="">About</a></li>
-              <li><a href="program.html" title="">Program</a></li>
+              <li><a href="index.html" title="Home">Home</a></li>
+              <li><a href="brand.html" title="About">About</a></li>
+              <li><a href="program.html" title="Program">Program</a></li>
               <li>
-                <a href="#" title="">
-                  Play <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="chevron"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="white"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
+                <a href="playground.html" title="playground">
+                  Playground
+                  <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 6l6 6l-6 6"></path>
                   </svg>
                 </a>
                 <div class="subnavigation__wrapper">
                   <ul>
-                    <li><a href="#" title="">Community</a></li>
-                    <li><a href="#" title="">Together</a></li>
-                    <li><a href="#" title="">Talk</a></li>
+                    <li><a href="playground.html">Notice</a></li>
+                    <li><a href="playground.html">talk</a></li>
+                    <li><a href="playground.html">together</a></li>
                   </ul>
                 </div>
               </li>
@@ -93,31 +84,35 @@
           </nav>
           <!-- 상단 아이콘  -->
           <div class="top-menu-icons">
-            <a href="#" class="xi-search icon"></a>
+            <div class="search">
+              <input type="text" />
+              <div href="#" class="xi-search icon"></div>
+            </div>
             <a href="login.html" class="xi-user-o icon"></a>
             <button class="mbt">
               <span></span>
               <span></span>
               <span></span>
             </button>
-                      <!-- 모바일 메뉴 리스트 -->
-          <div class="nav-mb">
-            <ul class="nav-mb-gnb">
-              <li class="menu"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Program</a></li>
-              <li class="menu"><a href="#">Play<span class="material-symbols-outlined">expand_more</span></a>
-                <ul class="hide">
-                  <li><a href="">Notice</a></li>
-                  <li><a href="">talk</a></li>
-                  <li><a href="">together</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+            <!-- 모바일 메뉴 리스트 -->
+            <div class="nav-mb">
+              <ul class="nav-mb-gnb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="brand.html">About</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li class="menu">
+                  <a href="playground.html">Playground<span class="material-symbols-outlined">expand_more</span></a>
+                  <ul class="hide">
+                    <li><a href="playground.html">Notice</a></li>
+                    <li><a href="playground.html">talk</a></li>
+                    <li><a href="playground.html">together</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-                <!-- 오버레이 -->
+        <!-- 오버레이 -->
         <div class="overlay"></div>
       </header>
       <!-- 회원가입 -->
@@ -192,8 +187,11 @@
           // 사용자가 입력한 사용자명과 비밀번호를 가져온다
           const usernameInput = document.getElementById("t_signup-username");
           const passwordInput = document.getElementById("t_signup-password");
+          const confirmPasswordInput = document.getElementById("t_signup-confirmPassword");
           const userName = usernameInput.value.trim();
           const userPassword = passwordInput.value.trim();
+          const confirmPassword = confirmPasswordInput.value.trim();
+
           // 사용자명과 비밀번호의 유효성을 정규 표현식을 사용하여 확인합니다.
           const usernameRegex = /^[a-zA-Z0-9]+$/;
           const passwordRegex = /.{6,}/;
@@ -207,6 +205,12 @@
             alert("비밀번호는 최소 6자 이상이어야 합니다.");
             return;
           }
+
+          if (userPassword !== confirmPassword) {
+            alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+            return;
+          }
+
           const newUser = {
             username: userName,
             password: userPassword,
@@ -219,6 +223,7 @@
           alert("가입 완료! 로그인 페이지로 이동합니다.");
           window.location.href = "login.html";
         });
+
         // 아이디 중복 확인 버튼 이벤트 리스너
         document.getElementById("checkDuplicate").addEventListener("click", function () {
           var id = document.getElementById("t_signup-username").value;
@@ -262,10 +267,10 @@
           <div class="text">
             <a href="#">개인정보처리방침</a>
             <a href="#">이용약관</a>
-            <a href="#">공지사항</a>
-            <a href="#">커뮤니티</a>
+            <a href="playground.html">공지사항</a>
+            <a href="playground.html">커뮤니티</a>
           </div>
-          <div class="copyright">2024 all rights reserved by spring</div>
+          <div class="copyright">2024 all rights reserved by Jiwon & Teahun & Soon</div>
         </div>
       </footer>
     </div>
