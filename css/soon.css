@@ -1,16 +1,7 @@
 @charset "utf-8";
 @import url("style.css");
-@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
-@font-face {
-  font-family: "UhBeeSe_hyun";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* 공통 컬러*/
-:root {
-  --sub-ko-font: "UhBeeSe_hyun";
-}
+@import url("font.css");
+
 .s_vistual_roundBg,
 .s_brandAbout_roundBg {
   width: 100%;
@@ -150,7 +141,7 @@
   align-items: center;
 }
 .s_brandAbout_left {
-  font-family: var(--sub-ko-font);
+  font-family: var(--side-ko-font);
   color: var(--side-color);
   text-align: center;
   display: flex;
@@ -159,7 +150,7 @@
   gap: 2rem;
 }
 .s_brandAbout_left_tit {
-  font-family: var(--sub-ko-font);
+  font-family: var(--side-ko-font);
   color: var(--main-color);
   font-size: 7rem;
   text-transform: uppercase;
@@ -190,7 +181,7 @@
 }
 /* 브랜드 소개 하단 */
 .s_brandAbout_ch3 {
-  font-family: var(--sub-ko-font);
+  font-family: var(--side-ko-font);
   width: 100%;
   /* height: 400px; */
   background-color: var(--main-color);
@@ -213,10 +204,10 @@
 }
 /*  내마음봄이 처음이라면? ********************************************** *********************************************/
 .s_foryou {
-  height: 100vh;
-  padding-bottom: 150px;
-  background-color:var(--bg-color);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  height: 100%;
+  padding-bottom: 15rem;
+  background-color:var(--bg-color-ivory);
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px; */
 }
 /* for you 스와이퍼 시작 */
 .sw-s_foryou {
@@ -311,7 +302,7 @@
 .sw-s_banner2 {
   width: 100%;
   position: relative;
-  margin: 10% 0 20% 0;
+  margin: 0 0 100px;
 }
 .sw-s_banner2 > .inner {
   position: absolute;
@@ -347,21 +338,36 @@
   padding-bottom: 3rem;
   height: 100%;
   overflow: hidden;
+  /* background-color: aqua; */
+  margin: auto;
 }
-.s_program .s_btn {
-  margin: 3% auto;
+.s_program_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
+.s_program_title a .s_btn  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 프로그램 스와이퍼 시작 */
 .s_program > .bk-slider {
   position: relative;
-  width: 65vw;
+  /* width: 65vw; */
+  width: 100%;
   padding: 100px 0;
   margin: 0 auto;
+  /* background-color: burlywood; */
 }
 .sw-s_program {
-  width: 100%;
   height: 300px;
   overflow: visible;
+  /* background-color: chartreuse; */
 }
 .s_program .swiper-slide {
   /* 활성화된 슬라이드에 대한 스타일 */
@@ -369,7 +375,7 @@
 }
 .s_program .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,6 +437,25 @@
   text-overflow: ellipsis;
   display: inline-block;
   -webkit-line-clamp: 2; 
+}
+.s_program_tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--main-en-font);
+}
+.s_program_tag span {
+  display: flex;
+  font-family: var(--main-en-font);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 5px;
+}
+.s_program_tag span.redTag {
+  color: tomato; border: 1PX solid tomato; background-color: #FFF;
 }
 /* 이달의 영상 시작 ********************************************** *********************************************/
 .s_Mentor {

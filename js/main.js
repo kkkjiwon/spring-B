@@ -43,17 +43,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // 프로그램
   var swiper = new Swiper(".sw-s_program", {
-    slidesPerView: 2,
+    slidesPerView: 1.3,
     centeredSlides: true,
     loop: true,
     spaceBetween: 20,
+    loopedSlides: 5,
+
     breakpoints: {
-      1000: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+      1800: {
+        slidesPerView: 5,
       },
-      800: {
-        slidesPerView: 2,
+      1000: {
+        slidesPerView: 4.5,
+      },
+      900: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      500: {
+        slidesPerView: 2.5,
+      },
+      320: {
+        slidesPerView: 1.5,
       },
     },
     autoplay: {
