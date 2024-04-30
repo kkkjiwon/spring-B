@@ -202,7 +202,7 @@ display: block;
 .t_login-ul-signup {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 .t_login-check {
@@ -272,7 +272,7 @@ p {
   cursor: pointer;
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 /* 로그인 */
 
@@ -283,7 +283,7 @@ p {
   max-width: 540px;
   min-width: 280px;
   width: 90vw;
-  height: 1020px;
+  height: 1060px;
   margin: 30px auto;
   background-color: #fff;
   padding-top: 30px;
@@ -407,7 +407,7 @@ p {
   max-width: 430px;
   min-width: 230px;
   height: 60px;
-  margin: 0 auto;
+  margin: 20px auto;
   font-size: 22px;
   font-weight: 700;
 }
@@ -438,7 +438,7 @@ p {
 .t_pl-header {
   max-width: 1110px;
   min-width: 280px;
-  width: 95%;
+  width: 90%;
   height: 120px;
   /* background-color: aqua; */
   margin: 0 auto;
@@ -460,10 +460,10 @@ p {
 }
 .t_pl-header-info {
   /* margin-left: 10px; */
-  width: 360px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 40px;
   text-overflow: ellipsis;
@@ -495,7 +495,7 @@ p {
 .t_pl-contents {
   max-width: 1160px;
   min-width: 280px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 .t_pl-contents-info {
