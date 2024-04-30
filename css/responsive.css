@@ -11,9 +11,6 @@
   .sw-s_program {
     height: 200px;
   }
-  .s_program .s_btn {
-    margin: 2% auto 3%;
-  }
 }
 @media screen and (max-width: 1200px) {
   /* 헤더 */
@@ -24,8 +21,8 @@
   /* 프로그램 스와이퍼 시작 */
   .s_program .swiper-slide {
     transform: scale(0.8);
-
-    &.swiper-slide-active {
+  }
+    .swiper-slide-active {
       transform: scale(1.2);
     }
     .s_program_des {
@@ -33,6 +30,7 @@
     }
     .s_program_tit {
       font-size: 1.8rem;
+      line-height: 1.5;
     }
     .sw-s_program {
       height: 200px;
@@ -63,8 +61,8 @@
   .s_vistual_left_txt1,
   .s_vistual_left_txt2,
   .s_vistual_left_txt3 {
-    width: 40%;
-    max-width: 40%;
+    width: 35%;
+    max-width: 35%;
   }
   .s_vistual_left_img {
     width: 300px;
@@ -88,8 +86,8 @@
     rotate: 0deg;
   }
   .s_vistual_left_txt3 {
-    left: -10%;
-    top: 10%;
+    left: -5%;
+    top: 20%;
     rotate: 20deg;
   }
 }
@@ -182,9 +180,10 @@
   }
   .nav-mb-gnb li {
     position: relative;
+    width: 100%;
   }
   .nav-mb-gnb li a {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .nav-mb-gnb li:hover > a {
     color: var(--side-color);
@@ -300,9 +299,6 @@
   .s_program > .bk-slider {
     width: 90vw;
   }
-  .s_program .s_btn {
-    margin: 3% auto 5%;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -317,6 +313,8 @@
   }
   .s_brandAbout_ch3_tit {
     font-size: 2rem;
+    width: 220px;
+    line-height: 1.5;
   }
   /* 프로그램 */
   .s_program_des {
@@ -334,9 +332,6 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2; 
   }
-  .s_program .s_btn {
-    margin: 10px auto;
-  }
 }
 @media screen and (max-width: 400px) {
   /* 헤더 */
@@ -350,19 +345,35 @@
   .logo-mb {
     display: block;
   }
+  /* 비주엉ㄹ */
+  .s_vistual_left_img {
+    width: 250px;
+    max-width: 250px;
+  }
   /* 브랜드 소개 */
   .s_brandAbout_left_txt {
     font-size: 2.5rem;
   }
   /* 프로그램 */
-  .s_vistual_left_img {
-    width: 250px;
-    max-width: 250px;
-  }
-}
-@media screen and (max-width: 400px) {
-  /* 프로그램 */
   .sw-s_program {
     height: 100px;
+  }
+  /* for you */
+  .sw-s_foryou_des_tit {
+    font-size: 2.5rem;
+  }
+  .s_foryou {
+    padding-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  /* for you */
+  .sw-s_foryou_des_tit {
+    font-size: 2.3rem;
+  }
+  .sw-s_foryou_des_txt {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 }
