@@ -10,7 +10,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "S-CoreDream-3Light";
+  font-family: var(--main-ko-font);
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -28,7 +28,7 @@
 }
 /* 메인 === 이달의 강연 ======================= */
 .mentor {
-  font-family: "S-CoreDream-3Light";
+  font-family: var(--main-ko-font);
   margin-top: 150px;
   margin-bottom: 150px;
 }
@@ -93,7 +93,7 @@
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
 }
 .mentor-bt {
@@ -110,7 +110,7 @@
   text-align: left;
   /* padding: 1vw; */
 }
-.mentor > .inner-mb{
+.mentor > .inner-mb {
   display: none;
 }
 /* 멘토 === 모바일 */
@@ -119,17 +119,19 @@
 
 /* 메인 === 리뷰 =========================== */
 .review {
+  /* height: 100%; */
   /* margin-top: 150px; */
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   /* width: 100%; */
   background-color: #fff2f2;
   /* border-radius: 10% 10% 0 0; */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
 }
 .rv-wrap {
-  font-family: "S-CoreDream-3Light";
+  font-family: var(--main-ko-font);
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 30px;
   gap: 2vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -148,6 +150,9 @@
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+.review > a > .s_btn {
+  margin-bottom: 50px;
+}
 .rv-cate {
   font-size: calc(0.1vw + 10px);
   font-weight: bold;
@@ -159,11 +164,11 @@
   justify-content: space-between;
   /* margin: 15px 0; */
 }
-.rv-tit p{
+.rv-tit p {
   font-size: calc(0.1vw + 13px);
   font-weight: bold;
 }
-.rv-tit img{
+.rv-tit img {
   margin-bottom: 5px;
   width: 2.3vw;
   min-width: 40px;
@@ -173,9 +178,8 @@
 .rv-box hr {
   border: 1px solid #c7c7c749;
 }
-.box-2-txt{
+.box-2-txt {
   display: none;
-  
 }
 .rv-body {
   height: 80%;
@@ -187,32 +191,32 @@
   overflow: auto;
   color: #555;
 }
-.rv-body::-webkit-scrollbar{
-    width: 10px;
+.rv-body::-webkit-scrollbar {
+  width: 10px;
 }
 
-.rv-body::-webkit-scrollbar-thumb{
+.rv-body::-webkit-scrollbar-thumb {
   height: 30%;
-    background-color: #c4c4c488;
-    border-radius: 10px;
-    background-clip: padding-box;
-	border: 2px solid transparent;
+  background-color: #c4c4c488;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
 }
 
-.rv-body::-webkit-scrollbar-track{
-    background-color: transparent;
+.rv-body::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 /* 메인 전체 끝 8888888888888888888888888888888888888888 */
 
 /* 상세 페이지 =================================== */
-/* 프로그램 소개 ================= */
+/* 프로그램 리스트 ================= */
 .j_banner_wrap {
-  padding-top: 100px;
+  padding: 6vw;
   width: 100%;
-  height: 450px;
+  height: 25vw;
+  min-height: 400px;
   background-color: var(--bg-color);
   text-align: center;
-  padding-top: 100px;
 }
 .j_banner {
   display: flex;
@@ -220,7 +224,7 @@
   /* gap: 30px; */
 }
 .j_banner h1 {
-  /* font-family: 'S-CoreDream-3Light'; */
+  font-family: var(--main-ko-font);
   font-size: 50px;
   font-weight: 700;
   color: var(--side-color);
@@ -233,27 +237,27 @@
   margin: 40px auto;
 }
 .j_banner p {
-  font-family: "S-CoreDream-3Light";
-  font-size: 16px;
-  font-weight: bold;
+  font-family: var(--main-ko-font);
+  font-size: 18px;
+  /* font-weight: bold; */
   line-height: 1.6;
+  color: var(--font-color);
 }
 .j_banner p:nth-child(2) {
   margin-bottom: 20px;
 }
 /* 프로그램 리스트 ================= */
 .J_container {
-  font-family: "S-CoreDream-3Light";
+  font-family: var(--main-ko-font);
 }
 .J_container > .inner {
   /* background-color: rgb(255, 205, 255); */
 }
 .j_program {
   width: 100%;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   padding: 80px 20px;
-  
 }
 .j_left {
   width: 400px;
@@ -264,7 +268,7 @@
 }
 .j_title {
   font-size: 18px;
-  /* font-weight: bold; */
+  font-weight: bold;
   width: 145px;
   line-height: 50px;
   text-align: center;
@@ -276,9 +280,10 @@
   box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.2);
 }
 .j_left > p {
+  color: #589856;
   text-align: left;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 16px;
+  /* font-weight: bold; */
   margin: 10px 0;
   line-height: 25px;
 }
@@ -290,48 +295,96 @@
 }
 .j_box {
   width: 250px;
-  height: 250px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
+  /* height: 250px; */
+
   /* border: 1px solid #a0a0a0ad; */
 }
 .j_box .j_top {
   width: 100%;
-  height: 210px;
+  height: 250px;
+}
+.j_top {
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+.j_box:hover .j_top img{
+  transform: scale(1.2);
+  transition: all 0.5s;
+
 }
 .j_top img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
+}
+.j_top .far {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: rgba(100, 100, 100, 0.5);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #eeeeee;
 }
 .j_box .j_bottom {
   width: 100%;
-  height: 40px;
-  line-height: 3;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: var(--bg-color);
+  /* height: 40px; */
+  margin-top: 15px;
+  background-color: rgba(0, 0, 0, 0);
   color: var(--font-color);
-  
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 5px 10px;
+  text-align: left;
 }
-.J_container hr{
+.j_box .j_bottom .star {
+  font-weight: bold;
+  color: #747474;
+}
+.j_box .j_bottom .star .fas {
+  color: #ffd900;
+  font-size: 10px;
+  font-weight: bold;
+}
+.j_box .j_bottom .j_bottom_tit {
+  /* line-height: 3; */
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--font-color);
+  margin: 10px 0;
+}
+.j_box .j_bottom .j_bottom_sub {
+  font-size: 14px;
+  color: var(--font-color);
+}
+.J_container hr {
   width: 100%;
   border: 1px solid #dfdfdf86;
 }
 /* 참여후기 ================= */
 .j_review {
   margin-top: 80px;
+  padding: 0 30px;
   width: 100%;
-  height: 700px;
-  font-family: "S-CoreDream-3Light";
+  height: 100%;
+  font-family: var(--main-ko-font);
   background-color: var(--bg-color);
 }
 .j_review > .inner {
   /* width: 1200px;
   height: 600px; */
   margin: 0 auto;
-  padding-top: 70px;
+  padding: 100px 0;
 }
 .j_rv_top {
   width: 100%;
@@ -345,11 +398,11 @@
   background-color: var(--side-color);
   color: #fff;
 }
-.fa-circle-plus {
+/* .fa-circle-plus {
   font-size: 40px;
   color: rgb(146, 146, 146);
   cursor: pointer;
-}
+} */
 .j_rv_bt {
   padding-top: 50px;
   display: flex;
@@ -357,7 +410,8 @@
 }
 .j_rv_box {
   width: calc(100% / 4 - 20px);
-  height: 450px;
+  height: 37.5vw;
+  max-height: 450px;
   border-radius: 10px;
   overflow: hidden;
   /* box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3); */
@@ -365,7 +419,7 @@
 }
 .j_rv_box_top {
   width: 100%;
-  height: 280px;
+  height: 60%;
 }
 .j_rv_box_top img {
   width: 100%;
@@ -374,28 +428,44 @@
 .j_rv_box_bt {
   background-color: #fff;
   width: 100%;
-  height: 170px;
+  height: 40%;
   padding: 20px;
 }
 .j_rv_box_bt h3 {
-  font-size: 10px;
+  height: 20%;
+  font-size: 12px;
   font-weight: bold;
   padding-bottom: 15px;
   color: var(--side-color);
 }
 .j_rv_box_bt p {
-  font-size: 12px;
+  height: 80%;
+  font-size: 14px;
   font-weight: bold;
   line-height: 1.4;
   text-align: left;
-  overflow: hidden; /* 넘치는 텍스트는 숨김 */
-  text-overflow: ellipsis; /* 넘치는 텍스트를 ...으로 표시 */
+  overflow: auto;
+}
+.j_rv_box_bt p::-webkit-scrollbar {
+  width: 10px;
+}
+
+.j_rv_box_bt p::-webkit-scrollbar-thumb {
+  height: 30%;
+  background-color: #c4c4c488;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.j_rv_box_bt p::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 /* 이달의 강연  =================*/
 
 /* =================상세페이지================== */
 .j_product {
-  font-family: "S-CoreDream-3Light";
+  font-family: var(--main-ko-font);
   margin-top: 80px;
 }
 .j_product_wrap {
