@@ -38,15 +38,14 @@
 }
 @media screen and (max-width: 1130px) {
   .j_banner_wrap {
-    height: 40vw;
-    min-height: 150px;
-    padding: 8.8vw 0;
+    height: 35vw;
+    min-height: 300px;
   }
   .j_banner h1 {
-    font-size: calc(2.5vw + 16px);
+    font-size: calc(3vw + 16px);
   }
   .j_banner p {
-    font-size: calc(0.3vw + 12px);
+    font-size: calc(0.5vw + 12px);
   }
   .j_banner p:nth-child(2) {
     margin-bottom: 2vw;
@@ -61,49 +60,76 @@
     flex-direction: column;
     height: auto;
     padding-top: 4.42vw;
-    padding: 7vw 10px 0;
+    padding: 5vw 10px;
   }
   .j_title {
     width: 11vw;
-    min-width: 90px;
+    min-width: 110px;
     min-height: 35px;
-    font-size: calc(0.6vw + 10px);
+    font-size: calc(0.3vw + 14px);
     height: 4vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 3vw;
   }
+  .j_left {
+    align-items: center;
+    width: 100%;
+  }
   .j_left > p {
     display: none;
   }
   .j_right {
-    padding: 0 0 4.42vw;
+    /* padding: 0 0 4.42vw; */
     width: 100%;
   }
   .j_right > a {
-    width: calc(100% / 3);
-    max-width: 300px;
-    height: 26.5vw;
-    gap: 5vw;
+    width: calc(100% / 3 - 5vw);
+    margin: 0 auto;
+    /* max-width: 300px; */
+    height: 100%;
+    gap: 0;
   }
   .j_box {
     width: 100%;
     height: 100%;
   }
   .j_box .j_top {
-    height: 85%;
+    height: auto;
+  }
+  .j_top img {
+    height: 20vw;
   }
   .j_box .j_bottom {
-    height: 15%;
+    /* height: 15%; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: calc(0.2vw + 10px);
+    padding: 5px 0;
+  }
+  .j_box .j_bottom .j_bottom_tit {
+    font-size: calc(0.3vw + 14px);
+  }
+  .j_box .j_bottom .j_bottom_sub {
+    font-size: calc(0.2vw + 12px);
   }
   .J_container hr {
     width: 90%;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .j_rv_bt {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .j_rv_box {
+    width: 30vw;
+    margin-right: 20px;
+    /* padding: 20px; */
   }
 }
 @media screen and (max-width: 768px) {
@@ -215,42 +241,48 @@
   .rv-body {
     height: 60%;
   }
-}
-@media screen and (max-width: 600px){
-  /* 프로그램 페이지 ===========*/
-  .j_banner p{
-    font-size: 12px;
+  /* 프로그램 리스트 페이지 ==== */
+  .j_banner_wrap {
+    height: 39vw;
+    min-height: 230px;
+    padding: 7.8vw;
+  }
+  .j_banner p {
+    font-size: 15px;
   }
   .j_left {
     align-items: center;
     width: auto;
-    min-width: 120px;
+    min-width: 100px;
   }
   .j_title {
-    width: 25vw;
-    font-size: calc(0.6vw + 10px);
-    height: 4.5vw;
+    width: 18vw;
+    font-size: 16px;
+    height: 5vw;
   }
   .j_right {
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    /* padding: 10% 0; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
   }
   .j_right > a {
-    width: 60vw;
-    height: 50vw;
-  }
-  .j_right > a > .j_box {
     width: 100%;
-    height: 100%;
+  }
+  .j_box {
+    width: 52vw;
+    height: auto;
   }
   .j_top img {
     width: 100%;
-    height: 100%;
+    height: 52vw;
   }
-  .j_box .j_bottom{
-    font-size: 12px;
+  .j_right::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 590px) {
+  .j_program_1 {
+    padding-top: 50px;
   }
 }
 @media screen and (max-width: 560px) {
@@ -265,7 +297,7 @@
     align-items: center;
     justify-content: space-evenly;
   }
-  .mentor-mb-md{
+  .mentor-mb-md {
     height: 35%;
     padding: 10px;
     font-size: calc(2.3vw + 18px);
@@ -325,9 +357,9 @@
     height: 280px;
     /* height: 60vw; */
     /* min-height: 210px; */
-   padding-top: 7%;
+    padding-top: 7%;
   }
-  .rv-tit img{
+  .rv-tit img {
     width: 12vw;
     height: 12vw;
     min-width: 50px;
@@ -341,10 +373,10 @@
   .rv-cate {
     font-size: 12px;
   }
-  .rv-tit p{
+  .rv-tit p {
     font-size: 16px;
   }
-  .box-2-txt{
+  .box-2-txt {
     display: inline;
     color: var(--font-color);
     font-size: 14px;
@@ -353,7 +385,6 @@
     height: 70%;
     font-size: 14px;
   }
-  
 }
 @media screen and (max-width: 450px) {
   .mentor-top span,
@@ -364,7 +395,12 @@
   .mentor-mb-top {
     gap: 5px;
   }
-  .mentor-mb-bt{
+  .mentor-mb-bt {
     padding: 0 6% 3%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .j_banner_wrap {
+    padding: 36px;
   }
 }
