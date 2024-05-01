@@ -143,6 +143,7 @@ height: 180px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  margin: 50px auto 100px;
 }
 
 /* 인스타 */
