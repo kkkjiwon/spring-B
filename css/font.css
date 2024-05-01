@@ -1,13 +1,6 @@
 @charset "utf-8";
 /* 영어 Montserrat  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-/* 한글 에스코어드림 */
-@font-face {
-  font-family: "S-CoreDream-3Light";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 /* 한글 어비 */
 @import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
 @font-face {
@@ -15,22 +8,6 @@
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
-/* Noto Sans Korean */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-/* 잘난체 */
-@font-face {
-  font-family: "yg-jalnan";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-/* 프레젠테이션 */
-@font-face {
-    font-family: 'Freesentation-9Black';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
 }
 /* 스위티 */
 @font-face {
