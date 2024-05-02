@@ -50,6 +50,7 @@
     <!-- 메인 -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/sly.css">
 
     <!-- html -->
     <!-- Js 연동 -->
@@ -60,6 +61,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- sly 적용-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
     <!-- 스와이퍼 JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
@@ -81,7 +87,7 @@
 
     <!-- 탑 버튼 -->
     <div class="top-button" id="top-button">
-      <a href="program-2.html" class="chat-btn">
+      <a href="program.html" class="chat-btn">
         <img src="images/chat-btn.png" alt="프로그램 신청 로고" />
         <span>이달의 프로그램</span>
       </a>
@@ -218,6 +224,66 @@
           </div>
         </div>
       </section>
+      <section class="webtong_menu_wrap shop s_category">
+        <div class="m-nav" id="mobile_nav02" >
+          <ul class="s_category_area">
+                  <li><a href="#"><img src="images/soon/cate1.png" alt="카테고리1"><p>심리 / 마음돌봄</p></a></li>
+                  <li><a href="#"><img src="images/soon/cate2.png" alt="카테고리2"><p>음악 / 그림</p></a></li>
+                  <li><a href="#"><img src="images/soon/cate3.png" alt="카테고리3"><p>일상 / 영감 수집</p></a></li>
+                  <li><a href="#"><img src="images/soon/cate4.png" alt="카테고리4"><p>명상 / 요가</p></a></li>
+                  <li><a href="#"><img src="images/soon/cate5.png" alt="카테고리5"><p>글쓰기 / 일기</p></a></li>
+          </ul>
+        </div>
+        <div class="scrollbar">
+          <div class="handle">
+            <div class="mousearea"></div>
+          </div>
+        </div>
+      </section>
+      <script>
+        $(document).ready(function() {
+          var menu_start = "0";
+          $('#mobile_nav').sly({
+            horizontal: 1,
+            itemNav: 'centered',
+            smart: 1,
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: menu_start,
+            speed: 300,
+            elasticBounds: 1,
+            dragHandle: 1,
+            dynamicHandle: 1
+            });
+          $(window).resize(function(e) {
+            $('#mobile_nav').sly('reload');
+        
+          });
+          
+        
+          var menu_start02 = "0";
+          var $wrap = $('#mobile_nav02').parent();	//스크롤을 넣고 싶을 경우 삽입
+          $('#mobile_nav02').sly({
+            horizontal: 1,
+            itemNav: 'centered',
+            smart: 1,
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: menu_start02,
+            scrollBar: $wrap.find('.scrollbar'),	//스크롤을 넣고 싶을 경우 삽입
+            scrollBy: 1,							//스크롤을 넣고 싶을 경우 삽입
+            speed: 300,
+            elasticBounds: 1,
+            dragHandle: 1,
+            dynamicHandle: 1
+            });
+          $(window).resize(function(e) {
+            $('#mobile_nav02').sly('reload');
+          });
+        });
+        </script>
       <!-- 프로그램 -->
       <section class="s_program" id="s_program">
         <div class="title">program<div class="title2">다양한 힐링 방법이 필요하다면?</div></div>
@@ -226,6 +292,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_1">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400min.jpg" alt="draw15min" class="p_img_1" />
 
                   <div class="s_program_des">
@@ -237,6 +304,7 @@
               </div>
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_2">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400color.png" alt="music" class="p_img_2" />
                   <div class="s_program_des">
                     <div class="s_program_tag"><span class="redTag">30%OFF</span><span>#meditation</span></div>
@@ -247,8 +315,8 @@
               </div>
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_3">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400myeongsang.jpg" alt="myeongsang" class="p_img_3" />
-
                   <div class="s_program_des">
                     <div class="s_program_tag"><span class="redTag">#Foryou</span><span>#healing</span></div>
                     <div class="s_program_tit">하루 10분 명상하기</div>
@@ -258,8 +326,8 @@
               </div>
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_4">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400cheer.jpg" alt="cheer" class="p_img_4" />
-
                   <div class="s_program_des">
                     <div class="s_program_tag"><span>#write</span><span>#Positive</span></div>
                     <div class="s_program_tit">긍정카드 필사&감사일기</div>
@@ -269,8 +337,8 @@
               </div>
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_5">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400plants.jpg" alt="plants" class="p_img_5" />
-
                   <div class="s_program_des">
                     <div class="s_program_tag"><span>#plant</span><span>#thanks</span></div>
                     <div class="s_program_tit">식물 산책&감사일기</div>
@@ -291,8 +359,8 @@
               </div>
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_7">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400food.jpg" alt="food" class="p_img_7" />
-
                   <div class="s_program_des">
                     <div class="s_program_tag"><span>#food</span><span>#takecare</span></div>
                     <div class="s_program_tit">제철 음식으로 나 돌보기</div>
@@ -312,10 +380,12 @@
           <div class="swiper sw-s_banner2">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="images/soon/banner1.png" alt="이달의 프로그램 30%할인" />
+                <img src="images/soon/banner1.png" alt="이달의 프로그램 30%할인" class="banner1" />
+                <img src="images/soon/banner1-m.png" alt="이달의 프로그램 30%할인" class="banner1Mobile"/>
               </div>
               <div class="swiper-slide">
-                <img src="images/soon/banner2.png" alt="리뷰왕" />
+                <img src="images/soon/banner2.png" alt="리뷰왕" class="banner2"/>
+                <img src="images/soon/banner2-m.png" alt="리뷰왕" class="banner2Mobile" />
               </div>
             </div>
             <div class="swiper-pagination sw-s_banner2-pg"></div>
@@ -346,6 +416,7 @@
             <div class="swiper-slide">
               <div class="sw-s_foryou_box sw-s_foryou_box_reverse">
                 <div class="sw-s_foryou_des sw-s_foryou_des2">
+                  <!-- <div class="s_foryou_tag"><span class="redTag">SIGNATURE</span><span>healing</span></div> -->
                   <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
                   <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
                   <a href="program-2.html" id="more_today"><div class="s_btn">More view</div></a>

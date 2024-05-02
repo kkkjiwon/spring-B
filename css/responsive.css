@@ -299,9 +299,21 @@
   .s_program > .bk-slider {
     width: 90vw;
   }
+
+  .program_btn {
+    margin: 8% auto;
+  }
+  /* 배너 */
+
 }
 
 @media screen and (max-width: 500px) {
+  /* 타이틀 */
+  .title2 {
+    width: 300px;
+    margin: 20px auto;
+    line-height: 1.5;
+  }
   /* 탑메뉴 */
   .top-button {
     right: 15px;
@@ -331,6 +343,15 @@
     display: block;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2; 
+  }
+  .banner1,
+  .banner2{
+    display: none;
+  }
+  .banner1Mobile,
+  .banner2Mobile{
+    display: block;
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -364,6 +385,21 @@
   }
   .s_foryou {
     padding-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 360px) {
+    /* 프로그램 */
+    .s_program > .bk-slider {
+      width: 100vw;
+    }
+  .s_program_tit {
+    font-size: 2.2rem;
+  }
+  .s_program_txt {
+    font-size: 1.5rem;
+  }
+  .s_program > .bk-slider {
+    margin: 50px 0 0 0;
   }
 }
 @media screen and (max-width: 330px) {

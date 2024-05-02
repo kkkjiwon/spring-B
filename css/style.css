@@ -74,6 +74,30 @@ body {
       transform: translateY(0);
     }
   }
+
+/* 하트 아이콘  */
+.s_program_box .fa-heart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  color: #eeeeee;
+  cursor: pointer;
+}
+.fa-heart {
+  font-family: var(--side-ko-font);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.heart.fas:before {
+  content: "\f004";
+  color: #eeeeee; /* 채워진 하트 색상 */
+  background-color: transparent;
+}
 /* 전체 레이아웃 ********************************************** *********************************************/
 .wrap {
   position: relative;
@@ -121,7 +145,7 @@ body {
 }
 .title2 {
   font-family: var(--main-ko-font);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 4;
   letter-spacing: 0.1rem;
 }
@@ -140,7 +164,7 @@ body {
   cursor: pointer;
   display: block;
   margin: auto;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 1.3rem;
   transition: all 0.7s ease;
   gap: 0.25rem;
