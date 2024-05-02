@@ -1,0 +1,152 @@
+@charset "utf-8";
+@import url(font.css);
+.webtong_menu_wrap {
+  border: 2px solid #26364c;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 100%;
+}
+.m-nav {
+  margin: 0 10px;
+  display: flex;
+}
+
+.m-nav ul.s_category_area {
+  margin: 100px auto 50px;
+  padding: 0;
+  list-style: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* .m-nav ul.s_category_area {margin: 100px 0 0 0; display: flex; justify-content: space-between; background-color: tomato; align-items: center;} */
+/* .m-nav ul.s_category_area:after {clear: both;content: " ";display:block} */
+.m-nav ul.s_category_area li {
+  white-space: nowrap;
+}
+.m-nav ul.s_category_area li a {
+  position: relative;
+  letter-spacing: -0.9px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* .m-nav ul.s_category_area li a:after {content:'';position: absolute;right: 0;top: 21px;background-color: #c5c5c5;height: 13px;width: 1px;} */
+/* .m-nav ul.s_category_area li:last-child a:after {background:none} */
+.m-nav ul.s_category_area li a img {
+  width: 100%;
+  height: 100%;
+}
+.m-nav ul.s_category_area li:hover {
+  scale: 1.25;
+}
+
+.webtong_menu_wrap.shop {
+  border: 0;
+  max-width: 1200px;
+}
+.webtong_menu_wrap.shop .m-nav ul.s_category_area li {
+  width: 150px;
+  max-width: 150px;
+}
+.webtong_menu_wrap.shop .m-nav ul.s_category_area li a {
+  border-radius: 5px;
+  width: 100%;
+}
+.webtong_menu_wrap.shop .m-nav ul.s_category_area li a:after {
+  content: none;
+}
+.webtong_menu_wrap.shop .m-nav ul.s_category_area li a p {
+  text-align: center;
+  font-family: var(--sub-ko-font);
+}
+
+.scrollbar {
+  display: none;
+  margin: 12px 0 1em 0;
+  height: 5px;
+  background: #fff;
+  line-height: 0;
+}
+.scrollbar .handle {
+  width: 50px;
+  height: 100%;
+  background: #e0e0e0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.scrollbar .handle .mousearea {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .webtong_menu_wrap.shop .m-nav ul.s_category_area li {
+    width: 100px;
+    max-width: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .m-nav ul.s_category_area {
+    margin: 50px auto 20px;
+  }
+  .scrollbar {
+    display: block;
+  }
+}
+/* 카테고리 ********************************************** *********************************************/
+/* .s_category {
+    width: 100%;
+  }
+  .s_category .inner {
+    background-color: pink;
+  }
+  .s_category_area {
+    margin: 0 auto;
+    background-color: antiquewhite;
+  }
+  ul.s_category_area {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul.s_category_area li {
+    width: 100%;
+    margin:150px 0 ;
+    max-width: 200px;
+    border-radius: 50%;
+    background-color: tomato;
+  }
+  ul.s_category_area li:hover a img {
+    scale: 1.2;
+  }
+  ul.s_category_area li a {
+    width: 100%;
+    display: block;
+  }
+  ul.s_category_area li a img {
+    width: 100%;
+  }
+  @media screen and (max-width:1200px) {
+    ul.s_category_area{
+      gap: 20px;
+    }
+    ul.s_category_area li {
+      width: 100%;
+      margin: 10% 0;
+    }
+  }
+  @media screen and (max-width : 500px) {
+  .s_category_area{
+    overflow: scroll;
+    width: 500px;
+    background-color: teal;
+  }
+  .ul.s_category_area li {
+    width: 80px;
+  }
+  } */

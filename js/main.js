@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   searchInputEl.addEventListener("focus", function () {
     searchEl.classList.add("focused");
-    searchInputEl.setAttribute("placeholder", "이달의 강연 무료");
+    searchInputEl.setAttribute("placeholder", "");
   });
   searchInputEl.addEventListener("blur", function () {
     searchEl.classList.remove("focused");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // 프로그램
   var swiper = new Swiper(".sw-s_program", {
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     centeredSlides: true,
     loop: true,
     spaceBetween: 20,
@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
       500: {
         slidesPerView: 2.5,
       },
-      320: {
+      400: {
         slidesPerView: 1.5,
-      },
+      }
     },
     autoplay: {
       delay: 2000, // 슬라이드 간의 시간 간격 (밀리초)
@@ -112,5 +112,12 @@ $(document).ready(function () {
 
     // 화살표 회전 토글
     $(this).find(".material-symbols-outlined").toggleClass("active");
+  });
+  // 하트 채움
+  $(document).ready(function() {
+    $('.heart').click(function() {
+      event.preventDefault()
+      $(this).toggleClass('far fas');
+    });
   });
 });

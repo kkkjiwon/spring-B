@@ -286,7 +286,6 @@
   font-size: 1.3rem;
   border-radius: 10px;
   text-align: center;
-  margin: 50px auto;
 }
 .sw-s_foryou_des_btn:hover {
   background-color: var(--main-color);
@@ -302,7 +301,6 @@
   width: 100%;
   position: relative;
   margin: 5% auto 10%;
-  background-color: #FFF;
 }
 
 /* 이달의 할인 배너 및 리뷰 적립 스와이퍼 적용 */
@@ -313,20 +311,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 .sw-s_banner2 .swiper-slide img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.sw-s_banner2-pg {
+.sw-s_banner2 .sw-s_banner2-pg {
   position: absolute;
-  top: 50px;
+  bottom: 20px;
   left: 0;
 }
 .sw-s_banner2-pg .swiper-pagination-bullet {
   background-color: var(--bg-color);
+}
+
+.banner1Mobile,
+.banner2Mobile{
+  display: none;
 }
 
 /* 프로그램 시작 ********************************************** *********************************************/
@@ -350,7 +353,6 @@
   justify-content: center;
   align-items: center;
 }
-
 /* 프로그램 스와이퍼 시작 */
 .s_program > .bk-slider {
   position: relative;
@@ -394,9 +396,6 @@
   height: auto;
   /* background-color: pink; */
 }
-.s_program_box:hover img {
-/* 고민 */
-}
 .s_program_box img {
   display: block;
   width: 100%;
@@ -435,14 +434,13 @@
   -webkit-line-clamp: 2; 
 }
 .s_program_tag {
+  font-family: var(--main-en-font);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3px;
-  font-family: var(--main-en-font);
 }
 .s_program_tag span {
-  display: flex;
   font-family: var(--main-en-font);
   text-transform: uppercase;
   font-size: 1.3rem;
