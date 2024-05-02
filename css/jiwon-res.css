@@ -121,7 +121,7 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .j_rv_bt {
+  /* .j_rv_bt {
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -129,8 +129,7 @@
   .j_rv_box {
     width: 30vw;
     margin-right: 20px;
-    /* padding: 20px; */
-  }
+  } */
 }
 @media screen and (max-width: 768px) {
   /* 메인 === 멘토 PC */
