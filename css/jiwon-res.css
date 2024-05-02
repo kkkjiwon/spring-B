@@ -1,5 +1,6 @@
 @charset "utf-8";
 @media screen and (max-width: 1630px) {
+  /* 메인 === 리뷰 */
   .rv-wrap {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -8,6 +9,7 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  /* 메인 === 멘토 */
   .mentor-top span {
     width: 8vw;
     min-width: 60px;
@@ -37,6 +39,7 @@
   }
 }
 @media screen and (max-width: 1130px) {
+  /* 프로그램 === 소개 */
   .j_banner_wrap {
     height: 35vw;
     min-height: 300px;
@@ -54,6 +57,7 @@
     margin: 3vw auto;
     margin-top: 4vw;
   }
+  /* 프로그램 === 리스트 */
   .j_program {
     width: 90%;
     margin: 0 auto;
@@ -119,17 +123,22 @@
     width: 90%;
     margin: 0 auto;
   }
+  /* 프로그램 === 리뷰 */
+  .j_rv_top{
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 1000px) {
-  /* .j_rv_bt {
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
+  /* 프로그램 === 리뷰 */
+  .j_rv_bt{
+    padding: auto 10%;
   }
-  .j_rv_box {
-    width: 30vw;
-    margin-right: 20px;
-  } */
+  .j_rv_box{
+    width: calc(100% / 3 - 2vw);
+  }
+  .j_rv_box:nth-child(3){
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   /* 메인 === 멘토 PC */
@@ -240,7 +249,7 @@
   .rv-body {
     height: 60%;
   }
-  /* 프로그램 리스트 페이지 ==== */
+  /* 프로그램 ==== 소개 */
   .j_banner_wrap {
     height: 39vw;
     min-height: 230px;
@@ -249,6 +258,7 @@
   .j_banner p {
     font-size: 15px;
   }
+  /* 프로그램 ==== 리스트 */
   .j_left {
     align-items: center;
     width: auto;
@@ -278,6 +288,30 @@
   .j_right::-webkit-scrollbar {
     display: none;
   }
+  /* 프로그램 === 리뷰 */
+  .j_rv_bt{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+    gap: 20px;
+  }
+  .j_rv_bt::-webkit-scrollbar {
+    display: none;
+  }
+  .j_rv_box:nth-child(3){
+    display: block;
+  }
+  .j_rv_box {
+    min-width: 220px;
+    height: 300px;
+    /* min-height: auto; */
+  }
+  .j_rv_box_top {
+    height: 45%;
+  }
+  .j_rv_box_bt {
+    height: 55%;
+  }
 }
 @media screen and (max-width: 590px) {
   .j_program_1 {
@@ -285,6 +319,7 @@
   }
 }
 @media screen and (max-width: 560px) {
+  /* 메인 === 멘토 */
   .mentor > .inner-mb {
     width: 100%;
     border-radius: 0;
@@ -337,6 +372,7 @@
   .mentor-of {
     font-size: calc(0.2vw + 10px);
   } */
+
   /* 메인 === 리뷰 */
   .rv-wrap {
     margin: 0 auto;
@@ -386,6 +422,7 @@
   }
 }
 @media screen and (max-width: 450px) {
+  /* 메인 === 멘토 */
   .mentor-top span,
   .mentor-top p,
   .mentor-bt p {
@@ -399,6 +436,7 @@
   }
 }
 @media screen and (max-width: 360px) {
+  /* 프로그램 === 소개 */
   .j_banner_wrap {
     padding: 36px;
   }
