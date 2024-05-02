@@ -308,18 +308,18 @@
   overflow: hidden;
   border-radius: 10px;
 }
-.j_box:hover .j_top img{
+/* .j_box:hover .j_top img{
   transform: scale(1.1);
   transition: all 0.5s;
-}
-.j_heart:hover .far{
+} */
+/* .j_heart:hover .far{
   opacity: 0;
 }
 .j_heart:hover .fas{
   opacity: 1;
   transition: all 0.3s;
   transform: scale(1.1);
-}
+} */
 .j_top img {
   width: 100%;
   height: 100%;
@@ -327,7 +327,30 @@
   overflow: hidden;
   box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
 }
-.j_top .j_heart {
+/* 하트 아이콘  */
+.j_top .fa-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  color: #eeeeee;
+  cursor: pointer;
+}
+.fa-heart {
+  font-family: var(--side-ko-font);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.j_top .heart .fas:before {
+  content: "\f004";
+  color: #eeeeee; /* 채워진 하트 색상 */
+  background-color: transparent;
+}
+/* .j_top .j_heart {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -339,9 +362,8 @@
   line-height: 1.8;
   font-size: 18px;
   color: #eeeeee;
-  /* z-index: 9999999; */
-} 
-.j_heart .far{
+} */
+/* .j_heart .far{
   position: absolute;
   top: 7px;
   right: 6px;
@@ -352,7 +374,7 @@
   right: 6px;
   opacity: 0;
   color: rgb(255, 133, 133);
-}
+} */
 
 .j_box .j_bottom {
   width: 100%;
@@ -402,8 +424,8 @@
   background-color: var(--bg-color);
 }
 .j_review > .inner {
-  /* width: 1200px;
-  height: 600px; */
+  /* width: 1200px; */
+  /* height: 600px; */
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -425,25 +447,25 @@
   cursor: pointer;
 } */
 .j_rv_bt {
+  width: 100%;
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  /* gap: 1vw; */
 }
 .j_rv_box {
-  /* width: calc(100% / 4 - 20px); */
-  width: 280px;
-  height: 25vw;
-  min-height: 300px;
+  width: calc(100% / 4 - 20px);
+  /* width: 17.5vw; */
+  height: 22vw;
+  min-height: 320px;
   border-radius: 10px;
   overflow: hidden;
-  
   /* box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3); */
   box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
 }
 .j_rv_box_top {
   width: 100%;
-  height: 50%;
+  height: 55%;
 }
 .j_rv_box_top img {
   width: 100%;
@@ -452,7 +474,7 @@
 .j_rv_box_bt {
   background-color: #fff;
   width: 100%;
-  height: 50%;
+  height: 45%;
   padding: 20px;
 }
 .j_rv_box_bt h3 {
