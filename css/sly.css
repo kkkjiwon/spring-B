@@ -6,13 +6,11 @@
   margin: 0 auto;
   width: 100%;
 }
-.m-nav {
-  margin: 0 10px;
-  display: flex;
+.m-nav {  margin: 0 10px;
 }
 
 .m-nav ul.s_category_area {
-  margin: 100px auto 50px;
+  margin: 150px auto 50px;
   padding: 0;
   list-style: none;
   -ms-touch-action: pan-y;
@@ -48,8 +46,8 @@
   max-width: 1200px;
 }
 .webtong_menu_wrap.shop .m-nav ul.s_category_area li {
-  width: 150px;
-  max-width: 150px;
+  width: 100px;
+  max-width: 100px;
 }
 .webtong_menu_wrap.shop .m-nav ul.s_category_area li a {
   border-radius: 5px;
