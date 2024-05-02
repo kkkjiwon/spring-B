@@ -50,7 +50,7 @@
     <!-- 메인 -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/sly.css">
+    <link rel="stylesheet" href="css/sly.css" />
 
     <!-- html -->
     <!-- Js 연동 -->
@@ -62,7 +62,7 @@
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- sly 적용-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
@@ -225,13 +225,38 @@
         </div>
       </section>
       <section class="webtong_menu_wrap shop s_category">
-        <div class="m-nav" id="mobile_nav02" >
+        <div class="m-nav" id="mobile_nav02">
           <ul class="s_category_area">
-                  <li><a href="#"><img src="images/soon/cate1.png" alt="카테고리1"><p>심리 / 마음돌봄</p></a></li>
-                  <li><a href="#"><img src="images/soon/cate2.png" alt="카테고리2"><p>음악 / 그림</p></a></li>
-                  <li><a href="#"><img src="images/soon/cate3.png" alt="카테고리3"><p>일상 / 영감 수집</p></a></li>
-                  <li><a href="#"><img src="images/soon/cate4.png" alt="카테고리4"><p>명상 / 요가</p></a></li>
-                  <li><a href="#"><img src="images/soon/cate5.png" alt="카테고리5"><p>글쓰기 / 일기</p></a></li>
+            <li>
+              <a href="#"
+                ><img src="images/soon/cate1.png" alt="카테고리1" />
+                <p>심리 / 마음돌봄</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/soon/cate2.png" alt="카테고리2" />
+                <p>음악 / 그림</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/soon/cate3.png" alt="카테고리3" />
+                <p>일상 / 영감 수집</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/soon/cate4.png" alt="카테고리4" />
+                <p>명상 / 요가</p></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="images/soon/cate5.png" alt="카테고리5" />
+                <p>글쓰기 / 일기</p></a
+              >
+            </li>
           </ul>
         </div>
         <div class="scrollbar">
@@ -240,50 +265,6 @@
           </div>
         </div>
       </section>
-      <script>
-        $(document).ready(function() {
-          var menu_start = "0";
-          $('#mobile_nav').sly({
-            horizontal: 1,
-            itemNav: 'centered',
-            smart: 1,
-            mouseDragging: 1,
-            touchDragging: 1,
-            releaseSwing: 1,
-            startAt: menu_start,
-            speed: 300,
-            elasticBounds: 1,
-            dragHandle: 1,
-            dynamicHandle: 1
-            });
-          $(window).resize(function(e) {
-            $('#mobile_nav').sly('reload');
-        
-          });
-          
-        
-          var menu_start02 = "0";
-          var $wrap = $('#mobile_nav02').parent();	//스크롤을 넣고 싶을 경우 삽입
-          $('#mobile_nav02').sly({
-            horizontal: 1,
-            itemNav: 'centered',
-            smart: 1,
-            mouseDragging: 1,
-            touchDragging: 1,
-            releaseSwing: 1,
-            startAt: menu_start02,
-            scrollBar: $wrap.find('.scrollbar'),	//스크롤을 넣고 싶을 경우 삽입
-            scrollBy: 1,							//스크롤을 넣고 싶을 경우 삽입
-            speed: 300,
-            elasticBounds: 1,
-            dragHandle: 1,
-            dynamicHandle: 1
-            });
-          $(window).resize(function(e) {
-            $('#mobile_nav02').sly('reload');
-          });
-        });
-        </script>
       <!-- 프로그램 -->
       <section class="s_program" id="s_program">
         <div class="title">
@@ -350,8 +331,8 @@
               </div>
               <div class="swiper-slide">
                 <a href="#" class="s_program_box" id="p_box_6">
+                  <i class="heart far fa-heart"></i>
                   <img src="images/soon/400positive.jpg" alt="positive" class="p_img_6" />
-
                   <div class="s_program_des">
                     <div class="s_program_tag"><span class="redTag">#SIGNATURE</span><span>#Positive</span></div>
                     <div class="s_program_tit">긍정적인 순간 수집</div>
@@ -375,26 +356,7 @@
         </div>
         <a href="program.html" class="program_btn"><div class="s_btn s_btn--reverse:hover">More View</div></a>
       </section>
-
-      <!-- 이달의 할인 배너 및 리뷰 적립 -->
-      <section class="s_banner2">
-        <div class="inner">
-          <div class="swiper sw-s_banner2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="images/soon/banner1.png" alt="이달의 프로그램 30%할인" class="banner1" />
-                <img src="images/soon/banner1-m.png" alt="이달의 프로그램 30%할인" class="banner1Mobile"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/soon/banner2.png" alt="리뷰왕" class="banner2"/>
-                <img src="images/soon/banner2-m.png" alt="리뷰왕" class="banner2Mobile" />
-              </div>
-            </div>
-            <div class="swiper-pagination sw-s_banner2-pg"></div>
-          </div>
-        </div>
-      </section>
-      <!-- 내마음봄이 처음이라면? -->
+      <!-- 시그니처 강의 for you-->
       <section class="s_foryou">
         <div class="title">
           SIGNATURE
@@ -443,6 +405,66 @@
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <!-- 이달의 할인 배너 및 리뷰 적립 -->
+      <section class="s_banner2">
+        <div class="inner">
+          <div class="swiper sw-s_banner2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/soon/banner1.png" alt="이달의 프로그램 30%할인" class="banner1" />
+                <img src="images/soon/banner1-m.png" alt="이달의 프로그램 30%할인" class="banner1Mobile" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/soon/banner2.png" alt="리뷰왕" class="banner2" />
+                <img src="images/soon/banner2-m.png" alt="리뷰왕" class="banner2Mobile" />
+              </div>
+            </div>
+            <div class="swiper-pagination sw-s_banner2-pg"></div>
+          </div>
+        </div>
+      </section>
+      <section class="s_soon">
+        <div class="title-area">
+          <div class="inner">
+            <div class="title" style="text-align: center">
+              For you
+              <div class="title2">내마음봄이 처음이라면?</div>
+            </div>
+          </div>
+        </div>
+        <div class="s_soon_area" style class="background-color:#red">
+          <div class="s_soon_card" style="--clr: #589856">
+            <div class="s_soon_card_imgBox">
+              <img src="images/soon/color.jpg" />
+            </div>
+            <div class="s_soon_card_textBox">
+              <h2>번아웃을 극복하는 컬러 명상</h2>
+              <p>평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</p>
+              <a href="program-2.html">More</a>
+            </div>
+          </div>
+          <div class="s_soon_card" style="--clr: #589856">
+            <div class="s_soon_card_imgBox">
+              <img src="images/soon/positive.jpg" />
+            </div>
+            <div class="s_soon_card_textBox">
+              <h2>긍정적인 순간 수집</h2>
+              <p>긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요.</p>
+              <a href="program-2.html">More</a>
+            </div>
+          </div>
+          <div class="s_soon_card" style="--clr: #589856">
+            <div class="s_soon_card_imgBox">
+              <img src="images/soon/myeongsang.jpg" />
+            </div>
+            <div class="s_soon_card_textBox">
+              <h2>하루 10분 명상하기</h2>
+              <p>명상을 하면서 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</p>
+              <a href="program-2.html">More</a>
+            </div>
+          </div>
         </div>
       </section>
       <!-- 이달의 영상 -->
