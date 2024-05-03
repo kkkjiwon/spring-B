@@ -35,7 +35,7 @@
     <!-- 메인 -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/sly.css">
+    <link rel="stylesheet" href="css/sly.css" />
 
     <!-- html -->
     <!-- Js 연동 -->
@@ -47,7 +47,7 @@
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 폰트어썸 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- sly 적용-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script>
@@ -58,12 +58,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRYGNJK8N7"></script>
   </head>
   <body>
+    <!-- 탑 버튼 -->
+    <div class="top-button" id="top-button">
+      <a href="program.html" class="chat-btn">
+        <img src="images/chat-btn.png" alt="프로그램 신청 로고" />
+        <span>프로그램</span>
+      </a>
+    </div>
     <!-- 전체 레이아웃 -->
     <div class="wrap">
-      <!-- 상단 띠 -->
-      <!-- <div class="topBanner">
-        <a class="tit">프로그램 신청 중 <b>회원가입시 5000원 추가 할인</b></a>
-      </div> -->
       <!-- 헤더 -->
       <header class="header">
         <!-- 상단 메뉴 -->
@@ -102,7 +105,7 @@
           <!-- 상단 아이콘  -->
           <div class="top-menu-icons">
             <div class="search">
-              <input type="text" />
+              <input type="text" id="search" name="search" />
               <div href="#" class="xi-search icon"></div>
             </div>
             <a href="login.html" class="xi-user-o icon"></a>
@@ -132,7 +135,6 @@
         <!-- 오버레이 -->
         <div class="overlay"></div>
       </header>
-
     <!-- 프로그램-->
     <div class="j_banner_wrap">
       <div class="j_banner">
