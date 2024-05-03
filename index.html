@@ -20,6 +20,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 파비콘 생성 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- seo 엔진 최적화 -->
     <title>내마음봄 : 당신의 마음에도 봄이 오면 좋겠어요.</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, viewport-fit=cover" />
@@ -354,23 +361,24 @@
             </div>
           </div>
         </div>
-        <a href="program.html" class="program_btn"><div class="s_btn s_btn--reverse:hover">More View</div></a>
+        <a href="program.html" class="program_btn"> <div class="s_btn s_btn--reverse:hover s_program_btn">More View</div></a>
       </section>
       <!-- 시그니처 강의 for you-->
       <section class="s_foryou">
         <div class="title">
           SIGNATURE
-          <div class="title2">내마음봄과 오래 함께하며 만들어 간 시그니처 강의</div>
+          <div class="title2">내마음봄이 처음이라면?</div>
         </div>
         <!-- /* for you 스와이퍼 시작 */ -->
-        <div class="swiper sw-s_foryou inner">
+        <div class="swiper sw-s_foryou inner" data-aos="fade-down" data-aos-duration="1500">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img" data-aos="fade-right" data-aos-duration="1000">
+                <div class="sw-s_foryou_img">
                   <img src="images/soon/color.jpg" alt="컬러명상" />
                 </div>
-                <div class="sw-s_foryou_des" data-aos="fade-left" data-aos-duration="1000">
+                <div class="sw-s_foryou_des">
+                  <div class="s_program_tag foryou_tag1"><span class="redTag">30%OFF</span><span class="redTag">#SIGNATURE</span></div>
                   <div class="sw-s_foryou_des_tit">번아웃을 극복하는 컬러 명상</div>
                   <div class="sw-s_foryou_des_txt">컬러 명상은 이분법적인 사고를 깨고 세상을 다각도로 세심하게 느끼도록 도와줘요. 평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</div>
                   <a href="program-2.html" id="more_color"><div class="s_btn">More view</div></a>
@@ -380,7 +388,7 @@
             <div class="swiper-slide">
               <div class="sw-s_foryou_box sw-s_foryou_box_reverse">
                 <div class="sw-s_foryou_des sw-s_foryou_des2">
-                  <!-- <div class="s_foryou_tag"><span class="redTag">SIGNATURE</span><span>healing</span></div> -->
+                  <div class="s_program_tag foryou_tag foryou_tag2"><span class="redTag">#SIGNATURE</span><span>#Positive</span></div>
                   <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
                   <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
                   <a href="program-2.html" id="more_today"><div class="s_btn">More view</div></a>
@@ -396,6 +404,7 @@
                   <img src="images/program/myeongsang.jpg" alt="10분명상" />
                 </div>
                 <div class="sw-s_foryou_des">
+                  <div class="s_program_tag foryou_tag3"><span class="redTag">#SIGNATURE</span><span>#meditation</span></div>
                   <div class="sw-s_foryou_des_tit">하루 10분 명상하기</div>
                   <div class="sw-s_foryou_des_txt">명상을 하면서 내가 하는 생각들과, 몸의 통증이나 감각들을 살펴봐요. 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</div>
                   <a href="program-2.html" id="more_10m"><div class="s_btn">More view</div></a>
@@ -425,43 +434,44 @@
           </div>
         </div>
       </section>
+      <!-- soon 모름 -->
       <section class="s_soon">
         <div class="title-area">
           <div class="inner">
             <div class="title" style="text-align: center">
-              For you
-              <div class="title2">내마음봄이 처음이라면?</div>
+              Coming soon
+              <div class="title2">두근두근 6월 오픈 프로그램</div>
             </div>
           </div>
         </div>
-        <div class="s_soon_area" style class="background-color:#red">
+        <div class="s_soon_area" data-aos="fade-down" data-aos-duration="1500">
           <div class="s_soon_card" style="--clr: #589856">
             <div class="s_soon_card_imgBox">
-              <img src="images/soon/color.jpg" />
+              <img src="images/soon/yoga.jpg" />
             </div>
             <div class="s_soon_card_textBox">
-              <h2>번아웃을 극복하는 컬러 명상</h2>
-              <p>평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</p>
+              <h2>초보요가의 아침</h2>
+              <p>한 동작을 하기 위해 모든 정신이 몸에 집중되면서 잡생각에서 벗어나고 더불어 긍정적인 에너지도 얻을 수 있습니다!</p>
               <a href="program-2.html">More</a>
             </div>
           </div>
           <div class="s_soon_card" style="--clr: #589856">
             <div class="s_soon_card_imgBox">
-              <img src="images/soon/positive.jpg" />
+              <img src="images/soon/meditation.jpg" />
             </div>
             <div class="s_soon_card_textBox">
-              <h2>긍정적인 순간 수집</h2>
-              <p>긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요.</p>
+              <h2>내 안에 나를 찾는 시간</h2>
+              <p>‘내 평소 생각이 진짜 나로부터 나온 게 아니라 남들이 하니까 따라하려던 것일 수 있다 내가 진짜 원하는 삶을 살아가 싶다면 명상을 해보세요.</p>
               <a href="program-2.html">More</a>
             </div>
           </div>
           <div class="s_soon_card" style="--clr: #589856">
             <div class="s_soon_card_imgBox">
-              <img src="images/soon/myeongsang.jpg" />
+              <img src="images/soon/draw.jpg" />
             </div>
             <div class="s_soon_card_textBox">
-              <h2>하루 10분 명상하기</h2>
-              <p>명상을 하면서 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</p>
+              <h2>즐겁게 드로잉 일기</h2>
+              <p>평범하게 잊힐 수 있는 일상들을 조금은 더 의미 있는 날로 만들어 줍니다. 또한 평가없이 즐겁게 그리고 싶은 분들에게 추천해요.</p>
               <a href="program-2.html">More</a>
             </div>
           </div>
@@ -589,7 +599,7 @@
       <!-- 인스타그램 -->
       <div class="t_instagram">
         <div class="title">INSTAGRAM</div>
-        <div class="t_insta-inner">
+        <div class="t_insta-inner" data-aos="fade-down" data-aos-duration="1500">
           <div class="t_insta-img-wrap">
             <a href="#"><img src="images/taehun/instatoon-1.png" alt="인스타그램1" /></a>
             <a href="#"><img src="images/taehun/instatoon-2.png" alt="인스타그램2" /></a>

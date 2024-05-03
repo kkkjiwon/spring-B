@@ -166,6 +166,8 @@ body {
   font-size: 1.3rem;
   transition: all 0.7s ease;
   gap: 0.25rem;
+  margin: 50px auto 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
 }
 .s_btn:hover {
   border: 2px solid var(--main-color);
@@ -365,8 +367,8 @@ nav {
   bottom: 0;
   margin: auto;
   right: 30px;
-  width: 28px;
-  height: 18px;
+  width: 25px;
+  height: 17px;
   background-color: transparent;
   border: 0;
   z-index: 999;
@@ -389,7 +391,7 @@ nav {
   transition: all 0.3s;
 }
 .mbt.ani span:nth-child(1) {
-  transform: rotate(40deg);
+  transform: rotate(45deg);
 }
 .mbt span:nth-child(2) {
   top: 50%;
