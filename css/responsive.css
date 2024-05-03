@@ -122,6 +122,12 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
+  .foryou_tag1 span,
+.foryou_tag2 span,
+.foryou_tag3 span
+ {
+  font-size: 1rem;
+}
   /* 프로그램 */
   .s_program {
     /* height: 90vh; */
@@ -131,9 +137,6 @@
   /* 프로그램 */
   .sw-s_program {
     height: 150px;
-  }
-  .program_btn {
-    margin: 40px auto;
   }
   /* 인스타그램 */
   .s_instagram_img_wrap {
@@ -228,6 +231,9 @@
     line-height: 1.5;
   }
     /* for you */ 
+  .sw-s_foryou_des {
+    text-align: center;
+  }
   .sw-s_foryou_img {
     width: 100%;
   }
@@ -243,7 +249,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 0 5%;
   }
   .sw-s_foryou_des {
@@ -258,6 +264,33 @@
   .sw-s_foryou_box_reverse {
     flex-direction: column-reverse;
   }
+  .sw-s_foryou_des > a > .s_btn {
+    font-family: "Montserrat";
+    width: 130px;
+    padding: 10px;
+    border-radius: 3rem;
+    color: #fff;
+    background-color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    transition: all 0.7s ease;
+    gap: 0.25rem;
+    margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  }
+  .sw-s_foryou_des .foryou_tag1,
+  .sw-s_foryou_des .foryou_tag3,
+  .sw-s_foryou_des .foryou_tag2
+{
+  display: flex;
+  justify-content: center;
+}
   /* ARROWS */
   .sw-s_foryou > .swiper-button-prev,
   .sw-s_foryou > .swiper-button-next {
@@ -302,14 +335,14 @@
   .s_program > .bk-slider {
     width: 90vw;
   }
-  .program_btn {
-    margin: 8% auto;
-  }
   /* 배너 */
 }
 
 @media screen and (max-width: 500px) {
   /* 타이틀 */
+  .title {
+    margin-top : 0;
+  }
   .title2 {
     width: 300px;
     margin: 20px auto;
@@ -374,7 +407,6 @@
   .s_brandAbout_left_txt {
     font-size: 2.5rem;
   }
-
   /* for you */
   .sw-s_foryou_des_tit {
     font-size: 2.5rem;

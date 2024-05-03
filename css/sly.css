@@ -1,12 +1,15 @@
 @charset "utf-8";
 @import url(font.css);
+
 .webtong_menu_wrap {
   border: 2px solid #26364c;
   border-radius: 5px;
   margin: 0 auto;
   width: 100%;
+  display: none;
 }
-.m-nav {  margin: 0 10px;
+.m-nav {
+  margin: 0 10px;
 }
 
 .m-nav ul.s_category_area {
@@ -34,11 +37,11 @@
 /* .m-nav ul.s_category_area li a:after {content:'';position: absolute;right: 0;top: 21px;background-color: #c5c5c5;height: 13px;width: 1px;} */
 /* .m-nav ul.s_category_area li:last-child a:after {background:none} */
 .m-nav ul.s_category_area li a img {
-  width: 100%;
+  width: 100px;
   height: 100%;
 }
-.m-nav ul.s_category_area li:hover {
-  scale: 1.25;
+.m-nav ul.s_category_area li a:hover p {
+  font-weight: bold;
 }
 
 .webtong_menu_wrap.shop {
@@ -83,19 +86,20 @@
   height: 20px;
 }
 
-@media screen and (max-width: 800px) {
-  .webtong_menu_wrap.shop .m-nav ul.s_category_area li {
-    width: 100px;
-    max-width: 100px;
-  }
-}
 @media screen and (max-width: 500px) {
+    /* 카테고리 */
+    .s_category {
+      display: block;
+    }
   .m-nav ul.s_category_area {
     margin: 50px auto 20px;
   }
   .scrollbar {
     display: block;
   }
+}
+@media screen and (max-width: 400px) {
+
 }
 /* 카테고리 ********************************************** *********************************************/
 /* .s_category {

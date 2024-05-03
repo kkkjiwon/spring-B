@@ -201,108 +201,13 @@
   font-size: 3rem;
   color: #fff;
 }
-/*  내마음봄이 처음이라면? ********************************************** *********************************************/
-.s_foryou {
-  height: 100%;
-  padding-bottom: 15rem;
-  background-color:var(--bg-color-ivory);
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px; */
-}
-/* for you 스와이퍼 시작 */
-.sw-s_foryou {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.sw-s_foryou_pg {
-  display: none;
-}
-.sw-s_foryou .swiper-scrollbar {
-  position: absolute; /* 스크롤바를 절대 위치로 지정합니다. */
-  bottom: 10px; /* 하단 여백 조절 */
-  left: 50%; /* 가운데 정렬을 위해 왼쪽 여백을 50%로 설정합니다. */
-  transform: translateX(-50%); /* 가운데 정렬을 위해 요소를 왼쪽으로 이동합니다. */
-  z-index: 50; /* 스크롤바가 다른 요소 위에 나타나도록 설정합니다. */
-}
-.sw-s_foryou > .swiper-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/*  스와이퍼 추가 */
-.sw-s_foryou_box {
-  display: flex;
-  padding: 0 10%;
-  width: 100%;
-}
-.sw-s_foryou_img {
-  position: relative;
-  display: block;
-  width: 55%;
-  height: auto;
-}
-.sw-s_foryou_img > img {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-.sw-s_foryou_des {
-  width: 50%;
-  height: 300px;
-  max-height: 300px;
 
-  display: flex;
-  justify-content: space-evenly;
-  margin: auto;
-  flex-direction: column;
-  padding-left: 5%;
-}
-.sw-s_foryou_des2 {
-  padding-left: 0;
-  padding-right: 5%;
-}
-.sw-s_foryou_des_tit {
-  font-weight: bold;
-  font-size: 2.5rem;
-  line-height: 1.2;
-}
-.sw-s_foryou_des_txt {
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-.sw-s_foryou_des > a > .s_btn {
-  display: block;
-  width: 100%;
-  padding: 3%;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  text-align: center;
-}
-.sw-s_foryou_des_btn:hover {
-  background-color: var(--main-color);
-  color: #fff;
-}
-/* ARROWS */
-.sw-s_foryou > .swiper-button-prev,
-.sw-s_foryou > .swiper-button-next {
-  color: var(--main-color);
-}
 /* 이달의 할인 배너 및 리뷰 적립 */
 .sw-s_banner2 {
   width: 100%;
   position: relative;
   margin: 5% auto 10%;
 }
-
 /* 이달의 할인 배너 및 리뷰 적립 스와이퍼 적용 */
 .sw-s_banner2 .swiper-slide {
   text-align: center;
@@ -348,10 +253,29 @@
   margin-top: 50px;
   padding-bottom: 50px;
 }
-.s_program_title a .s_btn  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.s_program_btn {
+  font-family: "Montserrat";
+  width: 130px;
+  padding: 10px;
+  border-radius: 3rem;
+  color: #fff;
+  background-color: var(--main-color);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  transition: all 0.7s ease;
+  gap: 0.25rem;
+  margin: 0 auto ;
+}
+.s_program_btn:hover {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: #FFF;
 }
 /* 프로그램 스와이퍼 시작 */
 .s_program > .bk-slider {
@@ -456,6 +380,121 @@
   width: 100%;
   margin: 2% auto 100px;
 }
+/*  내마음봄이 처음이라면? ********************************************** *********************************************/
+.s_foryou {
+  height: 100%;
+  padding-bottom: 15rem;
+  background-color:var(--bg-color-ivory);
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px; */
+}
+/* for you 스와이퍼 시작 */
+.sw-s_foryou {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sw-s_foryou_pg {
+  display: none;
+}
+.sw-s_foryou .swiper-scrollbar {
+  position: absolute; /* 스크롤바를 절대 위치로 지정합니다. */
+  bottom: 10px; /* 하단 여백 조절 */
+  left: 50%; /* 가운데 정렬을 위해 왼쪽 여백을 50%로 설정합니다. */
+  transform: translateX(-50%); /* 가운데 정렬을 위해 요소를 왼쪽으로 이동합니다. */
+  z-index: 50; /* 스크롤바가 다른 요소 위에 나타나도록 설정합니다. */
+}
+.sw-s_foryou > .swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  스와이퍼 추가 */
+.sw-s_foryou_box {
+  display: flex;
+  padding: 0 10%;
+  width: 100%;
+}
+.sw-s_foryou_img {
+  position: relative;
+  display: block;
+  width: 55%;
+  height: auto;
+}
+.sw-s_foryou_img > img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.sw-s_foryou_des {
+  width: 50%;
+  height: 300px;
+  max-height: 300px;
+
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  flex-direction: column;
+  padding-left: 5%;
+}
+.sw-s_foryou_des .foryou_tag1,
+.sw-s_foryou_des .foryou_tag3
+{
+  display: flex;
+  justify-content: flex-start;
+}
+.sw-s_foryou_des .foryou_tag2
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.foryou_tag1 span,
+.foryou_tag2 span,
+.foryou_tag3 span
+ {
+  font-size: 1.3rem;
+}
+.sw-s_foryou_des2 {
+  padding-left: 0;
+  padding-right: 5%;
+  text-align: right;
+}
+.sw-s_foryou_des_tit {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.sw-s_foryou_des_txt {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.sw-s_foryou_des > a > .s_btn {
+  display: block;
+  width: 100%;
+  padding: 3%;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  text-align: center;
+  margin: 0;
+}
+.sw-s_foryou_des_btn:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* ARROWS */
+.sw-s_foryou > .swiper-button-prev,
+.sw-s_foryou > .swiper-button-next {
+  color: var(--main-color);
+}
 /* **************************************************** soon 모름 */
 .s_soon {
   width: 100%;
@@ -528,7 +567,7 @@
   height: 250px;
 }
 .s_soon_area .s_soon_card .s_soon_card_textBox h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 2;
   font-weight: 700;
   color: var(--clr);
@@ -543,15 +582,15 @@
   position: relative;
   top: 15px;
   display: inline-block;
-  padding: 12px 30px;
-  /* text-decoration: underline; */
+  padding: 10px 25px;
   background: var(--clr);
   color: white;
   font-weight: 500;
   border-radius: 30px;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: var(--main-en-font);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
 }
 .s_soon_area .s_soon_card .s_soon_card_textBox a:hover {
   opacity: 0.8;
@@ -594,11 +633,13 @@
     max-width: 400px;
   }
   .s_soon_area .s_soon_card .s_soon_card_textBox {
-    padding: 10px;
+    padding:  0 20px;
   }
 }
-@media screen and (max-width:700px) {
-    
+@media screen and (max-width:550px) {
+  .s_soon_area .s_soon_card .s_soon_card_imgBox {
+    width: 350px;
+  }
 }
 @media screen and (max-width: 480px) {
     /* 모름 */
@@ -611,9 +652,6 @@
   .s_soon_area .s_soon_card .s_soon_card_imgBox {
       width: 300px;
       border-radius: 10px;
-  }
-  .s_soon_area .s_soon_card .s_soon_card_textBox{
-    padding: 0;
   }
 }
 @media (max-width: 340px) {
