@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TT8S9TLH");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <title>내마음봄</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 파비콘 생성 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- seo 엔진 최적화 -->
     <title>내마음봄 : 당신의 마음에도 봄이 오면 좋겠어요.</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width, viewport-fit=cover" />
@@ -56,8 +78,20 @@
     <script src="js/main.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRYGNJK8N7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZRYGNJK8N7");
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT8S9TLH" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- 탑 버튼 -->
     <div class="top-button" id="top-button">
       <a href="program.html" class="chat-btn">
@@ -421,8 +455,8 @@
         </div>
       </div>
     </section>
-    <!-- 풋터 -->
-    <footer>
+     <!-- 풋터 -->
+     <footer>
       <div class="inner">
         <div class="socials">
           <a href="#"><img src="images/soon/youtube.png" alt="유튜브" /></a>
@@ -432,11 +466,12 @@
         <div class="text">
           <a href="#">개인정보처리방침</a>
           <a href="#">이용약관</a>
-          <a href="#">공지사항</a>
-          <a href="#">커뮤니티</a>
+          <a href="playground.html">공지사항</a>
+          <a href="playground.html">커뮤니티</a>
         </div>
-        <div class="copyright">2024 all rights reserved by spring</div>
+        <div class="copyright">2024 all rights reserved by Jiwon & Teahun & Soon</div>
       </div>
     </footer>
-  </body>
+  </div>
+</body>
 </html>
