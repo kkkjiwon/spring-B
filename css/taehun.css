@@ -671,6 +671,11 @@ font-size: 20px;
 font-weight: 500;
 font-family: "UhBeeSe_hyun";
 }
+.t_brand-slogan p{
+max-width: 380px;
+  margin: 40px auto;
+  line-height: 20px;
+}
 /* 브랜드스토리 */
 /* 상세페이지 */
 /* .t_pd_wrap{
@@ -769,6 +774,9 @@ font-family: "UhBeeSe_hyun";
   /* justify-content: space-evenly; */
   gap: 30px;
 }
+.t_bt_wrap img{
+  cursor: pointer;
+}
 .t_bt {
   height: 50px;
   border-radius: 10px;
@@ -857,6 +865,10 @@ display: none;
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
 }
+.t_info-bt button a:hover{
+  color: var(--side-color);
+  font-weight: 700;
+}
 .t_review-pr {
   display: flex;
   justify-content: space-between;
@@ -873,18 +885,20 @@ display: none;
   align-items: center;
   width: 300px;
   line-height: 50px;
+ 
 }
 .t_review-bt button {
   width: 100px;
   height: 40px;
-  border: 0;
+  border: 0; 
+  cursor: pointer;
   background-color: #fff;
 }
 .t_review-page .t_review-star{
   margin-top: 30px;
 }
 .t_review-star{
-  color: var(--main-color);
+  color: #ffd900;;
   margin-left: 20px;
   margin-top: 20px;
   font-weight: bold;
@@ -926,6 +940,29 @@ text-align: left;
 line-height: 20px;
  
 }
+.t_pr-moreview{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.t_pr-morebt {
+  padding: 10px;
+  background-color: #589856;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 700;
+}
+.t_pr-morebt:hover {
+  background-color: #447242;
+}
 .t_inquiry {
   display: flex;
   justify-content: space-between;
@@ -948,6 +985,7 @@ line-height: 20px;
   width: 100px;
   height: 40px;
   border: 0;
+  cursor: pointer;
   background-color: #fff;
 }
 .t_inquiry-page{

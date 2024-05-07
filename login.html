@@ -172,7 +172,7 @@
           if (loginUser) {
             localStorage.setItem("loginUser", JSON.stringify(loginUser));
             alert(`${userName}님, 로그인 성공하였습니다.`);
-            window.location.href = "index.html?userName=" + encodeURIComponent(userName);
+            window.location.href = "program-2-login.html";
           } else {
             // 인증이 실패하면 메시지를 표시
             alert("로그인 정보가 올바르지 않습니다. 다시 시도하세요.");
