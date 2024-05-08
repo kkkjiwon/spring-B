@@ -1,6 +1,85 @@
 @charset "utf-8";
 @import url("style.css");
 
+
+/* 모달창 ******************************************************************* */
+.modal-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-main {
+  max-width: 500px; /* 최대 가로 너비 500px로 설정 */
+  height: 500px;
+  position: relative;
+}
+.modal-nonotic {
+  width: 100%;
+  height: 100%;
+}
+.modal-nonotic img {
+  width: 100%;
+  height: 100%;
+}
+.popup-button-area {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.popup-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  font-weight: 700;
+  height: 60px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  font-size: 20px;
+  color: #212529;
+  gap: 5px;
+}
+.popup-button a {
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+}
+
+.popup-close {
+  display: flex;
+  align-items: center;
+}
+
+.popup-close .close-today {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  background-color: pink;
+  vertical-align:center}
+.popup-close .close-today > input {
+  width: 10px;
+  height: 10px;
+}
+.popup-close .close-today label {
+  font-size: 10px;
+  margin-left: 5px;
+  color: #a2a2a2;
+}
+ 
+/* 비주얼 시작 ********************************************** *********************************************/
 .s_vistual_roundBg,
 .s_brandAbout_roundBg {
   width: 100%;
@@ -10,7 +89,7 @@
   background-size: cover; /* 이미지를 화면에 꽉 채우도록 크기 조절 */
   background-repeat: no-repeat; /* 이미지 반복 없애기 */
 }
-/* 비주얼 시작 ********************************************** *********************************************/
+
 .s_vistual {
   background-color: var(--side-color);
   position: relative;
@@ -387,6 +466,9 @@
   background-color:var(--bg-color-ivory);
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px; */
 }
+.s_foryou > .title {
+  margin-top:0;
+}
 /* for you 스와이퍼 시작 */
 .sw-s_foryou {
   position: relative;
@@ -498,7 +580,7 @@
 /* **************************************************** soon 모름 */
 .s_soon {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--bg-color);
 }
 .s_soon_area {
@@ -623,7 +705,7 @@
   .s_soon_area {
     flex-wrap: nowrap;
     gap: 100px 30px;
-    padding: 50px 30px 100px;
+    padding: 50px 5% 100px;
   }
   .s_soon_card:nth-child(3) {
     display: none;
