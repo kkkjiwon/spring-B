@@ -543,6 +543,7 @@ footer > .inner {
   text-align: center;
   flex-direction: column;
   gap: 1.5rem;
+  line-height: 20px;
 }
 footer > .inner > div {
   display: flex;
