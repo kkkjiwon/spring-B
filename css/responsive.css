@@ -238,6 +238,9 @@
     line-height: 1.5;
   }
     /* for you */ 
+  .s_foryou  {
+    height: 100%;
+  }
   .sw-s_foryou_des {
     text-align: center;
   }
@@ -289,7 +292,7 @@
     transition: all 0.7s ease;
     gap: 0.25rem;
     margin: 0 auto;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 5px 0px;
   }
   .sw-s_foryou_des .foryou_tag1,
   .sw-s_foryou_des .foryou_tag3,
