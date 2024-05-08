@@ -92,11 +92,70 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT8S9TLH" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- 안내창 -->
+    <div id="modal-wrap" class="modal-wrap">
+      <div class="modal-main">
+        <div class="modal-nonotic">
+          <img src="images/soon/30off.png" alt="팝업이미지" />
+        </div>
+        <div class="popup-button-area">
+          <div class="popup-button popup-close">
+            <div class="close-modal">닫기</div>
+            <div class="close-today">
+              <label for="no-show"><input type="checkbox" id="no-show" /> 오늘 하루 보지않기</label>
+            </div>
+          </div>
+          <div class="popup-button" style="background-color: #ffbc6c">
+            <a href="program-2-off.html" style="color: #fff">할인받기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const modalWrap = document.querySelector(".modal-wrap");
+      const closeModalButton = document.querySelector(".close-modal");
+      const noShowCheckbox = document.getElementById("no-show");
+      const noShowLink = document.querySelector(".close-today label");
+
+      function closeModal() {
+        modalWrap.style.display = "none";
+      }
+
+      function setCookie(name, value, days) {
+        const expires = new Date();
+        expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + value + ";expires=" + expires.toUTCString();
+      }
+
+      function getCookie(name) {
+        const keyValue = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+        return keyValue ? keyValue[2] : null;
+      }
+
+      closeModalButton.addEventListener("click", function () {
+        closeModal();
+      });
+
+      noShowLink.addEventListener("click", function (e) {
+        e.preventDefault(); // 링크 클릭의 기본 동작 방지
+
+        if (noShowCheckbox.checked) {
+          setCookie("popup-close", "true", 1); // Cookie expires in 1 day
+        }
+
+        closeModal();
+      });
+
+      // 페이지 로드 시 쿠키 확인하여 모달 노출 여부 결정
+      const isOpen = getCookie("popup-close") !== "true";
+      modalWrap.style.display = isOpen ? "flex" : "none";
+    </script>
+
     <!-- 탑 버튼 -->
     <div class="top-button" id="top-button">
-      <a href="program.html" class="chat-btn">
+      <a href="program-2.html" class="chat-btn">
         <img src="images/chat-btn.png" alt="프로그램 신청 로고" />
-        <span>프로그램</span>
+        <span>이달의 추천 프로그램</span>
       </a>
     </div>
     <!-- 전체 레이아웃 -->
@@ -120,7 +179,7 @@
               <li><a href="program.html" title="Program">Program</a></li>
               <li>
                 <a href="playground.html" title="playground">
-                  Playground
+                  Play
                   <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 6l6 6l-6 6"></path>
@@ -155,7 +214,7 @@
                 <li><a href="brand.html">About</a></li>
                 <li><a href="program.html">Program</a></li>
                 <li class="menu">
-                  <a href="playground.html">Playground<span class="material-symbols-outlined">expand_more</span></a>
+                  <a href="playground.html">Play<span class="material-symbols-outlined">expand_more</span></a>
                   <ul class="hide">
                     <li><a href="playground.html">Notice</a></li>
                     <li><a href="playground.html">talk</a></li>
@@ -231,6 +290,59 @@
           </div>
         </div>
       </section>
+      <!-- 시그니처 강의 for you-->
+      <section class="s_foryou">
+        <div class="title">
+          SIGNATURE
+          <div class="title2">내마음봄이 처음이라면?</div>
+        </div>
+        <!-- /* for you 스와이퍼 시작 */ -->
+        <div class="swiper sw-s_foryou inner" data-aos="fade-down" data-aos-duration="1500">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="sw-s_foryou_box">
+                <div class="sw-s_foryou_img">
+                  <img src="images/soon/color.jpg" alt="컬러명상" />
+                </div>
+                <div class="sw-s_foryou_des">
+                  <div class="s_program_tag foryou_tag1"><span class="redTag">30%OFF</span><span class="redTag">#SIGNATURE</span></div>
+                  <div class="sw-s_foryou_des_tit">번아웃을 극복하는 컬러 명상</div>
+                  <div class="sw-s_foryou_des_txt">컬러 명상은 이분법적인 사고를 깨고 세상을 다각도로 세심하게 느끼도록 도와줘요. 평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</div>
+                  <a href="program-2-off.html" id="more_color"><div class="s_btn">More view</div></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sw-s_foryou_box sw-s_foryou_box_reverse">
+                <div class="sw-s_foryou_des sw-s_foryou_des2">
+                  <div class="s_program_tag foryou_tag foryou_tag2"><span class="redTag">#SIGNATURE</span><span>#Positive</span></div>
+                  <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
+                  <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
+                  <a href="program-2.html" id="more_today"><div class="s_btn">More view</div></a>
+                </div>
+                <div class="sw-s_foryou_img">
+                  <img src="images/program/positive.jpg" alt="긍정적인순간수집" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sw-s_foryou_box">
+                <div class="sw-s_foryou_img">
+                  <img src="images/program/myeongsang.jpg" alt="10분명상" />
+                </div>
+                <div class="sw-s_foryou_des">
+                  <div class="s_program_tag foryou_tag3"><span class="redTag">#SIGNATURE</span><span>#meditation</span></div>
+                  <div class="sw-s_foryou_des_tit">하루 10분 명상하기</div>
+                  <div class="sw-s_foryou_des_txt">명상을 하면서 내가 하는 생각들과, 몸의 통증이나 감각들을 살펴봐요. 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</div>
+                  <a href="program-2.html" id="more_10m"><div class="s_btn">More view</div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
       <!-- 카테고리 -->
       <div class="s_cate_wrap">
         <div class="s_cate_menu_wrap list">
@@ -303,7 +415,21 @@
                     <p class="txt">내 안의 긍정성을 깨우는 나</p>
                   </div>
                 </a>
-
+                <a href="program-2.html">
+                  <img src="images/soon/400thankyou.jpg" alt="상품01" />
+                  <div class="s_cate_program_des">
+                    <p class="star">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      5 (100+)
+                    </p>
+                    <p class="tit">긍정카드 필사 & 감사일기</p>
+                    <p class="txt">내 안의 긍정성을 깨우는 나</p>
+                  </div>
+                </a>
                 <a href="program-2.html">
                   <img src="images/soon/400thankyou.jpg" alt="상품01" />
                   <div class="s_cate_program_des">
@@ -320,7 +446,7 @@
                   </div>
                 </a>
               </li>
-              <li id="tab-section-2" class="tab-section">
+              <li id="tab-section-2" class="tab-section" style="display: none">
                 <a href="program-2.html">
                   <img src="images/soon/400color.png" alt="상품01" />
                   <div class="s_cate_program_des">
@@ -369,7 +495,7 @@
                   </div>
                 </a>
               </li>
-              <li id="tab-section-3" class="tab-section">
+              <li id="tab-section-3" class="tab-section" style="display: none">
                 <a href="program-2.html">
                   <img src="images/soon/400food.jpg" alt="상품01" />
                   <div class="s_cate_program_des">
@@ -418,7 +544,7 @@
                   </div>
                 </a>
               </li>
-              <li id="tab-section-4" class="tab-section">
+              <li id="tab-section-4" class="tab-section" style="display: none">
                 <a href="program-2.html">
                   <img src="images/soon/400music.jpg" alt="상품01" />
                   <div class="s_cate_program_des">
@@ -467,7 +593,7 @@
                   </div>
                 </a>
               </li>
-              <li id="tab-section-5" class="tab-section">
+              <li id="tab-section-5" class="tab-section" style="display: none">
                 <a href="program-2.html">
                   <img src="images/soon/400plants.jpg" alt="상품01" />
                   <div class="s_cate_program_des">
@@ -527,10 +653,6 @@
       </div>
       <script>
         $(document).ready(function () {
-          // 초기 탭 섹션 설정
-          $(".tab-section").hide(); // 모든 탭 섹션 숨기기
-          $("#tab-section-1").show(); // 초기에는 첫 번째 탭 섹션만 보이게 설정
-
           // 탭 버튼 클릭 이벤트 처리
           $(".tab-button").click(function (event) {
             event.preventDefault(); // 기본 동작 방지
@@ -563,27 +685,90 @@
             $("#mobile_nav").sly("reload");
           });
 
-          var menu_start02 = "0";
-          var $wrap = $("#mobile_nav02").parent();
-          $("#mobile_nav02").sly({
-            horizontal: 1,
-            itemNav: "basic",
-            smart: 1,
-            mouseDragging: 1,
-            touchDragging: 1,
-            releaseSwing: 1,
-            startAt: menu_start02,
-            scrollBar: $wrap.find(".scrollbar"),
-            speed: 300,
-            elasticBounds: 1,
-            dragHandle: 1,
-            dynamicHandle: 1,
-          });
-          $(window).resize(function (e) {
-            $("#mobile_nav02").sly("reload");
-          });
+          // var menu_start = "0";
+          // $("#mobile_nav02").sly({
+          //   horizontal: 1,
+          //   itemNav: "centered",
+          //   smart: 1,
+          //   mouseDragging: 1,
+          //   touchDragging: 1,
+          //   releaseSwing: 1,
+          //   startAt: menu_start,
+          //   speed: 300,
+          //   elasticBounds: 1,
+          //   dragHandle: 1,
+          //   dynamicHandle: 1,
+          // });
+          // $(window).resize(function (e) {
+          //   $("#mobile_nav02").sly("reload");
+          // });
         });
       </script>
+      <!-- soon 모름 -->
+      <section class="s_soon">
+        <div class="title-area">
+          <div class="inner">
+            <div class="title" style="text-align: center">
+              Coming soon
+              <div class="title2">두근두근 6월 오픈 프로그램</div>
+            </div>
+          </div>
+        </div>
+        <div class="s_soon_area" data-aos="fade-down" data-aos-duration="1500">
+          <div class="s_soon_card" style="--clr: #589856" onmouseover="activeLayer(this)">
+            <div class="s_soon_card_imgBox">
+              <img src="images/soon/yoga.jpg" />
+            </div>
+            <div class="s_soon_card_textBox">
+              <h2>초보요가의 아침</h2>
+              <p>한 동작을 하기 위해 모든 정신이 몸에 집중되면서 잡생각에서 벗어나고 더불어 긍정적인 에너지도 얻을 수 있습니다!</p>
+              <a href="program-2.html">More</a>
+            </div>
+          </div>
+          <div class="s_soon_card actived1" style="--clr: #589856" onmouseover="activeLayer(this)" id="activedLay1">
+            <div class="s_soon_card_imgBox actived2" id="activedLay2">
+              <img src="images/soon/meditation.jpg" />
+            </div>
+            <div class="s_soon_card_textBox actived3" id="activedLay3">
+              <h2>내 안에 나를 찾는 시간</h2>
+              <p>‘내 평소 생각이 진짜 나로부터 나온 게 아니라 남들이 하니까 따라하려던 것일 수 있습니다. 내가 진짜 원하는 삶을 살아가 싶다면 명상을 해보세요.</p>
+              <a href="program-2.html">More</a>
+            </div>
+          </div>
+          <div class="s_soon_card" style="--clr: #589856" onmouseover="activeLayer(this)">
+            <div class="s_soon_card_imgBox">
+              <img src="images/soon/draw.jpg" />
+            </div>
+            <div class="s_soon_card_textBox">
+              <h2>즐겁게 드로잉 일기</h2>
+              <p>평범하게 잊힐 수 있는 일상들을 조금은 더 의미 있는 날로 만들어 줍니다. 또한 평가없이 즐겁게 그리고 싶은 분들에게 추천해요.</p>
+              <a href="program-2.html">More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 이달의 할인 배너 및 리뷰 적립 -->
+      <section class="s_banner2">
+        <div class="inner">
+          <div class="swiper sw-s_banner2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="program-2-off.html">
+                  <img src="images/soon/banner1.png" alt="이달의 프로그램 30%할인" class="banner1" />
+                  <img src="images/soon/banner1-m.png" alt="이달의 프로그램 30%할인" class="banner1Mobile" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="login.html">
+                  <img src="images/soon/banner2.png" alt="리뷰왕" class="banner2" />
+                  <img src="images/soon/banner2-m.png" alt="리뷰왕" class="banner2Mobile" />
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination sw-s_banner2-pg"></div>
+          </div>
+        </div>
+      </section>
       <!-- 프로그램 -->
       <section class="s_program" id="s_program">
         <div class="title">
@@ -674,124 +859,6 @@
           </div>
         </div>
         <a href="program.html" class="program_btn"> <div class="s_btn s_btn--reverse:hover s_program_btn">More View</div></a>
-      </section>
-      <!-- 시그니처 강의 for you-->
-      <section class="s_foryou">
-        <div class="title">
-          SIGNATURE
-          <div class="title2">내마음봄이 처음이라면?</div>
-        </div>
-        <!-- /* for you 스와이퍼 시작 */ -->
-        <div class="swiper sw-s_foryou inner" data-aos="fade-down" data-aos-duration="1500">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img">
-                  <img src="images/soon/color.jpg" alt="컬러명상" />
-                </div>
-                <div class="sw-s_foryou_des">
-                  <div class="s_program_tag foryou_tag1"><span class="redTag">30%OFF</span><span class="redTag">#SIGNATURE</span></div>
-                  <div class="sw-s_foryou_des_tit">번아웃을 극복하는 컬러 명상</div>
-                  <div class="sw-s_foryou_des_txt">컬러 명상은 이분법적인 사고를 깨고 세상을 다각도로 세심하게 느끼도록 도와줘요. 평소 그냥 지나쳤던 색깔을 다시 살피고 떠올리는 과정을 거치다 보면 나에게 일으키는 감정과 생각이 있다는 것을 알게 될거에요.</div>
-                  <a href="program-2off.html" id="more_color"><div class="s_btn">More view</div></a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sw-s_foryou_box sw-s_foryou_box_reverse">
-                <div class="sw-s_foryou_des sw-s_foryou_des2">
-                  <div class="s_program_tag foryou_tag foryou_tag2"><span class="redTag">#SIGNATURE</span><span>#Positive</span></div>
-                  <div class="sw-s_foryou_des_tit">오늘의 긍정적인 순간 수집</div>
-                  <div class="sw-s_foryou_des_txt">긍정적인 감정에 대해 기록하다 보면 내가 무엇을 좋아하고, 어떤 가치관을 가지고 있는지, 몰랐던 나의 기준을 알 수 있어요. 내 기준을 확고하게 알게 되면 남들이 아닌 나만의 행복을 느낄 수 있게 될 거예요.</div>
-                  <a href="program-2.html" id="more_today"><div class="s_btn">More view</div></a>
-                </div>
-                <div class="sw-s_foryou_img">
-                  <img src="images/program/positive.jpg" alt="긍정적인순간수집" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="sw-s_foryou_box">
-                <div class="sw-s_foryou_img">
-                  <img src="images/program/myeongsang.jpg" alt="10분명상" />
-                </div>
-                <div class="sw-s_foryou_des">
-                  <div class="s_program_tag foryou_tag3"><span class="redTag">#SIGNATURE</span><span>#meditation</span></div>
-                  <div class="sw-s_foryou_des_tit">하루 10분 명상하기</div>
-                  <div class="sw-s_foryou_des_txt">명상을 하면서 내가 하는 생각들과, 몸의 통증이나 감각들을 살펴봐요. 하루 동안 과열되었던 정신적 감정적 자극들이 평온해지면서 나의 자연스러운 리듬을 인지할 수 있게 될 거예요.</div>
-                  <a href="program-2.html" id="more_10m"><div class="s_btn">More view</div></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </section>
-      <!-- 이달의 할인 배너 및 리뷰 적립 -->
-      <section class="s_banner2">
-        <div class="inner">
-          <div class="swiper sw-s_banner2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="program-2off.html">
-                  <img src="images/soon/banner1.png" alt="이달의 프로그램 30%할인" class="banner1" />
-                  <img src="images/soon/banner1-m.png" alt="이달의 프로그램 30%할인" class="banner1Mobile" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="login.html">
-                  <img src="images/soon/banner2.png" alt="리뷰왕" class="banner2" />
-                  <img src="images/soon/banner2-m.png" alt="리뷰왕" class="banner2Mobile" />
-                </a>
-              </div>
-            </div>
-            <div class="swiper-pagination sw-s_banner2-pg"></div>
-          </div>
-        </div>
-      </section>
-      <!-- soon 모름 -->
-      <section class="s_soon">
-        <div class="title-area">
-          <div class="inner">
-            <div class="title" style="text-align: center">
-              Coming soon
-              <div class="title2">두근두근 6월 오픈 프로그램</div>
-            </div>
-          </div>
-        </div>
-        <div class="s_soon_area" data-aos="fade-down" data-aos-duration="1500">
-          <div class="s_soon_card" style="--clr: #589856" onmouseover="activeLayer(this)">
-            <div class="s_soon_card_imgBox">
-              <img src="images/soon/yoga.jpg" />
-            </div>
-            <div class="s_soon_card_textBox">
-              <h2>초보요가의 아침</h2>
-              <p>한 동작을 하기 위해 모든 정신이 몸에 집중되면서 잡생각에서 벗어나고 더불어 긍정적인 에너지도 얻을 수 있습니다!</p>
-              <a href="program-2.html">More</a>
-            </div>
-          </div>
-          <div class="s_soon_card actived1" style="--clr: #589856" onmouseover="activeLayer(this)" id="activedLay1">
-            <div class="s_soon_card_imgBox actived2" id="activedLay2">
-              <img src="images/soon/meditation.jpg" />
-            </div>
-            <div class="s_soon_card_textBox actived3" id="activedLay3">
-              <h2>내 안에 나를 찾는 시간</h2>
-              <p>‘내 평소 생각이 진짜 나로부터 나온 게 아니라 남들이 하니까 따라하려던 것일 수 있습니다. 내가 진짜 원하는 삶을 살아가 싶다면 명상을 해보세요.</p>
-              <a href="program-2.html">More</a>
-            </div>
-          </div>
-          <div class="s_soon_card" style="--clr: #589856" onmouseover="activeLayer(this)">
-            <div class="s_soon_card_imgBox">
-              <img src="images/soon/draw.jpg" />
-            </div>
-            <div class="s_soon_card_textBox">
-              <h2>즐겁게 드로잉 일기</h2>
-              <p>평범하게 잊힐 수 있는 일상들을 조금은 더 의미 있는 날로 만들어 줍니다. 또한 평가없이 즐겁게 그리고 싶은 분들에게 추천해요.</p>
-              <a href="program-2.html">More</a>
-            </div>
-          </div>
-        </div>
       </section>
       <script>
         function activeLayer(lay) {
@@ -947,7 +1014,10 @@
             <a href="playground.html">공지사항</a>
             <a href="playground.html">커뮤니티</a>
           </div>
-          <div class="copyright">2024 all rights reserved by Jiwon & Teahun & Soon</div>
+          <div class="copyright">
+            대구 중구 중앙대로 394 제일빌딩 5F <br>
+            2024 all rights reserved by Jiwon & Taehun & Soon
+          </div>
         </div>
       </footer>
     </div>

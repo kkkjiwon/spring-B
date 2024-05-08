@@ -34,7 +34,7 @@ body {
   position: absolute;
   top: -60px;
   right: 0;
-  width: 70px;
+  width: 80px;
   background-color: #ffff;
   border-radius: 20px;
   padding: 8px 10px;
@@ -543,6 +543,7 @@ footer > .inner {
   text-align: center;
   flex-direction: column;
   gap: 1.5rem;
+  line-height: 20px;
 }
 footer > .inner > div {
   display: flex;

@@ -17,7 +17,6 @@
     height: 70px;
   }
   /* 비주얼 */
-    /* 비주얼 */
   .s_vistual_right_tit .txt2 {
     line-height: 2;
     display: block;
@@ -36,6 +35,13 @@
     }
     .sw-s_program {
       height: 200px;
+    }
+    .program_btn {
+      margin: 2% auto 0;
+    }
+    /* 배너 */
+    .sw-s_banner2 {
+      margin: 5% auto 0;
     }
   /* 인스타그램 */
   .s_instagram > .inner {
