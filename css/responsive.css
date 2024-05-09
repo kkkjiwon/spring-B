@@ -397,6 +397,10 @@
   }
 }
 @media screen and (max-width: 400px) {
+  /* 모달 */
+  .popup-close {
+    font-size: 15px;
+  }
   /* 헤더 */
   .logo-web {
     display: none;
