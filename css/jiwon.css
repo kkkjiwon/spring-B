@@ -436,6 +436,7 @@
   overflow: hidden;
   /* box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3); */
   box-shadow: 4px 3px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .j_rv_box_top {
   width: 100%;
