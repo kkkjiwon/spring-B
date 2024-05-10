@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import url("style.css");
 
-
 /* 모달창 ******************************************************************* */
 .modal-wrap {
   position: fixed;
@@ -14,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99999;
+  z-index: 99999999999999;
 }
 
 .modal-main {
@@ -89,7 +88,6 @@
   margin-right: 5px;
 }
 
- 
 /* 비주얼 시작 ********************************************** *********************************************/
 .s_vistual_roundBg,
 .s_brandAbout_roundBg {
@@ -122,16 +120,17 @@
 }
 .s_vistual_roundBg {
   position: absolute;
- bottom: 0;
- left: 0;
- margin-bottom: -1px;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -1px;
 }
 .s_vistual_left {
   font-family: var(--sub-ko-font);
   position: relative;
   width: 60%;
-  height: 90vh;}
-.s_vistual_left_area{
+  height: 90vh;
+}
+.s_vistual_left_area {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -153,21 +152,20 @@
   height: auto;
 }
 /* 이미지 비율 변경 */
-.s_vistual_left_txt1 ,
-.s_vistual_left_txt2 ,
-.s_vistual_left_txt3  {
+.s_vistual_left_txt1,
+.s_vistual_left_txt2,
+.s_vistual_left_txt3 {
   width: 40%;
   max-width: 40%;
 }
-.s_vistual_left_img 
-{
+.s_vistual_left_img {
   width: 350px;
   max-width: 350px;
 }
 .s_vistual_left_txt1 {
- position: absolute;
- bottom: 55%;
- right: 0;
+  position: absolute;
+  bottom: 55%;
+  right: 0;
 }
 .s_vistual_left_txt2 {
   position: absolute;
@@ -188,18 +186,18 @@
   line-height: 1.2;
   font-family: var(--main-ko-font);
 }
-.s_vistual_right_tit .txt1{
+.s_vistual_right_tit .txt1 {
   font-family: var(--side-ko-font);
   font-size: 3rem;
   color: white;
 }
-.s_vistual_right_tit .txt2{
+.s_vistual_right_tit .txt2 {
   font-family: var(--side-ko-font);
   font-size: 3rem;
   color: white;
   letter-spacing: 0.25rem;
 }
-.s_vistual_right_tit .txt2 span{
+.s_vistual_right_tit .txt2 span {
   font-size: 4rem;
 }
 /*  브랜드 소개 ********************************************** *********************************************/
@@ -244,14 +242,14 @@
   font-size: 7rem;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  animation: bounce 2s infinite; 
+  animation: bounce 2s infinite;
 }
 .s_brandAbout_left_tit span {
   color: var(--main-color);
   top: 20px;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
-  animation: bounce 5s infinite;  ; /* 바운스 애니메이션 적용 */
+  animation: bounce 5s infinite; /* 바운스 애니메이션 적용 */
 }
 .s_brandAbout_left_txt {
   text-align: right;
@@ -323,7 +321,7 @@
 }
 
 .banner1Mobile,
-.banner2Mobile{
+.banner2Mobile {
   display: none;
 }
 
@@ -335,7 +333,7 @@
   /* background-color: aqua; */
   margin: auto;
 }
-.s_program_title{
+.s_program_title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -360,12 +358,12 @@
   font-size: 1.3rem;
   transition: all 0.7s ease;
   gap: 0.25rem;
-  margin: 0 auto ;
+  margin: 0 auto;
 }
 .s_program_btn:hover {
   border: 1px solid var(--main-color);
   color: var(--main-color);
-  background-color: #FFF;
+  background-color: #fff;
 }
 /* 프로그램 스와이퍼 시작 */
 .s_program > .bk-slider {
@@ -418,13 +416,12 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   -webkit-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .s_program_box:hover img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-
 }
 .s_program_des {
   width: 100%;
@@ -443,7 +440,7 @@
   font-size: 2.5rem;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;  /* 말줄임 적용 */
+  text-overflow: ellipsis; /* 말줄임 적용 */
 }
 .s_program_txt {
   font-size: 1.8rem;
@@ -454,7 +451,7 @@
   display: inline-block;
   text-overflow: ellipsis;
   display: inline-block;
-  -webkit-line-clamp: 2; 
+  -webkit-line-clamp: 2;
 }
 .s_program_tag {
   font-family: var(--main-en-font);
@@ -472,7 +469,9 @@
   padding: 5px;
 }
 .s_program_tag span.redTag {
-  color: tomato; border: 1PX solid tomato; background-color: #FFF;
+  color: tomato;
+  border: 1px solid tomato;
+  background-color: #fff;
 }
 .program_btn {
   display: block;
@@ -483,11 +482,11 @@
 .s_foryou {
   height: 100vh;
   padding-bottom: 15rem;
-  background-color:var(--bg-color-ivory);
+  background-color: var(--bg-color-ivory);
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px; */
 }
 .s_foryou > .title {
-  margin-top:0;
+  margin-top: 0;
 }
 /* for you 스와이퍼 시작 */
 .sw-s_foryou {
@@ -542,21 +541,18 @@
   padding-left: 5%;
 }
 .sw-s_foryou_des .foryou_tag1,
-.sw-s_foryou_des .foryou_tag3
-{
+.sw-s_foryou_des .foryou_tag3 {
   display: flex;
   justify-content: flex-start;
 }
-.sw-s_foryou_des .foryou_tag2
-{
+.sw-s_foryou_des .foryou_tag2 {
   display: flex;
   justify-content: flex-end;
 }
 
 .foryou_tag1 span,
 .foryou_tag2 span,
-.foryou_tag3 span
- {
+.foryou_tag3 span {
   font-size: 1.3rem;
 }
 .sw-s_foryou_des2 {
@@ -636,7 +632,7 @@
   top: 20px;
   width: 300px;
   height: 220px;
-  background:var(--side-color);
+  background: var(--side-color);
   border-radius: 12px;
   overflow: hidden;
   transition: 0.5s;
@@ -714,12 +710,11 @@
 
 @media screen and (max-width: 1350px) {
   .s_soon_area {
-    gap:100px 50px;
+    gap: 100px 50px;
   }
-  .s_soon{
+  .s_soon {
     height: 100%;
   }
-
 }
 @media screen and (max-width: 900px) {
   .s_soon_area {
@@ -735,15 +730,13 @@
   .s_soon_area {
     flex-wrap: wrap;
     flex-direction: column-reverse;
-  } 
+  }
 }
 @media screen and (max-width: 400px) {
   .s_soon_area .s_soon_card .s_soon_card_imgBox {
     width: 250px;
   }
-  
 }
-
 
 /* 이달의 영상 시작 ********************************************** *********************************************/
 .s_Mentor {
