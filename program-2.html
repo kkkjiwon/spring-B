@@ -58,12 +58,12 @@
   </head>
   <body>
     <!-- 탑 버튼 -->
-    <!-- <div class="top-button" id="top-button">
-          <a href="program-2.html" class="chat-btn">
-            <img src="images/chat-btn.png" alt="프로그램 신청 로고" />
-            <span>이달의 프로그램</span>
-          </a>
-        </div> -->
+<div class="top-button" id="top-button">
+  <a href="#" class="chat-btn" onclick="scrollToTop()">
+    <img src="images/logo2.png" alt="프로그램 신청 로고" />
+    <span>Top</span>
+  </a>
+</div>
     <!-- 전체 레이아웃 -->
     <div class="wrap">
       <!-- 헤더 -->
@@ -372,6 +372,18 @@
         </footer>
       </div>
       <script>
+         function scrollToTop() {
+    // 스크롤 애니메이션을 사용하려면 JavaScript로 부드러운 스크롤을 구현할 수 있습니다.
+    // 아래는 간단한 버전의 scrollTo를 사용하는 방법입니다.
+    // window.scrollTo(0, 0);
+
+    // 부드러운 스크롤을 구현하려면 다음과 같이 사용할 수 있습니다.
+    // 자세한 내용은 https://www.w3schools.com/howto/howto_css_smooth_scroll.asp 를 참조하세요.
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
         $(document).ready(function () {
           $(".t_bt2").click(function () { 
             alert("로그인 후 진행하세요. 로그인 페이지로 이동합니다.")
