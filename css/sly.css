@@ -30,6 +30,11 @@
   display: table-cell;
   margin: 10px;
 }
+.list > .s-m-nav > ul > li:hover a {
+  font-weight: bold;
+  scale: 1.05;
+  transition: 0.3s ease;
+}
 .list > .s-m-nav > ul > li > a {
   position: relative;
   display: inline-block;
@@ -45,12 +50,19 @@
   border-radius: 30px;
   width: 100%;
 }
+.list_content > .s-m-nav > ul > li > a:hover > img {
+scale: 0.98;
+transition: 0.3s ease;
+}
 .list_content > .s-m-nav > ul > li > a > p {
   text-align: center;
 }
-.s_cate_program_des > .star {
+.s_cate_program_des p {
   margin-top: 1.5rem;
   font-size: 10px;
+  color: #747474;
+}
+.s_cate_program_des p > i {
   font-weight: bold;
   color: #ffd900;
 }
