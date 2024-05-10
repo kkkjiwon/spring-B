@@ -90,9 +90,10 @@ body {
   font-size: 1.8rem;
   color: #eeeeee;
   cursor: pointer;
+  z-index: 999999999999999999;
 }
 .fa-heart {
-  font-family: var(--side-ko-font);
+  /* font-family: var(--side-ko-font); */
   background-color: rgba(0, 0, 0, 0.5);
 }
 .heart.fas:before {
