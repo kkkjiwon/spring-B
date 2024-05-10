@@ -18,7 +18,7 @@
 
 .modal-main {
   max-width: 500px; /* 최대 가로 너비 500px로 설정 */
-  height: 500px;
+  max-height: 500px;
   position: relative;
   margin: 5%;
 }
